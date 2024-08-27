@@ -1,0 +1,79 @@
+/* components/BookingPage.module.css */
+.container {
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.progressContainer {
+  margin-bottom: 20px;
+}
+
+.progressBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.progressSection {
+  flex: 1;
+  height: 10px;
+  background-color: #ddd;
+  position: relative;
+  border-radius: 5px;
+}
+
+.progressSection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  background-color: var(--color-primary);
+  border-radius: 5px;
+  transition: width 0.3s ease-in-out;
+}
+
+.progressSection.completed::before {
+  width: 100%;
+}
+
+.content {
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.button {
+  background-color: var(--color-primary); /* Primary color */
+  color: var(--color-background); /* Text color */
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 100px;
+  font-size: var(--font-size-md);
+  font-family: var(--font-family);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background: linear-gradient(to right, var(--color-primary), var(--color-secondary)) /* Secondary color on hover */
+}
+.servicesContainer {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}

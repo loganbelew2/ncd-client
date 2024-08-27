@@ -1,0 +1,48 @@
+/* components/ServiceCard.module.css */
+.card {
+    width: clamp(250px, 20vw, 300px); /* Minimum 250px, preferred 20% of viewport width, maximum 300px */
+    height: clamp(350px, 30vw, 500px); /* Minimum 300px, preferred 30% of viewport width, maximum 350px */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex: 1;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .price {
+    font-size: var(--font-size-lg);
+    font-weight:bold ;
+    color: var(--color-primary);
+  }
+  
+  .title {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+  }
+  
+  .image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    max-height: 195px;
+  }
+  
+  .title::after {
+    content: '';
+    display: block;
+    height: 4px;
+    background: linear-gradient(to right, var(--color-primary), transparent);
+  }
+  
+  .description {
+    font-size: 1rem;
+    color: #666;
+  }
+  

@@ -1,15 +1,35 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { NavBar } from "./ui/Nav/Nav-Bar";
-import { Footer } from "./ui/Footer/Footer";
-import Image from "next/image";
-import Link from "next/link";
+import { NavBar } from "./components/Nav/Nav-Bar";
+import { Footer } from "./components/Footer/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Nashville Car Detail",
-  description: "",
+  title: "Nashville Car Detail - Premium Mobile Auto Detailing",
+  description:
+    "Nashville Car Detail offers top-notch mobile auto detailing services in the Nashville area. Book your appointment today!",
+  keywords:
+    "Nashville car detailing, mobile car detailing, auto detailing, car cleaning services, car waxing, Nashville auto detailing, car detail",
+  authors: [{ name: "Nashville Car Detail" }],
+  robots: "index, follow",
+  viewport: "width=device-width, initial-scale=1.0",
+  openGraph: {
+    title: "Nashville Car Detail - Premium Mobile Auto Detailing",
+    description:
+      "Nashville Car Detail offers top-notch mobile auto detailing services in the Nashville area. Book your appointment today!",
+    type: "website",
+    url: "https://www.nashvillecardetailing.com",
+    images: "/images/NCDLogoTransBig.png",
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@NashvilleCarDetail",
+    title: "Nashville Car Detail - Premium Mobile Auto Detailing",
+    description:
+      "Nashville Car Detail offers top-notch mobile auto detailing services in the Nashville area. Book your appointment today!",
+    images: "/images/NCDLogoTransBig.png",
+  },
 };
 
 export default function RootLayout({
@@ -18,26 +38,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en-US">
       <body>
         <header>
-          <Link href={"/"}>
-              <Image
-                className="logo"
-                src="/images/NCDLogoTransBig.png"
-                alt="NCD Logo"
-                width={170}
-                height={150}
-                layout="intrinsic"
-              />
-          </Link>
-          <NavBar />
-          <button className="btn--primary">Book now</button>
-          <button className="btn--secondary">Learn more</button>
+          <nav className="nav">
+            <NavBar />
+          </nav>
         </header>
         <main>{children}</main>
         <footer>
-          <Footer />
+          {/* <Footer /> */}
         </footer>
       </body>
     </html>
