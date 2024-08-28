@@ -104,7 +104,9 @@ p {
   html {
     font-size: var(--font-size-sm); /* 1rem = 14px for smaller screens */
   }
- 
+  body {
+    width: 100vw;
+  }
  
 }
 

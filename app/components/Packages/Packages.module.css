@@ -19,9 +19,10 @@
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 20px;
-    width: 100%;
-    max-width: 270px; /* Adjust the card width as needed */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 250px;
+    max-width: 330px;
   }
   
   .cardTitle {

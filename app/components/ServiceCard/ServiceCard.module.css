@@ -1,7 +1,5 @@
 /* components/ServiceCard.module.css */
 .card {
-    width: clamp(250px, 20vw, 300px); /* Minimum 250px, preferred 20% of viewport width, maximum 300px */
-    height: clamp(350px, 30vw, 500px); /* Minimum 300px, preferred 30% of viewport width, maximum 350px */
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 20px;
@@ -9,6 +7,8 @@
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     flex: 1;
+    min-width: 200px;
+    max-width: 450px;
   }
   
   .card:hover {
@@ -19,7 +19,6 @@
   .price {
     font-size: var(--font-size-lg);
     font-weight:bold ;
-    color: var(--color-primary);
   }
   
   .title {
@@ -31,7 +30,7 @@
     width: 100%;
     height: auto;
     border-radius: 8px;
-    max-height: 195px;
+    max-height: 190px;
   }
   
   .title::after {

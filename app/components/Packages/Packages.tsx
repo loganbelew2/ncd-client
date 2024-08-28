@@ -5,7 +5,7 @@ const packages = [
     title: 'Interior Detail',
     description: 'A comprehensive cleaning of your vehicle’s interior leaving it looking and smelling brand new.',
     price: '$190',
-    features: ['double vacuum', 'interior detail clean', 'carpets and seats shampoo', 'windows clean', 'stain removal']
+    features: ['double vacuum', 'interior detail clean', 'shampoo carpets & seats', 'windows clean', 'stain removal']
   },
   {
     title: 'Exterior Detail',
@@ -17,7 +17,7 @@ const packages = [
     title: 'Full Detail',
     description: 'Complete detailing service covering both interior and exterior, providing a complete rejuvenation of your vehicle.',
     price: '$249',
-    features: ['double vacuum', 'interior detail clean', 'carpets and seats shampoo', 'windows clean', 'stain removal', 'exterior foam bath', 'hand wash', 'wheel & tire clean' ,'clay bar decontamination', 'tires dressed', 'Sealant protection applied']
+    features: ['double vacuum', 'interior detail clean', 'shampoo carpets & seats', 'windows clean', 'stain removal', 'exterior foam bath', 'hand wash', 'wheel & tire clean' ,'clay bar decontamination', 'tires dressed', 'Sealant protection applied']
   }
 ];
 
