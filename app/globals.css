@@ -85,7 +85,7 @@ p {
 /* Secondary Button */
 .btn--secondary {
   background-color: var(--color-background); /* Background color */
-  color: var(--color-secondary); /* Text color */
+  color: black;/* Text color */
   border: none;
   border-radius: 100px;
   padding: 0.5rem 1rem;
@@ -99,25 +99,17 @@ p {
  color: var(--color-primary);
 }
 
-/* Responsive adjustments */
-@media (max-width: 480px) {
-  html {
-    font-size: var(--font-size-sm); /* 1rem = 14px for smaller screens */
-  }
-  body {
-    width: 100vw;
-  }
- 
-}
 
-@media (min-width: 769px) and (max-width: 1024px) {
+@media (max-width: 1024px) {
   html {
-    font-size: var(--font-size-md); /* Default root font size */
+    font-size: var(--font-size-sm); /* Default root font size */
   }
   .logo {
     width: 110px;
   }
-
+  .btn--primary {
+    width: 100%;
+  }
 }
 
 @media (min-width: 1025px) {

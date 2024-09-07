@@ -97,7 +97,7 @@ const Booking: React.FC = () => {
               <div
                 className="calendly-inline-widget"
                 data-url="https://calendly.com/nashvillecardetail/interior-detail?primary_color=00aaff"
-                style={{ minWidth: "320px", height: "700px" }}
+                style={{ minWidth: "320px", height: "450px" }}
               ></div>
               {/* Calendly inline widget end */}
             </div>
@@ -109,7 +109,7 @@ const Booking: React.FC = () => {
               <div
                 className="calendly-inline-widget"
                 data-url="https://calendly.com/nashvillecardetail/exterior-auto-detail?primary_color=00aaff"
-                style={{ minWidth: "320px", height: "700px" }}
+                style={{ minWidth: "320px", height: "450px" }}
               ></div>
               {/* Calendly inline widget end */}
             </div>
@@ -121,7 +121,7 @@ const Booking: React.FC = () => {
               <div
                 className="calendly-inline-widget"
                 data-url="https://calendly.com/nashvillecardetail/full-detail?primary_color=00aaff"
-                style={{ minWidth: "320px", height: "700px" }}
+                style={{ minWidth: "320px", height: "450px" }}
               ></div>
               {/* Calendly inline widget end */}
             </div>

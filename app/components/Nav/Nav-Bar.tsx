@@ -3,6 +3,7 @@ import Link from "next/link";
 import styles from "./Nav.module.css";
 import { useState } from "react";
 import Image from "next/image";
+import PrimaryButton from "../Buttons/Primary-Button";
 
 const HamburgerIcon = () => (
   <svg
@@ -46,20 +47,19 @@ const CloseIcon = () => (
 );
 
 export const NavBar = () => {
+  
   const [isOpen, setIsOpen] = useState(false);
+
+  const closeMenu = () => {
+    setIsOpen(false);
+  };
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
-  const closeMenu = () => {
-    setIsOpen(false);
-  };
   
-  const handleBookNowClick = () => {
-    const bookingUrl = 'https://squareup.com/appointments/book/sagdidoakxii7d/LGS9SEJZ0MAGP/start';
-    window.location.href = bookingUrl;
-  };
+
 
   return (
     <div className={styles.navContainer}>
@@ -98,7 +98,11 @@ export const NavBar = () => {
           <Link className={styles.link} href="/locations" onClick={closeMenu}>
             Locations
           </Link>
-          <Link className={styles.link} href="/testimonials" onClick={closeMenu}>
+          <Link
+            className={styles.link}
+            href="/testimonials"
+            onClick={closeMenu}
+          >
             Testimonials
           </Link>
         </div>
@@ -114,16 +118,7 @@ export const NavBar = () => {
           >
             Contact us
           </button>
-          <button
-            className={`btn--primary ${styles.btn}`}
-            aria-label="Book a car detailing service"
-            onClick={() => {
-              handleBookNowClick();
-              closeMenu();
-            }}
-          >
-            Book now
-          </button>
+          <PrimaryButton closeMenu = {closeMenu}/>
         </div>
       </div>
     </div>

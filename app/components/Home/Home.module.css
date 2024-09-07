@@ -1,45 +1,46 @@
 /* page.module.css */
 
 .hero__container {
-    display: flex;               /* Use flexbox layout */
-    flex-wrap: wrap;
-    align-items: center;         /* Center items vertically */
-    margin: 20px;
-  }
-  
-  .hero__container__left {
-    padding: 20px;
-    flex: 1;
-    min-width: 322px;
-  }
-  
-  .hero__container__right {
-    flex: 1;
-    max-width: 100%;
-    min-width: 322px;
-  }
-  .btn--primary {
-    background-color: #0070f3;   /* Customize button color */
-    color: #fff;                 /* Button text color */
-    border: none;                /* Remove border */
-    padding: 10px 20px;          /* Add padding */
-    cursor: pointer;             /* Show pointer cursor on hover */
-  }
-  
-  .title::after {
-    content: '';
-    display: block;
-    height: 4px;
-    background: linear-gradient(to right, var(--color-primary), transparent);
-  }
+  display: flex; /* Use flexbox layout */
+  flex-wrap: wrap;
+  align-items: center; /* Center items vertically */
+  margin: 20px;
+}
 
-  .subheading {
-    color: gray;
-  }
+.hero__container__left {
+  padding: 20px;
+  flex: 1;
+  min-width: 322px;
+}
 
-  /* section two */
+.hero__container__right {
+  flex: 1;
+  max-width: 100%;
+  min-width: 322px;
+}
+.btn--primary {
+  background-color: #0070f3; /* Customize button color */
+  color: #fff; /* Button text color */
+  border: none; /* Remove border */
+  padding: 10px 20px; /* Add padding */
+  cursor: pointer; /* Show pointer cursor on hover */
+}
 
-  .section_two {
-     margin: 20px;
-     background-color: #f8f8f8;
-  }
+
+.title::after {
+  content: "";
+  display: block;
+  height: 4px;
+  background: linear-gradient(to right, var(--color-primary), transparent);
+}
+
+.subheading {
+  color: gray;
+}
+
+/* section two */
+
+.section_two {
+  margin: 20px;
+  background-color: #f8f8f8;
+}

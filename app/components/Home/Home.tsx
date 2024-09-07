@@ -1,5 +1,6 @@
 import Image from "next/image";
 import styles from "./Home.module.css";
+import PrimaryButton from "../Buttons/Primary-Button";
 
 export default function Home() {
   return (
@@ -14,13 +15,13 @@ export default function Home() {
             to fit seamlessly into your schedule with clear and honest pricing. We operate in surrounding Nashville areas.
             Wherever you park, we&apos;ll leave no mark!
           </p>
-          <button className="btn--primary">Book now</button>
+          <PrimaryButton />
         </div>
 
         <div className={styles.hero__container__right}>
           <Image
             src={
-              "/images/nashville_car_detail_transparent.png"
+              "/images/NCD.WEBP"
             }
             alt="car"
             className={styles.image}

@@ -2,12 +2,15 @@
 .container {
   margin: 0 auto;
   padding: 20px;
+
 }
 
-.header {
+.header, .header h1 {
   text-align: center;
   margin-bottom: 20px;
+  margin-top: 0;
 }
+
 
 .progressContainer {
   margin-bottom: 20px;

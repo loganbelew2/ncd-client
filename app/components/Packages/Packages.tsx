@@ -1,3 +1,5 @@
+
+import PrimaryButton from '../Buttons/Primary-Button';
 import styles from './Packages.module.css'; // Adjust the path as needed
 
 const packages = [
@@ -40,7 +42,7 @@ export const Packages = () => {
                 <li key={i}>{feature}</li>
               ))}
             </ul>
-            <button className={`btn--primary ${styles.btn}`}>Book now</button>
+            <PrimaryButton/>
           </div>
         ))}
       </div>
