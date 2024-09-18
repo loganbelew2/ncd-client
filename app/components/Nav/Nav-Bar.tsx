@@ -4,6 +4,7 @@ import styles from "./Nav.module.css";
 import { useState } from "react";
 import Image from "next/image";
 import PrimaryButton from "../Buttons/Primary-Button";
+import SecondaryButton from "../Buttons/Secondary-Button";
 
 const HamburgerIcon = () => (
   <svg
@@ -47,7 +48,6 @@ const CloseIcon = () => (
 );
 
 export const NavBar = () => {
-  
   const [isOpen, setIsOpen] = useState(false);
 
   const closeMenu = () => {
@@ -57,9 +57,6 @@ export const NavBar = () => {
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
-
-  
-
 
   return (
     <div className={styles.navContainer}>
@@ -77,17 +74,17 @@ export const NavBar = () => {
       </div>
 
       <div
-        className={`${styles.hamburger} ${isOpen ? styles.fixedHamburger : ""}`}
+        className={`${styles.hamburger} ${isOpen && styles.fixedHamburger}`}
         onClick={toggleMenu}
       >
         {isOpen ? <CloseIcon /> : <HamburgerIcon />}
       </div>
 
-      <div className={`${styles.nav} ${isOpen ? styles.open : ""}`}>
+      <div className={`${styles.nav} ${isOpen && styles.open}`}>
         <div className={styles.links}>
           <Link
             className={styles.link}
-            href="/services/exterior-detail"
+            href="/services/all-services"
             onClick={closeMenu}
           >
             Services
@@ -98,27 +95,20 @@ export const NavBar = () => {
           <Link className={styles.link} href="/locations" onClick={closeMenu}>
             Locations
           </Link>
-          <Link
+          {/* <Link
             className={styles.link}
             href="/testimonials"
             onClick={closeMenu}
           >
             Testimonials
-          </Link>
+          </Link> */}
         </div>
         <div
-          className={`${styles.buttons} ${
-            isOpen ? styles.buttonsVerticle : ""
-          }`}
+          className={`${styles.buttons} ${isOpen && styles.buttonsVerticle} butt`}
         >
-          <button
-            className={`btn--secondary ${styles.btn}`}
-            aria-label="Contact us"
-            onClick={closeMenu}
-          >
-            Contact us
-          </button>
-          <PrimaryButton closeMenu = {closeMenu}/>
+          <SecondaryButton closeMenu={closeMenu}/>
+
+          <PrimaryButton closeMenu={closeMenu} />
         </div>
       </div>
     </div>

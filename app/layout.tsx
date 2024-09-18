@@ -45,7 +45,7 @@ export default function RootLayout({
             <NavBar />
           </nav>
         </header>
-        <main>{children}</main>
+        <main style={{paddingTop: 120}}>{children}</main>
         <footer>
           {/* <Footer /> */}
         </footer>

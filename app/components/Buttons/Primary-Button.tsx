@@ -1,25 +1,29 @@
-"use client"
-import Link from "next/link";
+"use client";
+import { useRouter } from "next/navigation";
 
 interface PropsObject {
   closeMenu?: () => void;
+  params?: number;
+  // serviceId?: (pack: number) => void;
+  // pkgNum: number;
 }
 
-export default function PrimaryButton({closeMenu}: PropsObject) {
-
-
-let close = closeMenu;
+export default function PrimaryButton({ closeMenu, params }: PropsObject) {
+  const router = useRouter();
+  const serviceNum = "?serviceId=" + params;
   return (
-    <Link className="btn-wrapper" href="/booking">
-      <button
-        className={`btn--primary`}
-        aria-label="Book a car detailing service"
-        onClick={() => {
-          // closeMenu();
-        }}
-      >
-        Book now
-      </button>
-    </Link>
+    // <Link className="btn-wrapper" href="/booking">
+    <button
+      className={`btn--primary`}
+      aria-label="Book a car detailing service"
+      onClick={() => {
+        params ? router.push(`/booking${serviceNum}`) : router.push("/booking");
+        closeMenu && closeMenu();
+        // serviceId && serviceId(pkgNum);
+      }}
+    >
+      Book now
+    </button>
+    // </Link>
   );
 }

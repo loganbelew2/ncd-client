@@ -1,68 +1,75 @@
 .packagesContainer {
-    padding: 20px;
-  }
-  
-  .header {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .cardsContainer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 15px;
-  }
-  
-  .card {
-    background: #f8f8f8;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    flex: 1;
-    min-width: 250px;
-    max-width: 330px;
-  }
-  
-  .cardTitle {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-  }
-  
-  .cardDescription {
-    font-size: 1em;
-    margin-bottom: 15px;
-  }
-  
-  .cardPrice {
-    font-size: 1.25em;
-    margin-bottom: 15px;
-    font-weight: bold;
-  }
-  
-  .cardFeatures {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .cardFeatures li {
-    display: flex;
-    align-items: center;
-    margin-bottom: 5px;
-    font-size: 0.9em; /* Adjust text size if needed */
-  }
-  
-  .cardFeatures li::before {
-    content: "";
-    display: inline-block;
-    width: 16px;
-    height: 16px;
-    background-image: url('/images/checkmark.svg'); /* Path to your SVG file */
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    margin-right: 8px; /* Space between checkmark and text */
-    transform: translateY(-2px); /* Align vertically with text */
-  }
-  
+  padding: 20px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.header > p {
+  color: gray;
+}
+.cardsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 2vw;
+}
+.cardInfoContainer {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+}
+.card {
+  background: #f8f8f8;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  min-width: 250px;
+  max-width: 330px;
+}
+
+.cardTitle {
+  font-size: 1.75rem;
+  margin-bottom: 10px;
+}
+
+.cardDescription {
+  color: gray;
+  font-size: 1em;
+  line-height: 1.7;
+  margin-bottom: 25px;
+}
+
+.cardPrice {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.cardFeatures {
+  list-style: none;
+  padding: 0;
+}
+
+.cardFeatures li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+  font-size: 1em; /* Adjust text size if needed */
+}
+
+.cardFeatures li::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-image: url("/images/checkmark.svg"); /* Path to your SVG file */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 8px; /* Space between checkmark and text */
+  transform: translateY(-2px); /* Align vertically with text */
+}

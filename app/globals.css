@@ -3,10 +3,10 @@
 /* Define color variables */
 :root {
   --color-primary: #00aaff; /* Electric Blue */
-  --color-secondary: #FFA500; /* Lime Green */
+  --color-secondary: #ffa500; /* orange*/
   --color-background: #ffffff; /* White */
   --color-foreground: #000000; /* Black */
-  --color-compliment: #f8f8f8; /*light gray*/
+  --color-compliment: #f9f9f9; /*light gray*/
   /* Define font sizes in rem */
   --font-size-xs: 0.75rem; /* 12px */
   --font-size-sm: 0.875rem; /* 14px */
@@ -16,29 +16,32 @@
   --font-size-xxl: 2rem; /* 32px */
 
   /* Define font family */
-  --font-family: 'Roboto', sans-serif;
+  --font-family: "Roboto", sans-serif;
 }
 
 /* Base styles */
 body {
-  width: 70%;
+  width: 80%;
   margin: auto;
   font-family: var(--font-family);
   font-size: var(--font-size-md); /* Default font size */
-  line-height: 1.6;
+  line-height: 1.3;
   color: var(--color-foreground);
   background-color: var(--color-background);
 }
+main {
+  padding: 0;
+}
+
 .nav {
-  position: sticky;
-  top: 0;
   width: 100%;
-  z-index: 1000; /* Ensure it stays above other content */
   background-color: #fff; /* Optional: background color */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: shadow */
   /* Add any additional styling here */
+  display: flex;
+  justify-content: center;
+ 
 }
-
 
 footer div {
   background-color: var(--color-primary);
@@ -70,7 +73,7 @@ p {
   background-color: var(--color-secondary); /* Primary color */
   color: var(--color-background); /* Text color */
   border: none;
-  padding: 0.5rem 1rem;
+  padding: 0.7rem 1.5rem;
   border-radius: 100px;
   font-size: var(--font-size-md);
   font-family: var(--font-family);
@@ -79,16 +82,20 @@ p {
 }
 
 .btn--primary:hover {
-  background: linear-gradient(to right, var(--color-secondary), var(--color-primary)) /* Secondary color on hover */
+  background: linear-gradient(
+    to right,
+    var(--color-secondary),
+    var(--color-primary)
+  ); /* Secondary color on hover */
 }
 
 /* Secondary Button */
 .btn--secondary {
-  background-color: var(--color-background); /* Background color */
-  color: black;/* Text color */
+  background-color: transparent;
+  color: black; /* Text color */
   border: none;
   border-radius: 100px;
-  padding: 0.5rem 1rem;
+  padding: .7rem 1.5rem;
   font-size: var(--font-size-md);
   font-family: var(--font-family);
   cursor: pointer;
@@ -96,24 +103,47 @@ p {
 }
 
 .btn--secondary:hover {
- color: var(--color-primary);
+  color: var(--color-primary);
 }
 
 
-@media (max-width: 1024px) {
-  html {
-    font-size: var(--font-size-sm); /* Default root font size */
+
+@media (max-width: 1025px) {
+  .butt .btn-wrapper  {
+    display: block;
+    width: 100%;
+    padding: 1rem 2rem;
+    background-color: white;
   }
   .logo {
     width: 110px;
   }
-  .btn--primary {
-    width: 100%;
+  body {
+    width: 90%;
+  }
+}
+@media (max-width: 1225px) {
+  div .secondary button {
+    display: none;
+  }
+}
+/* large screens */
+@media (min-width: 1025px) {
+  html {
+    font-size: 18px;
   }
 }
 
-@media (min-width: 1025px) {
+/* Medium screens (tablets) */
+@media (max-width: 1024px) {
   html {
-    font-size: 18px; /* Larger root font size for larger screens */
+    font-size: 16px; /* Slightly smaller base font size */
+  }
+}
+
+/* Small screens (phones) */
+@media (max-width: 768px) {
+  html {
+    font-size: 14px; /* Smaller base font size */
   }
 }

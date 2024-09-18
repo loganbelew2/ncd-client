@@ -4,19 +4,21 @@
   display: flex; /* Use flexbox layout */
   flex-wrap: wrap;
   align-items: center; /* Center items vertically */
-  margin: 20px;
 }
 
 .hero__container__left {
   padding: 20px;
-  flex: 1;
-  min-width: 322px;
+  flex: 2;
 }
 
 .hero__container__right {
   flex: 1;
+  min-width: 400px;
   max-width: 100%;
-  min-width: 322px;
+}
+.image {
+  display: block;
+  min-height: 400px;
 }
 .btn--primary {
   background-color: #0070f3; /* Customize button color */
@@ -25,7 +27,17 @@
   padding: 10px 20px; /* Add padding */
   cursor: pointer; /* Show pointer cursor on hover */
 }
+.title {
+  font-size: clamp(2rem, 13vw, 5rem); /* Limits the font size */
+  line-height: 1.2; /* Adjusts the height between lines */
+  margin-bottom: 1rem; /* Adds space between the title and subheading */
+  overflow-wrap: break-word; /* Allows breaking long words */
+}
 
+.subheading {
+  color: gray;
+  margin-top: 0.5rem; /* Adjusts space below the title */
+}
 
 .title::after {
   content: "";

@@ -1,8 +1,6 @@
 /* components/BookingPage.module.css */
 .container {
   margin: 0 auto;
-  padding: 20px;
-
 }
 
 .header, .header h1 {
@@ -11,6 +9,37 @@
   margin-top: 0;
 }
 
+.carSizeCards {
+  display: flex;
+  justify-content: space-around;
+  flex-flow: row wrap;
+}
+.carSizeCards > * {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5px;
+  box-shadow: 0 4px 20px rgba(186, 185, 185, 0.1);
+  margin: 0 10px;
+}
+.car:hover {
+  background-color: var(--color-compliment)
+}
+.carSizeCards div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.carSizeCards p {
+  margin-top: 0px;
+  font-size: .9em;
+}
+.carSizeCards h3 {
+  margin-bottom: 0;
+}
 
 .progressContainer {
   margin-bottom: 20px;
@@ -47,7 +76,7 @@
 }
 
 .content {
-  padding: 20px;
+  padding: 10px;
   border: 1px solid #ddd;
   border-radius: 4px;
   background-color: #fff;
@@ -79,4 +108,7 @@
   justify-content: space-around;
   flex-wrap: wrap;
   gap: 20px;
+}
+.servicesContainer > div {
+  /* width: 100%; */
 }
