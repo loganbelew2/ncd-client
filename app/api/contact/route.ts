@@ -2,7 +2,6 @@ import { NextResponse } from 'next/server';
 import nodemailer from "nodemailer";
 // Make sure to include your environment variables
 const smtpHost = process.env.SMTP_HOST;
-const smtpPort = process.env.SMTP_PORT;
 const emailUser = process.env.EMAIL_USER;
 const emailPassword = process.env.EMAIL_PASSWORD;
 const receivingEmail = process.env.RECEIVING_EMAIL;
@@ -18,7 +17,6 @@ export async function POST(request: Request) {
   // Set up Nodemailer transporter
   const transporter = nodemailer.createTransport({
     host: smtpHost,
-    port: Number(smtpPort),
     secure: false, // Use true for port 465, false for others
     auth: {
       user: emailUser,

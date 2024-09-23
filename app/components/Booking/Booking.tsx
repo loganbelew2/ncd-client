@@ -2,10 +2,10 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import ServiceCard from "../ServiceCard/ServiceCard"; // Import the ServiceCard component
+import ServiceCard from "../ServiceCard/ServiceCard";
 import styles from "./Booking.module.css";
 import ServiceCardNoImage from "../ServiceCard/ServiceCardNoImage";
-import {useSearchParams } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 
 const steps = [
   { id: 1, title: "Select Service" },
@@ -74,7 +74,30 @@ const Booking: React.FC = () => {
 
   useEffect(() => {
     setSelectedService(serviceParamInt);
-  }, []);
+  }, [serviceParamInt]);
+
+  const getCalendlyUrl = () => {
+    if (selectedService === 1) {
+      return selectedCarType === 1
+        ? "https://calendly.com/nashvillecardetail/interior-detail?primary_color=00aaff"
+        : selectedCarType === 2
+        ? "https://calendly.com/nashvillecardetail/interior-detail-clone?primary_color=00aaff"
+        : "https://calendly.com/nashvillecardetail/interior-detail-large-clone-clone?primary_color=00aaff";
+    } else if (selectedService === 2) {
+      return selectedCarType === 1
+        ? "https://calendly.com/nashvillecardetail/exterior-auto-detail?primary_color=00aaff"
+        : selectedCarType === 2
+        ? "https://calendly.com/nashvillecardetail/exterior-detail-clone?primary_color=00aaff"
+        : "https://calendly.com/nashvillecardetail/exterior-detail-large-clone?primary_color=00aaff";
+    } else if (selectedService === 3) {
+      return selectedCarType === 1
+        ? "https://calendly.com/nashvillecardetail/full-detail-large-clone?primary_color=00aaff"
+        : selectedCarType === 2
+        ? "https://calendly.com/nashvillecardetail/full-detail-large?primary_color=00aaff"
+        : "https://calendly.com/nashvillecardetail/full-detail-clone?primary_color=00aaff";
+    }
+    return null;
+  };
 
   useEffect(() => {
     if (currentStep === 2) {
@@ -82,26 +105,16 @@ const Booking: React.FC = () => {
       script.src = "https://assets.calendly.com/assets/external/widget.js";
       script.async = true;
       document.body.appendChild(script);
-      const calendlyContainer = document.querySelector(
-        ".calendly-inline-widget"
-      );
 
-      console.log(calendlyContainer);
       return () => {
-        console.log(calendlyContainer + "inside cleanup");
-        if (calendlyContainer && calendlyContainer.parentNode) {
-          console.log(calendlyContainer.parentNode + "parentNode");
-          document.body.removeChild(script);
-          calendlyContainer.parentNode.removeChild(calendlyContainer);
-          console.log(calendlyContainer + "end cleanup");
-        }
+        document.body.removeChild(script);
       };
     }
   }, [currentStep]);
 
   const renderStepContent = () => {
     const sservice = selectedService != null ? services[selectedService - 1] : services[1];
-    console.log(sservice);
+
     switch (currentStep) {
       case 1:
         if (selectedService == null) {
@@ -127,7 +140,6 @@ const Booking: React.FC = () => {
                   sservice.id == service.id ? (
                     <div key={service.id}>
                       <ServiceCardNoImage
-                        key={service.id}
                         title={sservice.title}
                         price={sservice.price}
                         description={sservice.description}
@@ -135,11 +147,11 @@ const Booking: React.FC = () => {
                       />
                       <div className={styles.carSizeCards}>
                         <div
-                          className={`${styles.smallCar} ${styles.car} `}
+                          className={`${styles.smallCar} ${styles.car}`}
                           onClick={() => handleCarTypeSelect(1)}
                         >
                           <div>
-                            <h3>regular </h3>
+                            <h3>Regular</h3>
                             <p style={{ color: "gray" }}>2 to 4 door sedan</p>
                           </div>
                           <img
@@ -151,13 +163,13 @@ const Booking: React.FC = () => {
                         </div>
 
                         <div
-                          className={`${styles.mediumCar} ${styles.car} `}
+                          className={`${styles.mediumCar} ${styles.car}`}
                           onClick={() => handleCarTypeSelect(2)}
                         >
                           <div>
-                            <h3>large</h3>
+                            <h3>Large</h3>
                             <p style={{ marginBottom: 0, color: "gray" }}>
-                              4 door suv/ small truck
+                              4 door SUV/ small truck
                             </p>
                             <p>+ $20</p>
                           </div>
@@ -170,13 +182,13 @@ const Booking: React.FC = () => {
                         </div>
 
                         <div
-                          className={`${styles.largeCar} ${styles.car} `}
+                          className={`${styles.largeCar} ${styles.car}`}
                           onClick={() => handleCarTypeSelect(3)}
                         >
                           <div>
-                            <h3>extra large</h3>
-                            <p style={{ color: "gray" }}> 3 row vehicle</p>
-                            <p> + $40</p>
+                            <h3>Extra Large</h3>
+                            <p style={{ color: "gray" }}>3 row vehicle</p>
+                            <p>+ $40</p>
                           </div>
                           <img
                             src="/images/xlsuv.jpg"
@@ -203,127 +215,16 @@ const Booking: React.FC = () => {
           );
         }
       case 2:
-        if (selectedService === 1) {
-          switch (selectedCarType) {
-            case 1:
-              return (
-                <div>
-                  {/* Calendly inline widget begin */}
-                  <div
-                    className="calendly-inline-widget"
-                    data-url="https://calendly.com/nashvillecardetail/interior-detail?primary_color=00aaff"
-                    style={{ minWidth: "250px", height: "450px" }}
-                  ></div>
-                  {/* Calendly inline widget end */}
-                </div>
-              );
-            case 2:
-              return (
-                <div>
-                  {/* Calendly inline widget begin */}
-                  <div
-                    className="calendly-inline-widget"
-                    data-url="https://calendly.com/nashvillecardetail/interior-detail-clone?primary_color=00aaff"
-                    style={{ minWidth: "250px", height: "450px" }}
-                  ></div>
-                  {/* Calendly inline widget end */}
-                </div>
-              );
-            case 3:
-            case 1:
-              return (
-                <div>
-                  {/* Calendly inline widget begin */}
-                  <div
-                    className="calendly-inline-widget"
-                    data-url="https://calendly.com/nashvillecardetail/interior-detail-large-clone-clone?primary_color=00aaff"
-                    style={{ minWidth: "250px", height: "450px" }}
-                  ></div>
-                  {/* Calendly inline widget end */}
-                </div>
-              );
-          }
-        } else if (selectedService === 2) {
-          switch (selectedCarType) {
-            case 1:
-              return (
-                <div>
-                  {/* Calendly inline widget begin */}
-                  <div
-                    className="calendly-inline-widget"
-                    data-url="https://calendly.com/nashvillecardetail/exterior-auto-detail?primary_color=00aaff"
-                    style={{ minWidth: "250px", height: "450px" }}
-                  ></div>
-                  {/* Calendly inline widget end */}
-                </div>
-              );
-            case 2:
-              return (
-                <div>
-                  {/* Calendly inline widget begin */}
-                  <div
-                    className="calendly-inline-widget"
-                    data-url="https://calendly.com/nashvillecardetail/exterior-detail-clone?primary_color=00aaff"
-                    style={{ minWidth: "250px", height: "450px" }}
-                  ></div>
-                  {/* Calendly inline widget end */}
-                </div>
-              );
-            case 3:
-              return (
-                <div>
-                  {/* Calendly inline widget begin */}
-                  <div
-                    className="calendly-inline-widget"
-                    data-url="https://calendly.com/nashvillecardetail/exterior-detail-large-clone?primary_color=00aaff"
-                    style={{ minWidth: "250px", height: "450px" }}
-                  ></div>
-                  {/* Calendly inline widget end */}
-                </div>
-              );
-          }
-        } else if (selectedService === 3) {
-          switch (selectedCarType) {
-            case 1:
-              return (
-                <div>
-                  {/* Calendly inline widget begin */}
-                  <div
-                    className="calendly-inline-widget"
-                    data-url="https://calendly.com/nashvillecardetail/full-detail-large-clone?primary_color=00aaff"
-                    style={{ minWidth: "250px", height: "450px" }}
-                  ></div>
-                  {/* Calendly inline widget end */}
-                </div>
-              );
-            case 2:
-              return (
-                <div>
-                  {/* Calendly inline widget begin */}
-                  <div
-                    className="calendly-inline-widget"
-                    data-url="https://calendly.com/nashvillecardetail/full-detail-large?primary_color=00aaff"
-                    style={{ minWidth: "250px", height: "450px" }}
-                  ></div>
-                  {/* Calendly inline widget end */}
-                </div>
-              );
-            case 3:
-              return (
-                <div>
-                  {/* Calendly inline widget begin */}
-                  <div
-                    className="calendly-inline-widget"
-                    data-url="https://calendly.com/nashvillecardetail/full-detail-clone?primary_color=00aaff"
-                    style={{ minWidth: "250px", height: "450px" }}
-                  ></div>
-                  {/* Calendly inline widget end */}
-                </div>
-              );
-          }
-        } else {
-          return <h3>Please go back and select a service</h3>;
-        }
+        const calendlyUrl = getCalendlyUrl();
+        return (
+          <div>
+            {calendlyUrl ? (
+              <div className="calendly-inline-widget" data-url={calendlyUrl} style={{ minWidth: "250px", height: "450px" }}></div>
+            ) : (
+              <h3>Please go back and select a service</h3>
+            )}
+          </div>
+        );
       case 3:
         return <div>Review your booking details and confirm.</div>;
       default:
