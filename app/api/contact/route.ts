@@ -1,29 +1,33 @@
+
 import { NextResponse } from 'next/server';
 import nodemailer from "nodemailer";
 // Make sure to include your environment variables
 const smtpHost = process.env.SMTP_HOST;
+const smtpPort = process.env.SMTP_PORT;
 const emailUser = process.env.EMAIL_USER;
 const emailPassword = process.env.EMAIL_PASSWORD;
 const receivingEmail = process.env.RECEIVING_EMAIL;
-
 export async function POST(request: Request) {
+  console.log('host' + smtpHost)
+  console.log('port' + smtpPort)
+  console.log('user' + emailUser)
+  console.log('pass' + emailPassword)
+  console.log('receiving' + receivingEmail)
   const { name, email, phone, subject, message } = await request.json();
-
   // Basic validation
   if (!name || !email || !phone || !subject || !message) {
     return NextResponse.json({ error: 'All fields are required' }, { status: 400 });
   }
-
   // Set up Nodemailer transporter
   const transporter = nodemailer.createTransport({
     host: smtpHost,
+    port: Number(smtpPort),
     secure: false, // Use true for port 465, false for others
     auth: {
       user: emailUser,
       pass: emailPassword,
     },
   });
-
   // Email options
   const mailOptions = {
     from: receivingEmail, // Your sending email
@@ -31,7 +35,6 @@ export async function POST(request: Request) {
     subject: `Contact Form Submission: ${subject}`,
     text: `You received a message from ${name} (${email} / ${phone}):\n\n${message}`,
   };
-
   try {
     // Send email
     await transporter.sendMail(mailOptions);
