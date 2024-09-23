@@ -13,7 +13,7 @@ export default function SecondaryButton({closeMenu}: PropsObject) {
         className={`btn--secondary btn-wrapper secondary`}
         aria-label="Contact Us"
         onClick={() => {
-          router.push('contact-us')
+          router.push('/contact-us')
           closeMenu && closeMenu();
         }}
       >

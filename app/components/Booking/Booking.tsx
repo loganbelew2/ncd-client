@@ -4,9 +4,8 @@
 import React, { useState, useEffect } from "react";
 import ServiceCard from "../ServiceCard/ServiceCard"; // Import the ServiceCard component
 import styles from "./Booking.module.css";
-import PaymentForm from "../Stripe/PaymentForm";
 import ServiceCardNoImage from "../ServiceCard/ServiceCardNoImage";
-import { useRouter, useSearchParams } from "next/navigation";
+import {useSearchParams } from "next/navigation";
 
 const steps = [
   { id: 1, title: "Select Service" },

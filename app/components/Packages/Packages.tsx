@@ -1,5 +1,3 @@
-"use client"
-import { useRouter } from "next/navigation";
 import PrimaryButton from "../Buttons/Primary-Button";
 import styles from "./Packages.module.css"; // Adjust the path as needed
 

@@ -8,17 +8,19 @@
 
 .hero__container__left {
   padding: 20px;
-  flex: 2;
+  flex: 1;
 }
 
 .hero__container__right {
   flex: 1;
+  padding: 20px;
   min-width: 400px;
   max-width: 100%;
 }
 .image {
   display: block;
   min-height: 400px;
+  width: 99%;
 }
 .btn--primary {
   background-color: #0070f3; /* Customize button color */
@@ -49,10 +51,26 @@
 .subheading {
   color: gray;
 }
+.image {
+  border-radius: 40px; /* adjust the value to your liking */
+}
 
-/* section two */
 
-.section_two {
-  margin: 20px;
-  background-color: #f8f8f8;
+
+@media (max-width: 1025px) {
+  section.section_two {
+    width: 100%;
+  }
+  .section_two form {
+    width: 100%;
+  }
+  .hero__container__right {
+    display: none;
+  }
+}
+@media (min-width: 1800px) {
+  .image {
+    margin-top: 50px;
+    width: 90%;
+  }
 }

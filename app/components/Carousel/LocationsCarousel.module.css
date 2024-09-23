@@ -1,0 +1,52 @@
+.carouselContainer {
+  text-align: center;
+  margin: 4rem 0;
+}
+.locationSlide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 8rem;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+  }
+.locationSlide * {
+  z-index: 2;
+}
+.locationSlide::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.4); 
+  z-index: 1; 
+}
+
+  .location0 {
+    background-image: url(/images/Nashville.webp);
+  }
+  .location1 {
+    background-image: url(/images/Franklin.jpeg);
+  }
+  .location2 {
+    background-image: url(/images/Brentwood.jpg);
+  }
+  .location3 {
+    background-image: url(/images/Nolensville.jpg);
+  }
+  .location4 {
+    background-image: url(/images/SpringHill.jpeg);
+  }
+  .location5 {
+    background-image: url(/images/Murfreesboro.jpg);
+  }
+  .location6 {
+    background-image: url(/images/Smyrna.jpeg);
+  }
+  .location7 {
+    background-image: url(/images/MtJuliet.jpeg);
+  }

@@ -1,0 +1,75 @@
+/* .servicesContainer {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.fullDetail {
+    background-color: var(--color-compliment);
+}
+.interiorDetail {
+    background-color: rgb(255, 0, 0);
+}
+.exteriorDetail {
+    background-color: rgb(0, 255, 0);
+} */
+.servicesContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+  /* text-align: center; */
+}
+
+.servicesContainer h1 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+.servicesContainer h1::after {
+  content: '';
+  height: 4px;
+  display: block;
+  background: var(--color-primary);
+}
+.fullDetail, .interiorDetail, .exteriorDetail {
+  margin-bottom: 40px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 1200px;
+  background-color: #f9f9f9;
+}
+
+.servicesContainer h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+.servicesContainer h2::after {
+  content: '';
+  height: 4px;
+  display: block;
+  background: linear-gradient(to right, var(--color-primary), var(--color-secondary));
+}
+
+.servicesContainer p {
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+.ctaButton {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.ctaButton:hover {
+  background-color: #0056b3;
+}

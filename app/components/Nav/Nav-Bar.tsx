@@ -47,9 +47,11 @@ const CloseIcon = () => (
   </svg>
 );
 
-export const NavBar = () => {
+interface NavProps {
+  isFooter?: boolean;
+}
+export const NavBar = ({isFooter}: NavProps) => {
   const [isOpen, setIsOpen] = useState(false);
-
   const closeMenu = () => {
     setIsOpen(false);
   };
@@ -59,7 +61,7 @@ export const NavBar = () => {
   };
 
   return (
-    <div className={styles.navContainer}>
+    <div className={`${styles.navContainer} ${isFooter? styles.footerNav : ''}`}>
       <div className={styles.logoContainer}>
         <Link href="/">
           <Image
@@ -84,7 +86,7 @@ export const NavBar = () => {
         <div className={styles.links}>
           <Link
             className={styles.link}
-            href="/services/all-services"
+            href="/services"
             onClick={closeMenu}
           >
             Services

@@ -3,7 +3,6 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { NavBar } from "./components/Nav/Nav-Bar";
 import { Footer } from "./components/Footer/Footer";
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Nashville Car Detail - Premium Mobile Auto Detailing",
@@ -39,16 +38,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en-US">
-      <body>
-        <header>
-          <nav className="nav">
-            <NavBar />
-          </nav>
-        </header>
-        <main style={{paddingTop: 120}}>{children}</main>
-        <footer>
-          {/* <Footer /> */}
-        </footer>
+      <body className="body">
+        <div className="container">
+          <header>
+            <nav className="nav">
+              <NavBar />
+            </nav>
+          </header>
+          <main className="main" >{children}</main>
+          <footer>
+            <Footer />
+          </footer>
+        </div>
       </body>
     </html>
   );

@@ -18,6 +18,22 @@
   /* Define font family */
   --font-family: "Roboto", sans-serif;
 }
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Full height of the viewport */
+}
+
+.main {
+  flex: 1;
+  padding-top: 120px;
+}
+
 
 /* Base styles */
 body {
@@ -43,10 +59,10 @@ main {
  
 }
 
-footer div {
-  background-color: var(--color-primary);
-  display: flex;
-  padding: 1rem; /* Padding in rem */
+footer {
+  width: 100vw;
+  margin-left: calc((100% - 100vw) /2); /* Reset the margin to align it with the viewport */
+  color: white;
 }
 
 main {
@@ -74,7 +90,7 @@ p {
   color: var(--color-background); /* Text color */
   border: none;
   padding: 0.7rem 1.5rem;
-  border-radius: 100px;
+  border-radius: 5px;
   font-size: var(--font-size-md);
   font-family: var(--font-family);
   cursor: pointer;
