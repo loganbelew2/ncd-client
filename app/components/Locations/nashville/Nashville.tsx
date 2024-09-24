@@ -5,19 +5,20 @@ import { useRouter } from "next/navigation";
 
 export default function Nashville() {
   const router = useRouter();
+
   function handleScheduleClick() {
     router.push("/booking");
   }
 
   useEffect(() => {
     // Add class to body when component mounts
-    document.body.classList.add(styles.nashvilleBody);
+    document.body.classList.add(styles.serviceBody);
     const mainElement = document.querySelector(".main");
     mainElement?.classList.add(styles.mainn);
 
     // Cleanup function to remove the classes when the component unmounts
     return () => {
-      document.body.classList.remove(styles.nashvilleBody); // Remove from body
+      document.body.classList.remove(styles.serviceBody); // Remove from body
       mainElement?.classList.remove(styles.mainn); // Remove from .main element
     };
   }, []);
@@ -26,27 +27,27 @@ export default function Nashville() {
     <section className={styles.nashvilleSection}>
       {/* Header Section */}
       <div className={styles.header}>
-        <h1>Mobile Car Detailing in Nashville</h1>
+        <h1>Premium Mobile Car Detailing Services in Nashville</h1>
         <p>
-          Nashville Car Detail delivers high-quality mobile car detailing
-          services directly to your location in Music City. Whether it’s a
-          thorough exterior wash or an immaculate interior clean, we’re
-          committed to giving your vehicle the attention it deserves. Serving
-          all areas in Nashville and its surrounding neighborhoods, we take
-          pride in providing excellent customer service, working diligently to
-          ensure your car looks its best. With a focus on careful attention to
-          detail and customer satisfaction, we make sure your car stays spotless
-          and well-maintained, no matter the season or weather.
+          Nashville Car Detail proudly offers high-quality mobile car detailing
+          services directly to your location in Nashville, TN. Our experienced
+          team specializes in comprehensive exterior and interior detailing,
+          ensuring that your vehicle receives the meticulous care it deserves.
+          We serve all neighborhoods in Nashville, providing exceptional
+          customer service and a commitment to excellence. Whether you need a
+          thorough wash, waxing, or interior shampooing, our services are
+          designed to keep your car spotless and well-maintained in any season.
         </p>
       </div>
 
       {/* CTA Section */}
       <div className={styles.ctaSection}>
-        <h2>Book Your Nashville Detailing Today</h2>
+        <h2>Book Your Nashville Mobile Detailing Service Today</h2>
         <p>
-          Contact us to schedule your mobile car detailing service in Nashville
-          and experience the convenience of top-tier car care brought to your
-          location.
+          Experience the convenience of top-tier car care right at your
+          doorstep. Contact Nashville Car Detail to schedule your mobile car
+          detailing service in Nashville. Our team is ready to provide the
+          highest standard of detailing, ensuring your vehicle looks its best.
         </p>
         <button className="btn--primary" onClick={handleScheduleClick}>
           Schedule Now
