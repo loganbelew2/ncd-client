@@ -8,11 +8,7 @@ const emailUser = process.env.EMAIL_USER;
 const emailPassword = process.env.EMAIL_PASSWORD;
 const receivingEmail = process.env.RECEIVING_EMAIL;
 export async function POST(request: Request) {
-  console.log('host' + smtpHost)
-  console.log('port' + smtpPort)
-  console.log('user' + emailUser)
-  console.log('pass' + emailPassword)
-  console.log('receiving' + receivingEmail)
+  NextResponse.json({"host": smtpHost, "port": smtpPort, "user": emailUser, "pass": emailPassword, "receivingEmail": receivingEmail});
   const { name, email, phone, subject, message } = await request.json();
   // Basic validation
   if (!name || !email || !phone || !subject || !message) {
