@@ -8,7 +8,7 @@ const emailUser = process.env.EMAIL_USER;
 const emailPassword = process.env.EMAIL_PASSWORD;
 const receivingEmail = process.env.RECEIVING_EMAIL;
 export async function POST(request: Request) {
-  NextResponse.json({"host": smtpHost, "port": smtpPort, "user": emailUser, "pass": emailPassword, "receivingEmail": receivingEmail});
+ 
   const { name, email, phone, subject, message } = await request.json();
   // Basic validation
   if (!name || !email || !phone || !subject || !message) {
@@ -37,6 +37,6 @@ export async function POST(request: Request) {
     return NextResponse.json({ success: 'Message sent successfully' }, { status: 200 });
   } catch (error) {
     console.error('Error sending email:', error);
-    return NextResponse.json({ error: 'Failed to send message' }, { status: 500 });
+    return NextResponse.json({"host": smtpHost, "port": smtpPort, "user": emailUser, "pass": emailPassword, "receivingEmail": receivingEmail});
   }
 }
