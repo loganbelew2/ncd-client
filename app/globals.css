@@ -153,13 +153,13 @@ p {
 /* Medium screens (tablets) */
 @media (max-width: 1024px) {
   html {
-    font-size: 16px; /* Slightly smaller base font size */
+    font-size: 18px; /* Slightly smaller base font size */
   }
 }
 
 /* Small screens (phones) */
 @media (max-width: 768px) {
   html {
-    font-size: 14px; /* Smaller base font size */
+    font-size: 16px; /* Smaller base font size */
   }
 }

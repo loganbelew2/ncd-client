@@ -1,89 +1,64 @@
-.serviceBody {
-    width: 100vw;
-    margin: 0;
-  }
-  .mainn {
-      padding: 120px 0px 0px 0px !important;
-  }
-  .brentwoodSection {
-    padding: 0 0 0 0;
-    display: flex;
-    flex-flow: column wrap;
-    align-items: center;
-    text-align: center;
-  }
-  
-  .header {
-    position: relative;
-    background-image: url(/images/Brentwood.jpg);
-    background-size: cover;
-    background-position: center;
-    width: 100vw;
-    height: 50vh;
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .header::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, .5); /* Black overlay with 50% opacity */
-    z-index: 1; /* Place it behind the text but in front of the image */
-  }
-  
-  .header h1,
-  .header p {
-    position: relative; /* Ensure the text appears above the overlay */
-    z-index: 2; /* Stack above the overlay */
-  }
-  
-  .header h1 {
-    font-size: 3rem;
-    color: var(--color-background);
-    margin-bottom: 10px;
-  }
-  
-  .header p {
-    font-size: 1.2rem;
-    color: var(--color-background);
-    margin-bottom: 40px;
-  }
-  .ctaSection {
-    padding: 50px 0;
-    background-color: #007bff;
-    color: white;
-    margin: 0 0 50px 0;
-    width: 100%;
-  }
-  
-  .ctaSection h2 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-  }
-  
-  .ctaSection p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-  }
-  
-  .testimonialSection {
-    padding: 40px 20px;
-  }
-  
-  .testimonialSection h2 {
-    font-size: 2.5rem;
-    color: #000;
-    margin-bottom: 20px;
-  }
-  
-  .testimonialSection p {
-    color: #666;
-    font-size: 1.2rem;
-  }
-  
+.brentwoodSection {
+  width: 100vw;
+  position:absolute;
+  left: 0;
+  top: 14vh;
+}
+.header {
+  background-image: url("/images/Brentwood.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: multiply; 
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  padding: 60px 0;
+}
+
+.header h1 {
+  font-size: 3rem;
+  color: var(--color-background);
+  margin-bottom: 10px;
+}
+
+.header p {
+  font-size: 1.2rem;
+  color: var(--color-background);
+  margin-bottom: 40px;
+}
+.ctaSection {
+  padding: 50px 0 5px 0;
+  background-color: #007bff;
+  color: white;
+  width: 100%;
+  text-align: center;
+  height: 100%;
+}
+
+.ctaSection h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.ctaSection p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.testimonialSection {
+  padding: 40px 20px;
+}
+
+.testimonialSection h2 {
+  font-size: 2.5rem;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+.testimonialSection p {
+  color: #666;
+  font-size: 1.2rem;
+}

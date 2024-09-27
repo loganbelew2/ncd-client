@@ -8,7 +8,6 @@ const emailUser = process.env.EMAIL_USER;
 const emailPassword = process.env.EMAIL_PASSWORD;
 const receivingEmail = process.env.RECEIVING_EMAIL;
 export async function POST(request: Request) {
- 
   const { name, email, phone, subject, message } = await request.json();
   // Basic validation
   if (!name || !email || !phone || !subject || !message) {

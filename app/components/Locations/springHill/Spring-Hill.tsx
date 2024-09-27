@@ -24,7 +24,7 @@ export default function SpringHill() {
   }, []);
 
   return (
-    <section className={styles.SpringHillSection}>
+    <section className={styles.springHillSection}>
       {/* Header Section */}
       <div className={styles.header}>
         <h1>Premium Mobile Car Detailing Services in Spring Hill</h1>

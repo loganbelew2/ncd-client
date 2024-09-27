@@ -10,18 +10,6 @@ export default function Nashville() {
     router.push("/booking");
   }
 
-  useEffect(() => {
-    // Add class to body when component mounts
-    document.body.classList.add(styles.serviceBody);
-    const mainElement = document.querySelector(".main");
-    mainElement?.classList.add(styles.mainn);
-
-    // Cleanup function to remove the classes when the component unmounts
-    return () => {
-      document.body.classList.remove(styles.serviceBody); // Remove from body
-      mainElement?.classList.remove(styles.mainn); // Remove from .main element
-    };
-  }, []);
 
   return (
     <section className={styles.nashvilleSection}>

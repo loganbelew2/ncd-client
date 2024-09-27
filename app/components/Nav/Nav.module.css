@@ -6,6 +6,7 @@
   background-color: white;
   position: fixed;
   top: 0;
+  margin: auto;
   width: 80%;
   z-index: 1000;
 }
@@ -72,20 +73,21 @@
   position: fixed;
   top: 20px;
   right: 20px;
-  color: var(--color-secondary);
+  color: var(--color-primary);
 }
 
 
 @media (max-width: 1025px) {
   .navContainer {
-    width: 95%;
-    margin-left: 5vw;
+    width: 100%;
   }
   .link {
     margin: 0.5rem;
+    font-weight: bold;
   }
   .nav {
     display: none;
+
   }
   .nav.open {
     position: fixed;
@@ -126,6 +128,10 @@
   }
   .hamburger {
     display: block;
+    padding-right: 20px;
+  }
+  .fixedHamburger {
+    padding: 0;
   }
   .buttonsVerticle {
     display: flex;

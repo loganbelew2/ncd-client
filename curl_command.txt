@@ -1,0 +1,1 @@
+curl https://connect.squareup.com/v2/catalog/list   -H 'Square-Version: 2024-09-19'   -H 'Authorization: Bearer EAAAlq_vJOmB1n2Tq9zFCDSBxbXFLhkgQbEoi-PqjZhRKr6MJJE36_ubKRjxMLuC'   -H 'Content-Type: application/json'

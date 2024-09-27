@@ -79,7 +79,7 @@ const Booking: React.FC = () => {
   const getCalendlyUrl = () => {
     if (selectedService === 1) {
       return selectedCarType === 1
-        ? "https://calendly.com/nashvillecardetail/interior-detail?primary_color=00aaff"
+        ? "https://calendly.com/nashvillecardetail/vehicle-detailing?primary_color=00aaff"
         : selectedCarType === 2
         ? "https://calendly.com/nashvillecardetail/interior-detail-clone?primary_color=00aaff"
         : "https://calendly.com/nashvillecardetail/interior-detail-large-clone-clone?primary_color=00aaff";
@@ -113,7 +113,8 @@ const Booking: React.FC = () => {
   }, [currentStep]);
 
   const renderStepContent = () => {
-    const sservice = selectedService != null ? services[selectedService - 1] : services[1];
+    const sservice =
+      selectedService != null ? services[selectedService - 1] : services[1];
 
     switch (currentStep) {
       case 1:
@@ -219,7 +220,11 @@ const Booking: React.FC = () => {
         return (
           <div>
             {calendlyUrl ? (
-              <div className="calendly-inline-widget" data-url={calendlyUrl} style={{ minWidth: "250px", height: "450px" }}></div>
+              <div
+                className="calendly-inline-widget"
+                data-url={calendlyUrl}
+                style={{ minWidth: "250px", height: "450px" }}
+              ></div>
             ) : (
               <h3>Please go back and select a service</h3>
             )}
