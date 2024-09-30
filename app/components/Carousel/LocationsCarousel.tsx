@@ -61,7 +61,7 @@ export default function LocationsCarousel() {
                 styles[`location${index}`]
               }`}
             >
-              <h2>{location}</h2>
+              <h3>{location}</h3>
             </div>
           </SwiperSlide>
         ))}

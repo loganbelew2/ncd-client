@@ -46,7 +46,7 @@ export default function RootLayout({
             </nav>
           </header>
           <main className="main" >{children}</main>
-          <footer>
+          <footer className="footer">
             <Footer />
           </footer>
         </div>

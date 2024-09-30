@@ -1,3 +1,4 @@
+import ExteriorService from "@/app/components/Services/Exterior-Service";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -21,12 +22,7 @@ export const metadata: Metadata = {
   };
   function ExteriorDetail(){
     return (
-      <main>
-        <section>
-          <h1>Exterior Detailing</h1>
-          <p>lksanfokasnf fiqnwefnss</p>
-        </section>
-      </main>
+      <ExteriorService/>
     )
   }
   export default ExteriorDetail;

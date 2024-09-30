@@ -22,6 +22,9 @@ html, body {
   height: 100%;
   margin: 0;
 }
+* {
+  box-sizing: border-box;
+}
 
 .container {
   display: flex;
@@ -61,7 +64,7 @@ main {
 
 footer {
   width: 100vw;
-  margin-left: calc((100% - 100vw) /2); /* Reset the margin to align it with the viewport */
+  margin-left: calc((100% - 100vw) /2); 
   color: white;
 }
 
@@ -70,19 +73,19 @@ main {
 }
 
 h1 {
-  font-size: var(--font-size-xxl); /* Font size in rem */
+  font-size: clamp(2rem, 4vw, 3rem) ;
 }
 
 h2 {
-  font-size: var(--font-size-xl); /* Font size in rem */
+  font-size: clamp(1.75rem, 3vw, 2.25rem) ;
 }
 
 h3 {
-  font-size: var(--font-size-lg);
+  font-size: clamp(1.5rem, 2.5vw, 1.75rem) ;
 }
 
 p {
-  font-size: var(--font-size-md); /* Font size in rem */
+  font-size: clamp(0.875rem, 1.5vw, 1rem) ;
 }
 /* Primary Button */
 .btn--primary {
@@ -94,15 +97,16 @@ p {
   font-size: var(--font-size-md);
   font-family: var(--font-family);
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: transform .3s ease;
 }
 
 .btn--primary:hover {
-  background: linear-gradient(
+  /* background: linear-gradient(
     to right,
     var(--color-secondary),
     var(--color-primary)
-  ); /* Secondary color on hover */
+  );  */
+  transform: translateY(-2px);
 }
 
 /* Secondary Button */
@@ -122,7 +126,20 @@ p {
   color: var(--color-primary);
 }
 
-
+.btn--tertiary {
+  /* background-color: var(--color-primary);  */
+  /* color: var(--color-background);  */
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 5px;
+  font-size: var(--font-size-md);
+  font-family: var(--font-family);
+  cursor: pointer;
+  transition: transform .3s ease;
+}
+.btn--tertiary:hover {
+  transform: translateY(-2px);
+}
 
 @media (max-width: 1025px) {
   .butt .btn-wrapper  {

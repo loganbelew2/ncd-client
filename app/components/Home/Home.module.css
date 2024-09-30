@@ -10,6 +10,9 @@
   padding: 20px;
   flex: 1;
 }
+.hero__container__left button {
+  margin-top: 5px;
+}
 
 .hero__container__right {
   flex: 1;
@@ -22,16 +25,11 @@
   min-height: 400px;
   width: 99%;
 }
-.btn--primary {
-  background-color: #0070f3; /* Customize button color */
-  color: #fff; /* Button text color */
-  border: none; /* Remove border */
-  padding: 10px 20px; /* Add padding */
-  cursor: pointer; /* Show pointer cursor on hover */
-}
+
 .title {
-  font-size: clamp(2rem, 13vw, 5rem); /* Limits the font size */
+  font-size: clamp(2rem, 13vw, 4.5rem); /* Limits the font size */
   line-height: 1.2; /* Adjusts the height between lines */
+  width: max-content;
   margin-bottom: 1rem; /* Adds space between the title and subheading */
   overflow-wrap: break-word; /* Allows breaking long words */
 }
@@ -39,6 +37,7 @@
 .subheading {
   color: gray;
   margin-top: 0.5rem; /* Adjusts space below the title */
+  margin-bottom: 0;
 }
 
 .title::after {

@@ -15,24 +15,24 @@ const steps = [
 const services = [
   {
     id: 1,
-    title: "Interior Detailing",
-    price: 139,
-    description:
-      "Comprehensive cleaning, conditioning and protection of your vehicle’s interior.",
-    imageUrl: "/images/interior-detailing.jpg",
-  },
-  {
-    id: 2,
     title: "Exterior Detailing",
-    price: 139,
+    price: 60,
     description:
       "Thorough cleaning, paint decontamination, and protection for your vehicle’s exterior.",
     imageUrl: "/images/Car-Exterior-Detailing.jpg",
   },
   {
+    id: 2,
+    title: "Interior Detailing",
+    price: 99,
+    description:
+      "Comprehensive cleaning, conditioning and protection of your vehicle’s interior.",
+    imageUrl: "/images/interior-detailing.jpg",
+  },
+  {
     id: 3,
     title: "Full Detailing",
-    price: 199,
+    price: 129,
     description:
       "Complete interior and exterior detailing for a showroom finish.",
     imageUrl: "/images/full-detail.jpg",
@@ -152,7 +152,7 @@ const Booking: React.FC = () => {
                           onClick={() => handleCarTypeSelect(1)}
                         >
                           <div>
-                            <h3>Regular</h3>
+                            <h3 style={{textAlign:"center"}}>Regular</h3>
                             <p style={{ color: "gray" }}>2 to 4 door sedan</p>
                           </div>
                           <img
@@ -169,10 +169,10 @@ const Booking: React.FC = () => {
                         >
                           <div>
                             <h3>Large</h3>
+                            <span>+ $20</span>
                             <p style={{ marginBottom: 0, color: "gray" }}>
                               4 door SUV/ small truck
                             </p>
-                            <p>+ $20</p>
                           </div>
                           <img
                             src="/images/suv.jpg"
@@ -187,9 +187,9 @@ const Booking: React.FC = () => {
                           onClick={() => handleCarTypeSelect(3)}
                         >
                           <div>
-                            <h3>Extra Large</h3>
+                            <h3 style={{textAlign:"center"}}>Extra Large</h3>
+                            <span>+ $40</span>
                             <p style={{ color: "gray" }}>3 row vehicle</p>
-                            <p>+ $40</p>
                           </div>
                           <img
                             src="/images/xlsuv.jpg"

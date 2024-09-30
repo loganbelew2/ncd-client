@@ -1,18 +1,4 @@
-/* .servicesContainer {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-}
-.fullDetail {
-    background-color: var(--color-compliment);
-}
-.interiorDetail {
-    background-color: rgb(255, 0, 0);
-}
-.exteriorDetail {
-    background-color: rgb(0, 255, 0);
-} */
+
 .servicesContainer {
   display: flex;
   flex-direction: column;
@@ -59,17 +45,6 @@
   line-height: 1.6;
 }
 
-.ctaButton {
-  background-color: #007bff;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  font-size: 1.1rem;
-  border-radius: 4px;
-  cursor: pointer;
-  margin-top: 20px;
-}
-
-.ctaButton:hover {
-  background-color: #0056b3;
+.servicesContainer button {
+  margin-right: 10px;
 }

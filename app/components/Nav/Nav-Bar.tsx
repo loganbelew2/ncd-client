@@ -97,13 +97,6 @@ export const NavBar = ({isFooter}: NavProps) => {
           <Link className={styles.link} href="/locations" onClick={closeMenu}>
             Locations
           </Link>
-          {/* <Link
-            className={styles.link}
-            href="/testimonials"
-            onClick={closeMenu}
-          >
-            Testimonials
-          </Link> */}
         </div>
         <div
           className={`${styles.buttons} ${isOpen && styles.buttonsVerticle} butt`}

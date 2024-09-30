@@ -11,7 +11,7 @@ export default function Home() {
     <>
       <section className={styles.hero__container}>
         <div className={styles.hero__container__left}>
-          <h1 className={styles.title}>Mobile auto detailing in Nashville</h1>
+          <h1 className={styles.title}>Mobile auto <br/>detailing in <br/> Nashville</h1>
           <p className={styles.subheading}>
             Experience the convenience of our mobile detailing service, designed
             to fit seamlessly into your schedule with clear and upfront pricing.

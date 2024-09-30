@@ -83,7 +83,6 @@ export default function ContactUs() {
         className={styles.form}
       >
         <fieldset className={styles.fieldSet}>
-          <legend>Contact Us</legend>
           <div className={styles.formGroup}>
             <input
               className={styles.inputField}

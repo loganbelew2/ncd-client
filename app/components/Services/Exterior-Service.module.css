@@ -1,0 +1,24 @@
+.exteriorDetailContainer {
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.exteriorDetailContainer h1 {
+    display: inline-block;
+}
+.exteriorDetailContainer h1::after {
+    content: '';
+    height: 4px;
+    display: block;
+    background: var(--color-primary);
+}
+.exteriorDetailContainer h1 {
+    text-align: center;
+}
+.exteriorDetailContainer h2 {
+    text-align: center;
+}
+.serviceDetails {
+    
+}

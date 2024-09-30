@@ -12,8 +12,8 @@
 .cardsContainer {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
-  gap: 2vw;
+  gap: 2em;
+  justify-content: space-evenly;
 }
 .cardInfoContainer {
   display: flex;

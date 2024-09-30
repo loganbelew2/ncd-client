@@ -1,8 +1,45 @@
+import { Metadata } from "next";
 import PrimaryButton from "../Buttons/Primary-Button";
 import styles from "./Services.module.css";
+import LearnMoreButton from "../Buttons/Learn-More-Button";
+
+
+export const metadata: Metadata = {
+  title: "Nashville Car Detail - Car Detailing Services in Nashville",
+  description: "Explore Nashville Car Detail's premium car detailing services, including Full Detail, Interior Detail, and Exterior Detail. Book now for a fresh and shiny ride!",
+  keywords: "Nashville car detailing, car detail services, full car detail, interior car detail, exterior car detail, auto detailing, mobile car detail Nashville",
+  openGraph: {
+    title: "Nashville Car Detail - Car Detailing Services in Nashville",
+    description: "Our professional mobile detailing services cover Full Detail, Interior Detail, and Exterior Detail. Book your car detailing service today.",
+    url: "https://nashvillecardetail.com/services",
+    type: "website",
+    images: [
+      {
+        url: "https://nashvillecardetail.com/images/car-detailing-services.jpg",
+        alt: "Nashville Car Detailing Services",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Nashville Car Detail - Car Detailing Services",
+    description: "Get the best mobile car detailing services in Nashville, including Full, Interior, and Exterior Detail packages. Contact us to book today!",
+    images: [
+      {
+        url: "https://nashvillecardetail.com/images/car-detailing-services.jpg",
+        alt: "Nashville Car Detailing Services",
+      },
+    ],
+  },
+  alternates: {
+    canonical: "https://nashvillecardetail.com/services",
+  },
+};
+
 
 export default function Services() {
     
+
   return (
     <section className={styles.servicesContainer}>
       <h1>Our Services</h1>
@@ -26,6 +63,7 @@ export default function Services() {
           shines for up to 3 months.
         </p>
         <PrimaryButton params={3}/>
+        <LearnMoreButton service="full-detail"/>
       </div>
 
       <div className={styles.interiorDetail}>
@@ -44,7 +82,8 @@ export default function Services() {
           windows and an air freshener complete the package, ensuring a fresh
           and inviting interior.
         </p>
-        <PrimaryButton params={1}/>
+        <PrimaryButton params={2}/>
+        <LearnMoreButton service="interior-detail"/>
       </div>
 
       <div className={styles.exteriorDetail}>
@@ -61,7 +100,8 @@ export default function Services() {
           car, we apply a wax sealant that provides a brilliant shine and
           safeguards the paint for up to 3 months.
         </p>
-        <PrimaryButton params={2}/>
+        <PrimaryButton params={1}/>
+        <LearnMoreButton service="exterior-detail"/>
       </div>
     </section>
   );
