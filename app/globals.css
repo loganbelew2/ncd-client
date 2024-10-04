@@ -18,7 +18,7 @@
   /* Define font family */
   --font-family: "Roboto", sans-serif;
 }
-html, body {
+html {
   height: 100%;
   margin: 0;
 }
@@ -27,14 +27,19 @@ html, body {
 }
 
 .container {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh; /* Full height of the viewport */
+  display: grid;
+  grid-template-rows: 2rem 1fr 2rem;
+  grid-template-columns: 100%;
 }
-
+.header {
+  /* grid-column: 1 span 2; */
+}
 .main {
-  flex: 1;
   padding-top: 120px;
+  width: 100%;
+}
+.footer {
+
 }
 
 

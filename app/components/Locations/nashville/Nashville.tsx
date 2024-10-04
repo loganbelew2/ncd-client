@@ -10,7 +10,6 @@ export default function Nashville() {
     router.push("/booking");
   }
 
-
   return (
     <section className={styles.nashvilleSection}>
       {/* Header Section */}

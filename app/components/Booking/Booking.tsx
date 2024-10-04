@@ -6,6 +6,7 @@ import ServiceCard from "../ServiceCard/ServiceCard";
 import styles from "./Booking.module.css";
 import ServiceCardNoImage from "../ServiceCard/ServiceCardNoImage";
 import { useSearchParams } from "next/navigation";
+import Image from "next/image";
 
 const steps = [
   { id: 1, title: "Select Service" },
@@ -155,7 +156,7 @@ const Booking: React.FC = () => {
                             <h3 style={{textAlign:"center"}}>Regular</h3>
                             <p style={{ color: "gray" }}>2 to 4 door sedan</p>
                           </div>
-                          <img
+                          <Image
                             src="/images/se.webp"
                             width={75}
                             height={75}
@@ -174,7 +175,7 @@ const Booking: React.FC = () => {
                               4 door SUV/ small truck
                             </p>
                           </div>
-                          <img
+                          <Image
                             src="/images/suv.jpg"
                             width={75}
                             height={75}
@@ -191,7 +192,7 @@ const Booking: React.FC = () => {
                             <span>+ $40</span>
                             <p style={{ color: "gray" }}>3 row vehicle</p>
                           </div>
-                          <img
+                          <Image
                             src="/images/xlsuv.jpg"
                             width={100}
                             height={75}

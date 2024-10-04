@@ -1,25 +1,25 @@
-"use client"
+"use client";
 import React, { useEffect, useState } from 'react';
 
 // Define the structure of the appointment segment
 interface AppointmentSegment {
-  duration_minutes: number;
-  team_member_id: string;
-  service_variation_id: string;
-  service_variation_version: number;
+  durationMinutes: number;
+  teamMemberId: string;
+  serviceVariationId: string;
+  serviceVariationNumber: string;
 }
 
 // Define the structure of an availability object
 interface Availability {
-  start_at: string;
+  startAt: string;
   location_id: string;
-  appointment_segments: AppointmentSegment[];
+  appointmentSegments: AppointmentSegment[];
 }
 
 // Define the structure of the API response
 interface AvailabilityResponse {
   availabilities: Availability[];
-  errors: string[];
+  errors?: string[];
 }
 
 const BookingV2: React.FC = () => {
@@ -33,15 +33,9 @@ const BookingV2: React.FC = () => {
         },
         method: "POST",
       });
-      const data: AvailabilityResponse = await response.json();
-
-      // Check if response structure is correct
-      if (Array.isArray(data.availabilities)) {
-        setAvailableTimes(data.availabilities);
-      } else {
-        console.error("Unexpected response structure:", data);
-        setAvailableTimes([]); // Reset to an empty array
-      }
+      
+      const data: AvailabilityResponse = await response.json(); // Parse JSON response
+      setAvailableTimes(data.availabilities); // Assign parsed data
     } catch (error) {
       console.error("Error fetching availability:", error);
       setAvailableTimes([]); // Reset to an empty array on error
@@ -55,17 +49,18 @@ const BookingV2: React.FC = () => {
   return (
     <div>
       <h2>Available Appointment Times</h2>
-      {availableTimes.length > 0 ? (
+      {availableTimes?.length > 0 ? (
         <ul>
           {availableTimes.map((availability, index) => {
-            const startDateTime = new Date(availability.start_at);
-            const formattedTime = startDateTime.toLocaleString(); // Format to a more user-friendly string
+            const startDateTime = new Date(availability.startAt);
+            const formattedTime = startDateTime.toLocaleString(); // Format to user-friendly string
 
             return (
               <li key={index}>
                 <div>
                   <strong>Time:</strong> {formattedTime} 
-                  <span> | Duration: {availability.appointment_segments[0].duration_minutes} minutes</span>
+                  <span> | Duration: {availability.appointmentSegments[0].durationMinutes} minutes</span>
+                  <span>{availability.appointmentSegments[0].serviceVariationId}</span>
                 </div>
               </li>
             );
