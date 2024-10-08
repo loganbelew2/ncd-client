@@ -11,13 +11,12 @@ export const metadata: Metadata = {
     "Nolensville car detailing, mobile car detailing Nolensville, auto detailing Nolensville, car cleaning Nolensville, car waxing Nolensville, Nashville Car Detail, premium car care",
   authors: [{ name: "Nashville Car Detail" }],
   robots: "index, follow",
-  viewport: "width=device-width, initial-scale=1.0",
   openGraph: {
     title: "Mobile Car Detailing in Nolensville - Nashville Car Detail",
     description:
       "Nashville Car Detail provides high-quality mobile car detailing services in Nolensville, TN. Contact us to schedule your detailing service and experience unparalleled car care.",
     type: "website",
-    url: "https://www.nashvillecardetailing.com/locations/nolensville",
+    url: "https://www.nashvillecardetail.com/locations/nolensville",
     images: "/images/NCDLogoTransBig.png",
   },
   twitter: {

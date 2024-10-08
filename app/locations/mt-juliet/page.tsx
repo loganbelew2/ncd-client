@@ -10,13 +10,12 @@ export const metadata: Metadata = {
     "Mt. Juliet car detailing, mobile car detailing Mt. Juliet, auto detailing Mt. Juliet, car cleaning Mt. Juliet, car waxing Mt. Juliet, Nashville Car Detail, premium car care",
   authors: [{ name: "Nashville Car Detail" }],
   robots: "index, follow",
-  viewport: "width=device-width, initial-scale=1.0",
   openGraph: {
     title: "Mobile Car Detailing in Mt. Juliet - Nashville Car Detail",
     description:
       "Nashville Car Detail provides high-quality mobile car detailing services in Mt. Juliet, TN. Contact us to schedule your detailing service and experience unparalleled car care.",
     type: "website",
-    url: "https://www.nashvillecardetailing.com/locations/mt-juliet",
+    url: "https://www.nashvillecardetail.com/locations/mt-juliet",
     images: "/images/NCDLogoTransBig.png",
   },
   twitter: {

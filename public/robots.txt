@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://www.nashvillecardetailing.com
+Host: https://www.nashvillecardetail.com
 
 # Sitemaps
-Sitemap: https://www.nashvillecardetailing.com/sitemap.xml
+Sitemap: https://www.nashvillecardetail.com/sitemap.xml

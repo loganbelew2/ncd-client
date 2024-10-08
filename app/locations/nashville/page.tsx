@@ -10,13 +10,12 @@ export const metadata: Metadata = {
     "Nashville car detailing, mobile car detailing Nashville, auto detailing Nashville, car cleaning Nashville, car waxing Nashville, Nashville Car Detail, premium car care",
   authors: [{ name: "Nashville Car Detail" }],
   robots: "index, follow",
-  viewport: "width=device-width, initial-scale=1.0",
   openGraph: {
     title: "Mobile Car Detailing in Nashville - Nashville Car Detail",
     description:
       "Nashville Car Detail provides high-quality mobile car detailing services in Nashville, TN. Contact us to schedule your detailing service and experience unparalleled car care.",
     type: "website",
-    url: "https://www.nashvillecardetailing.com/locations/nashville",
+    url: "https://www.nashvillecardetail.com/locations/nashville",
     images: "/images/NCDLogoTransBig.png",
   },
   twitter: {

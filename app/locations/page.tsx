@@ -10,13 +10,12 @@ export const metadata: Metadata = {
     "Nashville car detailing locations, mobile auto detailing Nashville, Franklin car detailing, Brentwood car cleaning, Smyrna car detail, Murfreesboro auto detailing",
   authors: [{ name: "Nashville Car Detail" }],
   robots: "index, follow",
-  viewport: "width=device-width, initial-scale=1.0",
   openGraph: {
     title: "Nashville Car Detail Locations - Premium Mobile Auto Detailing",
     description:
       "Explore our various mobile auto detailing locations, providing top-notch car detailing services throughout Nashville and surrounding areas. Book your appointment today!",
     type: "website",
-    url: "https://www.nashvillecardetailing.com/locations",
+    url: "https://www.nashvillecardetail.com/locations",
     images: "/images/NCDLogoTransBig.png", 
   },
   twitter: {

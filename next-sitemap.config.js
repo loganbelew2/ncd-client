@@ -1,9 +1,9 @@
 /** @type {import('next-sitemap').IConfig} */
 const config = {
-    siteUrl: 'https://www.nashvillecardetailing.com',
+    siteUrl: 'https://www.nashvillecardetail.com',
     generateRobotsTxt: true,
     sitemapSize: 5000,
   };
   
-  module.exports = config;
+  export default config;
   

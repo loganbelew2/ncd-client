@@ -10,13 +10,12 @@ export const metadata: Metadata = {
     "Brentwood car detailing, mobile car detailing Brentwood, auto detailing Brentwood, car cleaning Brentwood, car waxing Brentwood, Nashville Car Detail, premium car care",
   authors: [{ name: "Nashville Car Detail" }],
   robots: "index, follow",
-  viewport: "width=device-width, initial-scale=1.0",
   openGraph: {
     title: "Mobile Car Detailing in Brentwood - Nashville Car Detail",
     description:
       "Nashville Car Detail provides high-quality mobile car detailing services in Brentwood, TN. Contact us to schedule your detailing service and experience unparalleled car care.",
     type: "website",
-    url: "https://www.nashvillecardetailing.com/locations/brentwood",
+    url: "https://www.nashvillecardetail.com/locations/brentwood",
     images: "/images/NCDLogoTransBig.png",
   },
   twitter: {

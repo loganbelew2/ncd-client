@@ -10,13 +10,12 @@ export const metadata: Metadata = {
     "Franklin car detailing, mobile car detailing Franklin, auto detailing Franklin, car cleaning Franklin, car waxing Franklin, Nashville Car Detail, premium car care",
   authors: [{ name: "Nashville Car Detail" }],
   robots: "index, follow",
-  viewport: "width=device-width, initial-scale=1.0",
   openGraph: {
     title: "Mobile Car Detailing in Franklin - Nashville Car Detail",
     description:
       "Nashville Car Detail provides high-quality mobile car detailing services in Franklin, TN. Contact us to schedule your detailing service and experience unparalleled car care.",
     type: "website",
-    url: "https://www.nashvillecardetailing.com/locations/franklin",
+    url: "https://www.nashvillecardetail.com/locations/franklin",
     images: "/images/NCDLogoTransBig.png",
   },
   twitter: {
