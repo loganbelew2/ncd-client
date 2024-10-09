@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import Services from "../components/Services/Services";
 
 export const metadata: Metadata = {
-  title: "Nashville Car Detail - Car Detailing Services in Nashville",
+  title: "Nashville Car Detail - Car Detailing Services Near Nashville",
   description:
     "Explore Nashville Car Detail's premium car detailing services, including Full Detail, Interior Detail, and Exterior Detail. Book now for a fresh and shiny ride!",
   keywords:

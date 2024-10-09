@@ -7,7 +7,7 @@ export const viewport: Viewport = {
   userScalable: false,
 };
 export const metadata: Metadata = {
-  title: "Nashville Car Detail - Premium Mobile Auto Detailing",
+  title: "Mobile Car Detailing Near Me | Auto Detailing Services in Nashville",
   description:
     "Nashville Car Detail offers top-notch mobile auto detailing services in the Nashville area. Book your appointment today!",
   keywords:
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   authors: [{ name: "Nashville Car Detail" }],
   robots: "index, follow",
   openGraph: {
-    title: "Nashville Car Detail - Premium Mobile Auto Detailing",
+    title: "Mobile Car Detailing Near Me | Auto Detailing Services in Nashville",
     description:
       "Nashville Car Detail offers top-notch mobile auto detailing services in the Nashville area. Book your appointment today!",
     type: "website",
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     site: "@NashvilleCarDetail",
-    title: "Nashville Car Detail - Premium Mobile Auto Detailing",
+    title: "Mobile Car Detailing Near Me | Auto Detailing Services in Nashville",
     description:
       "Nashville Car Detail offers top-notch mobile auto detailing services in the Nashville area. Book your appointment today!",
     images: "/images/NCDLogoTransBig.png",
