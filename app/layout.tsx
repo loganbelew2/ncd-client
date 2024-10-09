@@ -2,6 +2,7 @@ import "./globals.css";
 import { NavBar } from "./components/Nav/Nav-Bar";
 import { Footer } from "./components/Footer/Footer";
 import Analytics from "./components/Analytics/Analytics";
+import { GoogleTag } from "./components/Analytics/GoogleTag";
 
 export default function RootLayout({
   children,
@@ -10,8 +11,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en-US">
+      <GoogleTag/>
+      <Analytics />
       <body className="body">
-        <Analytics />
         <div className="container">
           <header>
             <nav className="nav">
