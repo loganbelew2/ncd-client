@@ -29,6 +29,7 @@ html {
 
 h1 {
   font-size: clamp(3.5rem, 4.5vw, 5rem);
+  font-weight: 400;
 }
 h2 {
   font-size: 48px;
@@ -49,6 +50,9 @@ h3 {
 }
 .font--blue {
   color: var(--color-primary);
+}
+.font--bold {
+  font-weight: bold;
 }
 .header {
   position: sticky;
@@ -165,9 +169,7 @@ footer {
   html {
     font-size: 18px; /* Slightly smaller base font size */
   }
-  .txt-center {
-    /* text-align: start; */
-  }
+
 }
 
 /* Small screens (phones) */

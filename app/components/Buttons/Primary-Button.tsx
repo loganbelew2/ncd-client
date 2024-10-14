@@ -17,7 +17,7 @@ export default function PrimaryButton({ closeMenu, params }: PropsObject) {
       className={`btn--primary`}
       aria-label="Book a car detailing service"
       onClick={() => {
-        params ? router.push(`/booking${serviceNum}`) : router.push("/booking");
+        params ? router.push(`/booking${serviceNum}`) : router.push("/packages");
         closeMenu && closeMenu();
         // serviceId && serviceId(pkgNum);
       }}

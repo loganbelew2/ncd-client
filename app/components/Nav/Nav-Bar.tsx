@@ -4,7 +4,7 @@ import styles from "./Nav.module.css";
 import { useState } from "react";
 import Image from "next/image";
 import PrimaryButton from "../Buttons/Primary-Button";
-
+import { useRouter } from "next/navigation";
 const HamburgerIcon = () => (
   <svg
     width="24"
@@ -51,6 +51,12 @@ interface NavProps {
 }
 export const NavBar = ({ isFooter }: NavProps) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const router = useRouter();
+  
+  const toggleDropdown = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+  }
   const closeMenu = () => {
     setIsOpen(false);
   };
@@ -91,9 +97,21 @@ export const NavBar = ({ isFooter }: NavProps) => {
             <p>Call or book with us anytime</p>
           </div>
         )}
-        <Link className={styles.link} href="/packages" onClick={closeMenu}>
-          Services
-        </Link>
+        <div className={styles.services}>
+          <Link
+            className={`${styles.link}`}
+            href="/services"
+            onClick={closeMenu}
+          >
+            Services
+          </Link>
+          <ul className={`${styles.dropdown} ${isDropdownOpen? styles.showDropdown: ''}`}>
+            <li><Link href={`/services/exterior-detailing`}>Exterior Detail</Link></li>
+            <li><Link href={`/services/interior-detailing`}>Interior Detail</Link></li>
+            <li><Link href={`/services/full-detailing`}>Full Detail</Link></li>
+          </ul>
+        </div>
+
         <Link className={styles.link} href="/locations" onClick={closeMenu}>
           Locations
         </Link>
