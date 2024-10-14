@@ -42,3 +42,15 @@
 .services_exterior_right {
   flex: 1;
 }
+
+@media (max-width: 1025px) {
+  .services_exterior > * {
+    flex: 100%;
+  }
+  .second_service .services_exterior_right {
+    order: 5;
+  }
+  .services_exterior {
+    padding: 0;
+  }
+}
