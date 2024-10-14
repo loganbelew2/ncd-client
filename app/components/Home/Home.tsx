@@ -2,39 +2,36 @@
 import Image from "next/image";
 import styles from "./Home.module.css";
 import PrimaryButton from "../Buttons/Primary-Button";
-import ContactUs from "../Forms/ContactUs"
+import ContactUs from "../Forms/ContactUs";
 import LocationsCarousel from "../Carousel/LocationsCarousel";
+import Link from "next/link";
+import LearnMoreButton from "../Buttons/Learn-More-Button";
+import Services from "../Services/Services";
 export default function Home() {
-
-
   return (
-    <>
+    <div className={styles.home__container}>
       <section className={styles.hero__container}>
-        <div className={styles.hero__container__left}>
-          <h1 className={styles.title}>Mobile auto <br/>detailing in <br/> Nashville</h1>
-          <p className={styles.subheading}>
-            Experience the convenience of our mobile detailing service, designed
-            to fit seamlessly into your schedule with clear and upfront pricing.
-            We operate in Nashville and surrounding areas. All we need is access to water and electric hookups and Wherever you park,
-            we&apos;ll leave no mark!
-          </p>
-          <PrimaryButton />
-        </div>
+        <h1 className={styles.title}>
+          Mobile auto detailing <br />
+          in Nashville
+        </h1>
+        <p className={styles.subheading}>
+          Quick Online Booking, Professional Detailing, and Exceptional Results
+          – <span className="font--blue font--bold">All Without Leaving Home</span>
+        </p>
 
-        <div className={styles.hero__container__right}>
-          <Image
-            src={"/images/heroimage.webp"}
-            alt="car"
-            className={styles.image}
-            width={500}
-            height={1} 
-          />
-        </div>
+        <PrimaryButton />
       </section>
-      <section className="locations">
-        <LocationsCarousel/>
+      <section className={styles.locations__section}>
+        <h2 className="h2 txt-center">Service Areas</h2>
+        <p className={styles.subheading}>
+          Check out all of the <Link href={"/locations"}>Locations </Link> we
+          proudly serve and let us give your car the shine it deserves!
+        </p>
+        <LocationsCarousel />
       </section>
-      <ContactUs/>
-    </>
+      <Services/>
+      <ContactUs />
+    </div>
   );
 }

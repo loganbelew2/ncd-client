@@ -12,18 +12,18 @@ export default function PrimaryButton({ closeMenu, params }: PropsObject) {
   const router = useRouter();
   const serviceNum = "?serviceId=" + params;
   return (
-    // <Link className="btn-wrapper" href="/booking">
+    
     <button
       className={`btn--primary`}
       aria-label="Book a car detailing service"
       onClick={() => {
-        params ? router.push(`/booking${serviceNum}`) : router.push("/booking");
+        params ? router.push(`/booking${serviceNum}`) : router.push("/packages");
         closeMenu && closeMenu();
         // serviceId && serviceId(pkgNum);
       }}
     >
-      Book now
+      Book Now
     </button>
-    // </Link>
+    
   );
 }

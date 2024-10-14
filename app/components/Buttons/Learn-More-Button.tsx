@@ -2,7 +2,7 @@
 import { useRouter } from "next/navigation";
 
 interface PropsObject {
-  service: string;
+  service?: string;
 }
 export default function LearnMoreButton({ service }: PropsObject) {
   const router = useRouter();

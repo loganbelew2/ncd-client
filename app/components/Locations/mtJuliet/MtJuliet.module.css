@@ -1,8 +1,4 @@
-.mtJulietSection {
-  width: 100vw;
-  position:absolute;
-  left: 0;
-}
+
 .header {
   background-image: url("/images/MtJuliet.jpeg");
   background-position: center;
@@ -29,7 +25,8 @@
   margin-bottom: 40px;
 }
 .ctaSection {
-  padding: 50px 0 5px 0;
+  margin-bottom: 1rem;
+  padding: 60px 0;
   background-color: var(--color-primary);
   color: white;
   width: 100%;

@@ -1,12 +1,10 @@
 .section_two {
-  margin: 20px;
   padding-top: 20px;
   background-color: var(--color-primary);
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
+  margin: 0 auto 3rem auto;
   align-items: center;
-  border-radius: 20px;
 }
 .section_two h2 {
   color: white;

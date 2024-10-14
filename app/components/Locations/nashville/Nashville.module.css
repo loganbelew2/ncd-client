@@ -1,7 +1,5 @@
 .nashvilleSection {
-  width: 100vw;
-  position:absolute;
-  left: 0;
+
 }
 .header {
   background-image: url("/images/Nashville.webp");
@@ -35,6 +33,7 @@
   width: 100%;
   text-align: center;
   height: 100%;
+  margin-bottom: 1rem;
 }
 
 .ctaSection h2 {

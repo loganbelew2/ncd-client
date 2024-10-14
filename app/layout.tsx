@@ -15,7 +15,7 @@ export default function RootLayout({
       <Analytics />
       <body className="body">
         <div className="container">
-          <header>
+          <header className="header">
             <nav className="nav">
               <NavBar />
             </nav>

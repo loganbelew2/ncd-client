@@ -32,7 +32,7 @@ const handleCardClick = (locationIndex: number) => {
         {locations.map((location, index) => (
           <div key={index} className={styles.locationCard} onClick={() => handleCardClick(index)}>
             <h2>{location}</h2>
-            <p>Professional mobile car detailing available in {location}.</p>
+            <p>Professional mobile car detailing in {location}.</p>
           </div>
         ))}
       </div>

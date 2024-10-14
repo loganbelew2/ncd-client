@@ -4,64 +4,115 @@
   border-bottom: 1px dotted lightgray;
   justify-content: space-between;
   background-color: white;
-  position: fixed;
   max-height: 100svh;
-  top: 0;
-  width: 80%;
-  z-index: 1000;
+  width: 85%;
 }
 
 .nav {
   display: flex;
   flex-flow: row nowrap;
-  justify-content: space-between;
-  flex-grow: 2;
-}
-.links {
-  margin-left: 30px;
-  display: flex;
-  justify-content: flex-start;
-  gap: 30px;
-  align-items: center;
-  flex-grow: 3;
-  flex-shrink: 3;
-}
-.buttons {
-  display: flex;
   justify-content: space-evenly;
-  align-content: center;
-  flex-flow: row nowrap;
-  flex-shrink: 1;
   flex-grow: 2;
+  align-items: center;
 }
+
 .logoContainer {
   display: flex;
   align-items: center;
-  /* margin-left: 3em; */
-  flex-shrink: 0;
+  
+  flex-grow: 5
 }
 .link {
   position: relative;
+  font-size: .9rem;
   margin: 0 1rem;
   transition: color 0.3s ease;
   color: var(--color-foreground);
   text-decoration: none;
 }
+/* services dropdown starts here */
+.services {
+  position: relative;
+}
+.dropdown {
+  background-color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  padding: 0.5rem 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
 
-.link::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 3px;
-    background-color: transparent;
-    transition: background-color .3s ease;
-  }
-  
-  .link:hover::after {
-    background-color: var(--color-primary); /* Orange color for the underline */
-  }
+.showDropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.services:hover .dropdown, .dropdown:hover {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+/* new */
+.dropdown::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: var(--color-primary); /* Change this to your desired blue color */
+  position: absolute;
+  top: 10px;
+  left: 0;
+}
+
+
+.dropdown li {
+  font-size: .9rem;
+  position: relative;
+  text-decoration: none;
+  color: #333;
+  padding: 0.5rem 1rem;
+  display: block;
+  transition: background-color 0.3s ease;
+  cursor:pointer;
+  width: max-content
+}
+.dropdown li:nth-child(3) {
+  width: 100%;
+}
+.dropdown a {
+  text-decoration: none;
+  color: black;
+}
+.dropdown li:hover::after {
+  content: '';
+  height: 3px;
+  width: 100%;
+  background-color: var(--color-primary);
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+.link:nth-child(3)::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 3px;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+}
+
+.link:hover::after {
+  background-color: var(--color-primary); /* Orange color for the underline */
+}
 
 .hamburger {
   display: none;
@@ -76,18 +127,28 @@
   color: var(--color-primary);
 }
 
+.phone__div > a{
+  text-decoration: none;
+  color: var(--color-primary);
+}
+.phone__div a div {
+  display: flex;
+  align-items: center;
+}
+.show_phone_nav_primaryBtn {
+  display: none;
+}
 
 @media (max-width: 1025px) {
+  
   .navContainer {
     width: 100%;
   }
-  .link {
-    margin: 0.5rem;
+  .phone__div a {
     font-weight: bold;
   }
   .nav {
     display: none;
-
   }
   .nav.open {
     position: fixed;
@@ -96,32 +157,41 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(156, 153, 153, 0.8); 
+    padding-bottom: 15%;
+    background-color: rgba(156, 153, 153, .9);
     flex-direction: column;
-    justify-content: flex-start;
-    padding: 30px;
-    gap: 100px;
     z-index: 999; /* Ensure nav overlay is on top */
   }
-  .nav.open .links {
-    flex-direction: column;
-    margin-left: 0;
-    margin-top: 10%;
-    gap: 50px;
-    flex-grow: 0;
+
+  .nav_open_top_bar {
+    background-color: var(--color-primary);
     width: 100%;
-    align-items: flex-start;
+    text-align: center;
+    font-size: 1.2rem;
+    color: white;
   }
-
-  .nav.open .buttons {
-    width: 80%;
-  }
-
-  .nav.open .link {
+  .nav a {
     font-size: var(--font-size-xl);
     color: black;
-    border-bottom: 1px dotted white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 2rem;
+    color: white;
+  }
+  .phone__div {
     width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .phone__div img {
+    width: 30px;
+    height: 30px;
+  }
+  .nav button {
+    width: 80%;
+    font-size: var(--font-size-xl);
+    font-size: 2rem;
+    font-weight: bold;
   }
   .nav.open .link:hover {
     color: var(--color-primary);
@@ -133,12 +203,8 @@
   .fixedHamburger {
     padding: 0;
   }
-  .buttonsVerticle {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    margin-bottom: 45px;
-    gap: 20px;
+  .show_phone_nav_primaryBtn {
+    display: block;
+    padding-right: 1.5rem;
   }
 }
-
