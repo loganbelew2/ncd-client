@@ -4,7 +4,6 @@ import styles from "./Nav.module.css";
 import { useState } from "react";
 import Image from "next/image";
 import PrimaryButton from "../Buttons/Primary-Button";
-import SecondaryButton from "../Buttons/Secondary-Button";
 
 const HamburgerIcon = () => (
   <svg
@@ -41,7 +40,7 @@ const CloseIcon = () => (
     viewBox="0 0 24 24"
     width="24"
     height="24"
-    fill="currentColor"
+    fill="black"
   >
     <path d="M18.3 5.7c.4.4.4 1 0 1.4L13.4 12l4.9 4.9c.4.4.4 1 0 1.4-.4.4-1 .4-1.4 0L12 13.4l-4.9 4.9c-.4.4-1 .4-1.4 0-.4-.4-.4-1 0-1.4L10.6 12 5.7 7.1c-.4-.4-.4-1 0-1.4.4-.4 1-.4 1.4 0L12 10.6l4.9-4.9c.4-.4 1-.4 1.4 0z" />
   </svg>
@@ -50,7 +49,7 @@ const CloseIcon = () => (
 interface NavProps {
   isFooter?: boolean;
 }
-export const NavBar = ({isFooter}: NavProps) => {
+export const NavBar = ({ isFooter }: NavProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const closeMenu = () => {
     setIsOpen(false);
@@ -61,50 +60,60 @@ export const NavBar = ({isFooter}: NavProps) => {
   };
 
   return (
-    <div className={`${styles.navContainer} ${isFooter? styles.footerNav : ''}`}>
+    <div className={`${styles.navContainer} `}>
       <div className={styles.logoContainer}>
         <Link href="/">
           <Image
             className={styles.logo}
             src="/images/NCD_Logo_White_BG.jpg"
             alt="Nashville Car Detail Logo"
-            width={110}
-            height={100}
-            layout="intrinsic"
+            width={90}
+            height={90}
           />
         </Link>
       </div>
 
+      {isOpen != true && (
+        <div className={styles.show_phone_nav_primaryBtn}>
+          <PrimaryButton />
+        </div>
+      )}
       <div
         className={`${styles.hamburger} ${isOpen && styles.fixedHamburger}`}
         onClick={toggleMenu}
       >
         {isOpen ? <CloseIcon /> : <HamburgerIcon />}
       </div>
-
       <div className={`${styles.nav} ${isOpen && styles.open}`}>
-        <div className={styles.links}>
-          <Link
-            className={styles.link}
-            href="/services"
-            onClick={closeMenu}
-          >
-            Services
-          </Link>
-          <Link className={styles.link} href="/packages" onClick={closeMenu}>
-            Packages
-          </Link>
-          <Link className={styles.link} href="/locations" onClick={closeMenu}>
-            Locations
-          </Link>
+        {isOpen && (
+          <div className={styles.nav_open_top_bar}>
+            <p>Monday to Sunday: 7am to 7pm</p>
+            <p>Call or book with us anytime</p>
+          </div>
+        )}
+        <Link className={styles.link} href="/packages" onClick={closeMenu}>
+          Services
+        </Link>
+        <Link className={styles.link} href="/locations" onClick={closeMenu}>
+          Locations
+        </Link>
+        <Link className={styles.link} href="/reviews" onClick={closeMenu}>
+          Reviews
+        </Link>
+        <div className={styles.phone__div}>
+          <a href="tel:+16159271987">
+            <div>
+              <Image
+                src="/images/phone.png"
+                alt="phone icon"
+                width={20}
+                height={20}
+              ></Image>
+              615-927-1987
+            </div>
+          </a>
         </div>
-        <div
-          className={`${styles.buttons} ${isOpen && styles.buttonsVerticle} butt`}
-        >
-          <SecondaryButton closeMenu={closeMenu}/>
-
-          <PrimaryButton closeMenu={closeMenu} />
-        </div>
+        <PrimaryButton closeMenu={closeMenu} />
       </div>
     </div>
   );

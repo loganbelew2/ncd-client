@@ -1,8 +1,4 @@
-.franklinSection {
-  width: 100vw;
-  position:absolute;
-  left: 0;
-}
+
 .header {
   background-image: url("/images/Franklin.jpeg");
   background-position: center;
@@ -35,6 +31,8 @@
   width: 100%;
   text-align: center;
   height: 100%;
+  margin-bottom: 1rem;
+  padding: 60px 0;
 }
 
 .ctaSection h2 {

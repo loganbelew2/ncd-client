@@ -12,7 +12,7 @@ export function Footer() {
           </a>
         </p>
         <p>
-          Phone: <a href="tel:+16159271987">(615) 927-1987</a>
+          Phone: <a href="tel:+16159271987">(615)-927-1987</a>
         </p>
         <p>Location: Nashville, TN</p>
       </address>

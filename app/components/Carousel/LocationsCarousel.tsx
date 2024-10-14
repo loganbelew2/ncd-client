@@ -28,7 +28,7 @@ export default function LocationsCarousel() {
 
   return (
     <section className={styles.carouselContainer}>
-      <h2>Service Areas</h2>
+     
       <Swiper
         className={styles.swiper}
         spaceBetween={30}
