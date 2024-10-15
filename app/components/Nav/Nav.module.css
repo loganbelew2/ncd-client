@@ -1,3 +1,39 @@
+.locationDropdownButton {
+  font-size: 1rem;
+  text-decoration: none;
+  color: black;
+  background-color: transparent;
+  border: none;
+  margin: 0 auto;
+}
+.locationDropdownButton span {
+  margin: 0;
+}
+.serviceDropdownButton {
+  font-size: 1rem;
+  text-decoration: none;
+  color: black;
+  background-color: transparent;
+  border: none;
+  margin: 0 auto;
+}
+.serviceDropdownButton span {
+  margin: 0;
+}
+.nav button {
+  margin: 0;
+}
+
+.dropdownIcon {
+  display: inline-block;
+  transition: transform 0.3s ease; /* Smoothly rotate the icon */
+  margin-left: 0.5rem; /* Add space between the text and icon */
+}
+
+.turnIcon .dropdownIcon {
+  transform: rotate(180deg); /* Rotate 180 degrees to face up */
+}
+
 .navContainer {
   display: flex;
   align-items: center;
@@ -12,19 +48,20 @@
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-evenly;
-  flex-grow: 2;
   align-items: center;
+  flex-grow: 2;
+  
 }
 
 .logoContainer {
   display: flex;
   align-items: center;
-  
-  flex-grow: 5
+
+  flex-grow: 5;
 }
 .link {
   position: relative;
-  font-size: .9rem;
+  font-size: 0.9rem;
   margin: 0 1rem;
   transition: color 0.3s ease;
   color: var(--color-foreground);
@@ -32,6 +69,9 @@
 }
 /* services dropdown starts here */
 .services {
+  position: relative;
+}
+.locations {
   position: relative;
 }
 .dropdown {
@@ -48,50 +88,47 @@
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-.showDropdown {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-}
-
-.services:hover .dropdown, .dropdown:hover {
-  visibility: visible;
-  opacity: 1;
-  transform: translateY(0);
-}
 /* new */
 .dropdown::before {
-  content: '';
+  content: "";
   display: block;
   width: 100%;
   height: 4px;
-  background-color: var(--color-primary); /* Change this to your desired blue color */
+  background-color: var(
+    --color-primary
+  ); /* Change this to your desired blue color */
   position: absolute;
   top: 10px;
   left: 0;
 }
 
-
 .dropdown li {
-  font-size: .9rem;
+  font-size: 0.9rem;
   position: relative;
   text-decoration: none;
   color: #333;
   padding: 0.5rem 1rem;
   display: block;
   transition: background-color 0.3s ease;
-  cursor:pointer;
-  width: max-content
+  cursor: pointer;
+  width: max-content;
 }
 .dropdown li:nth-child(3) {
+  width: 100%;
+}
+.dropdown li {
   width: 100%;
 }
 .dropdown a {
   text-decoration: none;
   color: black;
 }
+.dropdown .sublink {
+  width: max-content;
+  display: block;
+}
 .dropdown li:hover::after {
-  content: '';
+  content: "";
   height: 3px;
   width: 100%;
   background-color: var(--color-primary);
@@ -110,9 +147,7 @@
   transition: background-color 0.3s ease;
 }
 
-.link:hover::after {
-  background-color: var(--color-primary); /* Orange color for the underline */
-}
+
 
 .hamburger {
   display: none;
@@ -124,10 +159,9 @@
   position: fixed;
   top: 20px;
   right: 20px;
-  color: var(--color-primary);
 }
 
-.phone__div > a{
+.phone__div > a {
   text-decoration: none;
   color: var(--color-primary);
 }
@@ -139,28 +173,145 @@
   display: none;
 }
 
+@media (min-width: 1025px) {
+  .services:hover .dropdown,
+  .dropdown:hover {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .locations:hover .dropdown,
+  .dropdown:hover {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .link:hover::after {
+    background-color: var(--color-primary); /* Orange color for the underline */
+  }
+}
 @media (max-width: 1025px) {
-  
+  .nav .serviceDropdownButton {
+    background: none;
+    border: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 2rem;
+    justify-content: flex-start;
+    padding: 0;
+    margin: 0 1rem;
+  }
+  .nav .locationDropdownButton {
+    background: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 2rem;
+    justify-content: flex-start;
+    padding: 0;
+    margin: 0 1rem 5px 1rem;
+  }
+  .services .sublink {
+    font-size: 1.2rem;
+  }
+  .locations .sublink {
+    font-size: 1.2rem;
+  }
+  .showDropdown {
+    opacity: 1;
+    margin: 0;
+    visibility: visible;
+    transform: translateY(0);
+    background-color: transparent;
+    color: white;
+    position: relative;
+    z-index: 1001;
+  }
   .navContainer {
     width: 100%;
   }
-  .phone__div a {
-    font-weight: bold;
-  }
+
   .nav {
-    display: none;
-  }
-  .nav.open {
+    height: 100%;
+    width: 0;
     position: fixed;
     display: flex;
+    flex-direction: column;
+    align-items: start;
+    top: 0;
+    right: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: width 0.4s ease-in-out;
+    padding-top: 10vh;
+    z-index: 999;
+  }
+
+  .sideNav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: width 0.4s ease-in-out;
+    padding-top: 60px;
+    z-index: 1000;
+  }
+
+  .sideNav.open {
+    width: 60%;
+  }
+
+  .sideNav a:hover {
+    color: #f1f1f1;
+  }
+
+  .closeBtn {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 36px;
+    color: #f1f1f1;
+    cursor: pointer;
+  }
+
+  .menuBtn {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 18px;
+    cursor: pointer;
+    z-index: 1001;
+  }
+
+  /* Overlay styling */
+  .overlay {
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    padding-bottom: 15%;
-    background-color: rgba(156, 153, 153, .9);
-    flex-direction: column;
-    z-index: 999; /* Ensure nav overlay is on top */
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999; /* Just below the sideNav */
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+    pointer-events: none; /* Prevent clicking when hidden */
+  }
+  .overlay.open {
+    opacity: 1;
+    pointer-events: all; /* Enable clicks when the overlay is visible */
+  }
+
+  .nav.open {
+    width: 60%;
+    justify-content: flex-start;
+    gap: 2.5rem;
   }
 
   .nav_open_top_bar {
@@ -168,17 +319,36 @@
     width: 100%;
     text-align: center;
     font-size: 1.2rem;
+    margin-top: 2vh;
     color: white;
   }
   .nav a {
     font-size: var(--font-size-xl);
     color: black;
     text-decoration: none;
-    font-weight: bold;
     font-size: 2rem;
     color: white;
   }
+  
+  .locationDropdownButton {
+    font-size: var(--font-size-xl);
+    color: black;
+    text-decoration: none;
+    font-size: 2rem;
+    color: white;
+    margin: 0 auto;
+  }
+  .phone__div::before {
+    content: '';
+    height: 3px;
+    background-color: var(--color-primary);
+    position: absolute;
+    top: -2vh;
+    left: 0;
+    width: 100%;
+  }
   .phone__div {
+    position: relative;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -190,8 +360,9 @@
   .nav button {
     width: 80%;
     font-size: var(--font-size-xl);
-    font-size: 2rem;
-    font-weight: bold;
+    font-size: 1.5rem;
+    margin: 0 auto;
+    margin-bottom: 1.5rem;
   }
   .nav.open .link:hover {
     color: var(--color-primary);
@@ -206,5 +377,23 @@
   .show_phone_nav_primaryBtn {
     display: block;
     padding-right: 1.5rem;
+  }
+}
+@media (max-width: 930px) {
+  .nav p {
+    font-size: 1.3rem;
+  }
+  .nav a {
+    font-size: 1.5rem;
+  }
+  .nav button {
+    font-size: 1.5rem;
+
+  }
+  .nav .serviceDropdownButton {
+    font-size: 1.5rem;
+  }
+  .nav .locationDropdownButton {
+    font-size: 1.5rem;
   }
 }

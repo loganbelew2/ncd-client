@@ -38,9 +38,9 @@ const CloseIcon = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 24 24"
-    width="24"
-    height="24"
-    fill="black"
+    width="32"
+    height="32"
+    fill="white"
   >
     <path d="M18.3 5.7c.4.4.4 1 0 1.4L13.4 12l4.9 4.9c.4.4.4 1 0 1.4-.4.4-1 .4-1.4 0L12 13.4l-4.9 4.9c-.4.4-1 .4-1.4 0-.4-.4-.4-1 0-1.4L10.6 12 5.7 7.1c-.4-.4-.4-1 0-1.4.4-.4 1-.4 1.4 0L12 10.6l4.9-4.9c.4-.4 1-.4 1.4 0z" />
   </svg>
@@ -51,12 +51,16 @@ interface NavProps {
 }
 export const NavBar = ({ isFooter }: NavProps) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isServiceDropdownOpen, setIsServiceDropdownOpen] = useState(false);
+  const [isLocationDropdownOpen, setIsLocationDropdownOpen] = useState(false);
   const router = useRouter();
-  
-  const toggleDropdown = () => {
-    setIsDropdownOpen(!isDropdownOpen);
-  }
+
+  const toggleServiceDropdown = () => {
+    setIsServiceDropdownOpen(!isServiceDropdownOpen);
+  };
+  const toggleLocationDropdown = () => {
+    setIsLocationDropdownOpen(!isLocationDropdownOpen);
+  };
   const closeMenu = () => {
     setIsOpen(false);
   };
@@ -90,6 +94,13 @@ export const NavBar = ({ isFooter }: NavProps) => {
       >
         {isOpen ? <CloseIcon /> : <HamburgerIcon />}
       </div>
+      {isOpen && (
+        <div
+          className={`${styles.overlay} ${isOpen ? styles.open : ""}`}
+          onClick={closeMenu}
+        ></div>
+      )}
+
       <div className={`${styles.nav} ${isOpen && styles.open}`}>
         {isOpen && (
           <div className={styles.nav_open_top_bar}>
@@ -97,37 +108,204 @@ export const NavBar = ({ isFooter }: NavProps) => {
             <p>Call or book with us anytime</p>
           </div>
         )}
-        <div className={styles.services}>
-          <Link
-            className={`${styles.link}`}
-            href="/services"
-            onClick={closeMenu}
+        <div className={styles.services}
+          onMouseEnter={toggleServiceDropdown}
+          onMouseLeave={toggleServiceDropdown}
+        
+        >
+          <button
+            onClick={toggleServiceDropdown}
+            className={`${styles.serviceDropdownButton} ${
+              isServiceDropdownOpen ? styles.turnIcon : ""
+            }`}
           >
             Services
-          </Link>
-          <ul className={`${styles.dropdown} ${isDropdownOpen? styles.showDropdown: ''}`}>
-            <li><Link href={`/services/exterior-detailing`}>Exterior Detail</Link></li>
-            <li><Link href={`/services/interior-detailing`}>Interior Detail</Link></li>
-            <li><Link href={`/services/full-detailing`}>Full Detail</Link></li>
+            <span className={styles.dropdownIcon}>
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="icon"
+              >
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </span>
+          </button>
+          <ul
+            className={`${styles.dropdown} ${
+              isServiceDropdownOpen ? styles.showDropdown : ""
+            }`}
+          >
+            <li>
+              <Link
+                className={styles.sublink}
+                onClick={closeMenu}
+                href={`/services/exterior-detailing`}
+              >
+                Exterior Detail
+              </Link>
+            </li>
+            <li>
+              <Link
+                className={styles.sublink}
+                onClick={closeMenu}
+                href={`/services/interior-detailing`}
+              >
+                Interior Detail
+              </Link>
+            </li>
+            <li>
+              <Link
+                className={styles.sublink}
+                onClick={closeMenu}
+                href={`/services/full-detailing`}
+              >
+                Full Detail
+              </Link>
+            </li>
+          </ul>
+        </div>
+        <div className={styles.locations}
+           onMouseEnter={toggleLocationDropdown}
+           onMouseLeave={toggleLocationDropdown}
+        >
+          <button
+            onClick={toggleLocationDropdown}
+            className={`${styles.locationDropdownButton} ${
+              isLocationDropdownOpen ? styles.turnIcon : ""
+            }`}
+          >
+            Locations
+            <span className={styles.dropdownIcon}>
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="icon"
+              >
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </span>
+          </button>
+          <ul
+            className={`${styles.dropdown} ${
+              isLocationDropdownOpen ? styles.showDropdown : ""
+            }`}
+          >
+            <li>
+              <Link
+                className={styles.sublink}
+                onClick={closeMenu}
+                href={`/locations/brentwood`}
+              >
+                Brentwood, TN
+              </Link>
+            </li>
+            <li>
+              <Link
+                className={styles.sublink}
+                onClick={closeMenu}
+                href={`/locations/franklin`}
+              >
+                Franklin, TN
+              </Link>
+            </li>
+            <li>
+              <Link
+                className={styles.sublink}
+                onClick={closeMenu}
+                href={`/locations/mt-juliet`}
+              >
+                Mt. Juliet, TN
+              </Link>
+            </li>
+            <li>
+              <Link
+                className={styles.sublink}
+                onClick={closeMenu}
+                href={`/locations/murfreesboro`}
+              >
+                Murfreesboro, TN
+              </Link>
+            </li>
+            <li>
+              <Link
+                className={styles.sublink}
+                onClick={closeMenu}
+                href={`/locations/nashville`}
+              >
+                Nashville, TN
+              </Link>
+            </li>
+            <li>
+              <Link
+                className={styles.sublink}
+                onClick={closeMenu}
+                href={`/locations/nolensville`}
+              >
+                Nolensville, TN
+              </Link>
+            </li>
+            <li>
+              <Link
+                className={styles.sublink}
+                onClick={closeMenu}
+                href={`/locations/smyrna`}
+              >
+                Smyrna, TN
+              </Link>
+            </li>
+            <li>
+              <Link
+                className={styles.sublink}
+                onClick={closeMenu}
+                href={`/locations/spring-hill`}
+              >
+                Spring Hill, TN
+              </Link>
+            </li>
           </ul>
         </div>
 
-        <Link className={styles.link} href="/locations" onClick={closeMenu}>
-          Locations
-        </Link>
+      
         <Link className={styles.link} href="/reviews" onClick={closeMenu}>
           Reviews
         </Link>
         <div className={styles.phone__div}>
           <a href="tel:+16159271987">
             <div>
-              <Image
-                src="/images/phone.png"
-                alt="phone icon"
-                width={20}
-                height={20}
-              ></Image>
-              615-927-1987
+              {isOpen ? (
+                <div>
+                  <Image
+                    src="/images/phone_white.png"
+                    alt="phone icon"
+                    width={20}
+                    height={20}
+                  ></Image>
+                  615-927-1987
+                </div>
+              ) : (
+                <div>
+                  <Image
+                    src="/images/phone.png"
+                    alt="phone icon"
+                    color="white"
+                    width={20}
+                    height={20}
+                  ></Image>
+                  615-927-1987
+                </div>
+              )}
             </div>
           </a>
         </div>

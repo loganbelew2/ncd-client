@@ -1,8 +1,13 @@
+.background {
+  background-color: black;
+}
 .services_section {
   padding: 3rem 7% 3rem 7%;
-  
   background-color: lightgray;
+  border-radius: 0 55vw 0 38vw;
+  padding-top: 300px;
 }
+
 .services_section > div {
   margin: 1rem 0;
 }

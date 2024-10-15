@@ -4,22 +4,20 @@ import styles from "./Services.module.css";
 import LearnMoreButton from "../Buttons/Learn-More-Button";
 import Image from "next/image";
 
-
-
-
 export default function Services() {
-    
   return (
-    <section className={styles.services_section}>
+    <div className={styles.background}>
+      <section className={styles.services_section}>
         <h2 className="h2 txt-center">Our Detailing Services</h2>
-        <p className={styles.subheading}>
-          We keep it simple with our 3 services and aim to provide the most
+        <p className={`${styles.subheading} txt-center `}>
+          {/* We keep it simple with our 3 services and aim to provide the most
           value at the most affordable cost to you all while never sacrificing
-          for quality!
+          for quality! */}
+          3 Services - Affordable cost - Professional quality - Great value
         </p>
         <div className={styles.services_exterior}>
           <div className={styles.services_exterior_left}>
-            <h3 className="h3">Exterior detail | Wash & Wax</h3>
+            <h3 className="h3">Exterior detail | <span className="font--blue">Wash & Wax</span></h3>
             <p>
               When you book an exterior detailing service at Nashville Car
               Detail you will be investing in your car&apos;s appearance and
@@ -52,7 +50,7 @@ export default function Services() {
             />
           </div>
           <div className={styles.services_exterior_left}>
-            <h3 className="h3">Interior detail | Deep Clean</h3>
+            <h3 className="h3">Interior detail | <span className="font--blue">Deep Clean</span></h3>
             <p>
               When you book an interior detailing service at Nashville Car
               Detail you will be investing in your car&apos;s appearance and
@@ -67,12 +65,12 @@ export default function Services() {
         </div>
         <div className={styles.services_exterior}>
           <div className={styles.services_exterior_left}>
-            <h3 className="h3">Full detail | Inside & Out</h3>
+            <h3 className="h3">Full detail | <span className="font--blue">Inside & Out</span></h3>
             <p>
               When you book an exterior service at Nashville Car Detail you will
-              be investing in your car&apos;s appearance and protecting your vehicle
-              from the elements. We will thoroughly hand wash the vehicle and
-              hand wax the paint to protect it.
+              be investing in your car&apos;s appearance and protecting your
+              vehicle from the elements. We will thoroughly hand wash the
+              vehicle and hand wax the paint to protect it.
             </p>
             <div className={styles.buttons}>
               <PrimaryButton params={3} />
@@ -90,8 +88,6 @@ export default function Services() {
           </div>
         </div>
       </section>
-
-  )
-
-
+    </div>
+  );
 }
