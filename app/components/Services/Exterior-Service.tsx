@@ -68,7 +68,7 @@ export default function ExteriorService() {
       <div className={styles.serviceDetails}>
         <h2>Why Should I Get My Car Washed and Waxed?</h2>
         <p>
-          Choosing a professional detailer for your car's wash and wax ensures
+          Choosing a professional detailer for your car&apos;s wash and wax ensures
           expert care and lasting protection. We use the right techniques and
           products to safely remove dirt and contaminants, while professional
           waxing adds shine and shields your paint from weather and UV rays.
@@ -79,7 +79,7 @@ export default function ExteriorService() {
           <li>
             <strong>Protects Paint from Damage</strong> Regular washing and
             waxing create a protective barrier against dirt, bird droppings,
-            tree sap, and other contaminants that can damage your car's paint.
+            tree sap, and other contaminants that can damage your car&apos;s paint.
           </li>
           <li>
             <strong>Prevents Rust and Corrosion</strong> Removing dirt, salt,
@@ -89,7 +89,7 @@ export default function ExteriorService() {
           </li>
           <li>
             <strong>Enhances Shine and Appearance</strong> Waxing restores your
-            car’s glossy finish, giving it a like-new shine that enhances its
+            car&apos;s glossy finish, giving it a like-new shine that enhances its
             overall appearance.
           </li>
           <li>
@@ -99,8 +99,8 @@ export default function ExteriorService() {
           </li>
           <li>
             <strong>Extends the Life of Your Paint</strong> By reducing exposure
-            to the sun's UV rays and environmental pollutants, waxing extends
-            the life of your car's paint, helping it retain its value.
+            to the sun&apos;s UV rays and environmental pollutants, waxing extends
+            the life of your car&apos;s paint, helping it retain its value.
           </li>
           <li>
             <strong>Boosts Resale Value</strong> A well-maintained exterior with
