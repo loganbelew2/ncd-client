@@ -1,9 +1,11 @@
 export default function SecondaryButton() {
   return (
-    <button
+    <a
+    href="tel:+16159271987"
     className="btn btn--secondary"
+    
     >
       Call Us
-    </button>
+    </a>
   )
 }

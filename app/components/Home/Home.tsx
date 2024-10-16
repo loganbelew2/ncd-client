@@ -7,6 +7,7 @@ import LocationsCarousel from "../Carousel/LocationsCarousel";
 import Link from "next/link";
 import Services from "../Services/Services";
 import SecondaryButton from "../Buttons/Secondary-Button";
+import Process from "../Process/Process";
 export default function Home() {
   return (
     <div className={styles.home__container}>
@@ -36,6 +37,7 @@ export default function Home() {
         <LocationsCarousel />
       </section>
       <Services />
+      <Process/>
       <ContactUs />
     </div>
   );

@@ -1,24 +1,99 @@
 .exteriorDetailContainer {
-    background-color: #f9f9f9;
+    /* background-color: lightgray; */
     display: flex;
     flex-direction: column;
     align-items: center;;
 }
 
-.exteriorDetailContainer h1::after {
-    content: '';
-    height: 4px;
-    display: block;
-    background: var(--color-primary);
+.exteriorHero {
+    background-color: rgba(0, 0, 0, .7);
+    color: white;
+    text-align: center;
+    width: 100%;
+    height: 70vh;
+    background-image: url('/images/wheel-wash.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+    background-position: center;
 }
+
+
+.washAndWaxProcessSection {
+    padding: 2rem;
+    background-color: #f9f9f9;
+  }
+  
+  .heading {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: #333;
+  }
+  
+  .subheading {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: #555;
+  }
+  
+  .grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 2fr));
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  
+  .cardTitle {
+    font-size: 1.8rem;
+    color: var(--color-primary);
+    margin-bottom: 0.5rem;
+  }
+  
+  .cardDescription {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.5;
+  }
+  
+
+
+
 .exteriorDetailContainer h1 {
     text-align: center;
     margin-bottom: 0;
+    padding-top: 10vh;
 }
 .exteriorDetailContainer h2 {
     text-align: center;
     margin-bottom: 0;
 }
 .serviceDetails {
-    
+    width: 85%;
+}
+.whyList {
+    padding: 0;
+}
+.whyList *{
+    padding: .5rem;
+    list-style: none;
+}
+.whyList strong {
+    color:var(--color-primary);
+}
+
+@media (max-width: 1025px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
 }

@@ -17,9 +17,16 @@
   border: none;
   margin: 0 auto;
 }
+.serviceDropdownButton:hover {
+  cursor: pointer;
+}
+.locationDropdownButton:hover {
+  cursor: pointer;
+}
 .serviceDropdownButton span {
   margin: 0;
 }
+
 .nav button {
   margin: 0;
 }

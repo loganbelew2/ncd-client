@@ -1,0 +1,19 @@
+.processContainer {
+    text-align: center;
+}
+.steps {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 3rem;
+    justify-content: center;
+}
+.step {
+    padding: 1rem;
+}
+.step:nth-child(2) img {
+    padding-top: 1rem;
+}
+.stepHeader {
+    font-weight: 600;
+    font-size: 1.4rem;
+}

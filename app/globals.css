@@ -44,6 +44,9 @@ h3 {
   font-size: 32px;
   font-weight: 400;
 }
+.subheading {
+  font-size: 1.2rem;
+}
 .txt-center {
   text-align: center;
 }
@@ -115,13 +118,12 @@ footer {
   font-family: var(--font-family);
   cursor: pointer;
   transition: transform 0.3s ease;
+  text-decoration: none;
 }
 
 .btn--tertiary {
-  color: white;
-  background-color: transparent;
-  /* outline: 1px dotted gray; */
-  background-color: rgba(0, 170, 255, 0.4);
+  color: rgba(255, 255, 255, 1);
+  background-color: rgba(0, 170, 255, 0.5);
   border: none;
   padding: 0.7rem 1.5rem;
   border-radius: 5px;
@@ -129,9 +131,6 @@ footer {
   font-family: var(--font-family);
   cursor: pointer;
   transition: transform 0.3s ease;
-}
-.btn--tertiary:hover {
-  transform: translateY(-2px);
 }
 
 @media (max-width: 1025px) {

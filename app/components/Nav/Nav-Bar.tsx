@@ -144,6 +144,15 @@ export const NavBar = ({ isFooter }: NavProps) => {
               <Link
                 className={styles.sublink}
                 onClick={() => {closeMenu(); toggleServiceDropdown();}}
+                href={`/services`}
+              >
+                All Services
+              </Link>
+            </li>
+            <li>
+              <Link
+                className={styles.sublink}
+                onClick={() => {closeMenu(); toggleServiceDropdown();}}
                 href={`/services/exterior-detailing`}
               >
                 Exterior Detail
