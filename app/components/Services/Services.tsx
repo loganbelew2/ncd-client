@@ -15,7 +15,7 @@ export default function Services() {
           for quality! */}
           3 Services - Affordable cost - Professional quality - Great value
         </p>
-        <div className={styles.services_exterior}>
+        <div className={`${styles.services_exterior} ${styles.first_service}`}>
           <div className={styles.services_exterior_left}>
             <h3 className="h3">Exterior detail | <span className="font--blue">Wash & Wax</span></h3>
             <p>
@@ -63,7 +63,7 @@ export default function Services() {
             </div>
           </div>
         </div>
-        <div className={styles.services_exterior}>
+        <div className={`${styles.services_exterior} ${styles.third_service}`}>
           <div className={styles.services_exterior_left}>
             <h3 className="h3">Full detail | <span className="font--blue">Inside & Out</span></h3>
             <p>

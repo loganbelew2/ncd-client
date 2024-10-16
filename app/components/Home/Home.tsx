@@ -5,8 +5,8 @@ import PrimaryButton from "../Buttons/Primary-Button";
 import ContactUs from "../Forms/ContactUs";
 import LocationsCarousel from "../Carousel/LocationsCarousel";
 import Link from "next/link";
-import LearnMoreButton from "../Buttons/Learn-More-Button";
 import Services from "../Services/Services";
+import SecondaryButton from "../Buttons/Secondary-Button";
 export default function Home() {
   return (
     <div className={styles.home__container}>
@@ -17,10 +17,15 @@ export default function Home() {
         </h1>
         <p className={styles.subheading}>
           Quick Online Booking, Professional Detailing, and Exceptional Results
-          – <span className="font--blue font--bold">All Without Leaving Home</span>
+          –{" "}
+          <span className="font--blue font--bold">
+            All Without Leaving Home
+          </span>
         </p>
-
-        <PrimaryButton />
+        <div className={styles.heroButtons}>
+          <PrimaryButton />
+          <SecondaryButton />
+        </div>
       </section>
       <section className={styles.locations__section}>
         <h2 className="h2 txt-center">Service Areas</h2>
@@ -30,7 +35,7 @@ export default function Home() {
         </p>
         <LocationsCarousel />
       </section>
-      <Services/>
+      <Services />
       <ContactUs />
     </div>
   );

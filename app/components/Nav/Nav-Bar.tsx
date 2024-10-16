@@ -102,15 +102,14 @@ export const NavBar = ({ isFooter }: NavProps) => {
       )}
 
       <div className={`${styles.nav} ${isOpen && styles.open}`}>
-        {isOpen && (
+        {isOpen ? (
           <div className={styles.nav_open_top_bar}>
             <p>Monday to Sunday: 7am to 7pm</p>
             <p>Call or book with us anytime</p>
           </div>
-        )}
+        ): ''}
         <div className={styles.services}
-          onMouseEnter={toggleServiceDropdown}
-          onMouseLeave={toggleServiceDropdown}
+         
         
         >
           <button
@@ -144,7 +143,7 @@ export const NavBar = ({ isFooter }: NavProps) => {
             <li>
               <Link
                 className={styles.sublink}
-                onClick={closeMenu}
+                onClick={() => {closeMenu(); toggleServiceDropdown();}}
                 href={`/services/exterior-detailing`}
               >
                 Exterior Detail
@@ -153,7 +152,7 @@ export const NavBar = ({ isFooter }: NavProps) => {
             <li>
               <Link
                 className={styles.sublink}
-                onClick={closeMenu}
+                onClick={() => {closeMenu(); toggleServiceDropdown();}}
                 href={`/services/interior-detailing`}
               >
                 Interior Detail
@@ -162,7 +161,7 @@ export const NavBar = ({ isFooter }: NavProps) => {
             <li>
               <Link
                 className={styles.sublink}
-                onClick={closeMenu}
+                onClick={() => {closeMenu(); toggleServiceDropdown();}}
                 href={`/services/full-detailing`}
               >
                 Full Detail
@@ -171,8 +170,7 @@ export const NavBar = ({ isFooter }: NavProps) => {
           </ul>
         </div>
         <div className={styles.locations}
-           onMouseEnter={toggleLocationDropdown}
-           onMouseLeave={toggleLocationDropdown}
+         
         >
           <button
             onClick={toggleLocationDropdown}
@@ -205,7 +203,7 @@ export const NavBar = ({ isFooter }: NavProps) => {
             <li>
               <Link
                 className={styles.sublink}
-                onClick={closeMenu}
+                onClick={() => {closeMenu(); toggleLocationDropdown();}}
                 href={`/locations/brentwood`}
               >
                 Brentwood, TN
@@ -214,7 +212,7 @@ export const NavBar = ({ isFooter }: NavProps) => {
             <li>
               <Link
                 className={styles.sublink}
-                onClick={closeMenu}
+                onClick={() => {closeMenu(); toggleLocationDropdown();}}
                 href={`/locations/franklin`}
               >
                 Franklin, TN
@@ -223,7 +221,7 @@ export const NavBar = ({ isFooter }: NavProps) => {
             <li>
               <Link
                 className={styles.sublink}
-                onClick={closeMenu}
+                onClick={() => {closeMenu(); toggleLocationDropdown();}}
                 href={`/locations/mt-juliet`}
               >
                 Mt. Juliet, TN
@@ -232,7 +230,7 @@ export const NavBar = ({ isFooter }: NavProps) => {
             <li>
               <Link
                 className={styles.sublink}
-                onClick={closeMenu}
+                onClick={() => {closeMenu(); toggleLocationDropdown();}}
                 href={`/locations/murfreesboro`}
               >
                 Murfreesboro, TN
@@ -241,7 +239,7 @@ export const NavBar = ({ isFooter }: NavProps) => {
             <li>
               <Link
                 className={styles.sublink}
-                onClick={closeMenu}
+                onClick={() => {closeMenu(); toggleLocationDropdown();}}
                 href={`/locations/nashville`}
               >
                 Nashville, TN
@@ -250,7 +248,7 @@ export const NavBar = ({ isFooter }: NavProps) => {
             <li>
               <Link
                 className={styles.sublink}
-                onClick={closeMenu}
+                onClick={() => {closeMenu(); toggleLocationDropdown();}}
                 href={`/locations/nolensville`}
               >
                 Nolensville, TN
@@ -259,7 +257,7 @@ export const NavBar = ({ isFooter }: NavProps) => {
             <li>
               <Link
                 className={styles.sublink}
-                onClick={closeMenu}
+                onClick={() => {closeMenu(); toggleLocationDropdown();}}
                 href={`/locations/smyrna`}
               >
                 Smyrna, TN
@@ -268,7 +266,7 @@ export const NavBar = ({ isFooter }: NavProps) => {
             <li>
               <Link
                 className={styles.sublink}
-                onClick={closeMenu}
+                onClick={() => {closeMenu(); toggleLocationDropdown();}}
                 href={`/locations/spring-hill`}
               >
                 Spring Hill, TN
@@ -280,6 +278,9 @@ export const NavBar = ({ isFooter }: NavProps) => {
       
         <Link className={styles.link} href="/reviews" onClick={closeMenu}>
           Reviews
+        </Link>
+        <Link className={styles.link} href="/pricing" onClick={closeMenu}>
+          Pricing
         </Link>
         <div className={styles.phone__div}>
           <a href="tel:+16159271987">

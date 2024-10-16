@@ -3,9 +3,9 @@ import Locations from "../components/Locations/Locations"
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Nashville Car Detail Locations - Premium Mobile Auto Detailing",
+  title: "Nashville Car Detail Locations - Mobile Auto Detailing in Middle Tennessee",
   description:
-    "Discover Nashville Car Detail's mobile auto detailing services available in various locations, including Nashville, Franklin, Brentwood, and more. Find the nearest service to you!",
+    "Discover Nashville Car Detail's mobile auto detailing services available in Middle Tennessee, including Nashville, Rutherford County, Williamson County, and more. Find the nearest service to you!",
   keywords:
     "Nashville car detailing locations, mobile auto detailing Nashville, Franklin car detailing, Brentwood car cleaning, Smyrna car detail, Murfreesboro auto detailing",
   authors: [{ name: "Nashville Car Detail" }],

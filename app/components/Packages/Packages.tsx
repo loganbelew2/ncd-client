@@ -3,23 +3,7 @@ import styles from "./Packages.module.css"; // Adjust the path as needed
 
 const packages = [
   {
-    id: 1,
-    title: "Exterior Detail",
-    description:
-      "Thorough washing and protection for your vehicle’s exterior surfaces, including paint decon and sealant.",
-    price: "$60",
-    features: [
-      "exterior foam bath",
-      "hand wash",
-      "clean wheels & tires",
-      "dress tires",
-      "brake dust/iron removal",
-      "tar, sap, bug removal",
-      "wax protection applied (1 month)",
-    ],
-  },
-  {
-    id: 2,
+    id: 3,
     title: "Interior Detail",
     description:
       "A comprehensive cleaning of your vehicle’s interior leaving it looking and smelling brand new.",
@@ -38,7 +22,7 @@ const packages = [
     ],
   },
   {
-    id: 3,
+    id: 2,
     title: "Full Detail",
     description:
       "Complete detailing service covering both interior and exterior, providing a complete rejuvenation of your vehicle.",
@@ -63,13 +47,23 @@ const packages = [
       "wax protection applied (3 months)",
     ],
   },
+  {
+    id: 1,
+    title: "Exterior Detail",
+    description:
+      "Thorough washing and protection for your vehicle’s exterior surfaces, including paint decon and sealant.",
+    price: "$70",
+    features: [
+      "exterior foam bath",
+      "hand wash",
+      "clean wheels & tires",
+      "dress tires",
+      "brake dust/iron removal",
+      "tar, sap, bug removal",
+      "wax protection applied (1 month)",
+    ],
+  },
 ];
-
-// const setUrlParamsToSelectedPackage = (serviceId: number) => {
-//   const router = useRouter();
-//   router.push(`/booking?service=${serviceId}`);
-
-// };
 
 export const Packages = () => {
   return (
@@ -83,25 +77,27 @@ export const Packages = () => {
       </div>
       <div className={`${styles.cardsContainer} gcardsContainer`}>
         {packages.map((pkg, index) => (
-        
-          <div key={index} className={styles.card}>
-            <div className={styles.cardInfoContainer}>
+          <div
+            key={index}
+            className={`${styles.card} ${styles[`card${index}`]}`}
+          >
+            <div className={styles.blueBackground}>
               <h2 className={styles.cardTitle}>{pkg.title}</h2>
-              <p className={styles.cardDescription}>{pkg.description}</p>
+              {/* <h3></h3> */}
               <p className={styles.cardPrice}>{pkg.price}</p>
-              <PrimaryButton params= {index + 1}
-                // pkgNum={index}
-                // serviceId={(pkgId: number) =>
-                //   setUrlParamsToSelectedPackage(pkgId)
-                
-              />
             </div>
+            <div className={styles.cardWrapper}>
+              <div className={styles.cardInfoContainer}>
+                <p className={styles.cardDescription}>{pkg.description}</p>
+                <PrimaryButton params={index + 1} />
+              </div>
 
-            <ul className={styles.cardFeatures}>
-              {pkg.features.map((feature, i) => (
-                <li key={i}>{feature}</li>
-              ))}
-            </ul>
+              <ul className={styles.cardFeatures}>
+                {pkg.features.map((feature, i) => (
+                  <li key={i}>{feature}</li>
+                ))}
+              </ul>
+            </div>
           </div>
         ))}
       </div>

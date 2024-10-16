@@ -18,6 +18,10 @@
 .hero__container * {
   margin: 0;
 }
+.heroButtons {
+  display: flex;
+  gap: 1rem;
+}
 
 .hero__container button {
   width: max-content;

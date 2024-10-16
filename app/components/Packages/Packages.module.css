@@ -6,9 +6,12 @@
 
 .header {
   text-align: center;
-  margin-bottom: 20px;
+}
+.header h1 {
+  font-size: 3rem;
 }
 .header > p {
+  font-size: 1.2rem;
   color: gray;
 }
 .cardsContainer {
@@ -17,25 +20,59 @@
   gap: 2em;
   justify-content: space-evenly;
 }
+.card {
+  background: #f8f8f8;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  min-width: 300px;
+  max-width: 25vw;
+}
 .cardInfoContainer {
   display: flex;
   flex-flow: column;
   justify-content: space-between;
 }
-.card {
-  background: #f8f8f8;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  flex: 1;
-  min-width: 250px;
-  max-width: 330px;
+.blueBackground {
+  text-align: center;
+  padding: 30px 10px 10px 10px;
+  border-radius: 8px 8px 0 0;
+}
+.blueBackground * {
+  margin: 0;
+}
+.card1 .blueBackground {
+  padding: 10px;
+  color: white;
+  background-color: var(--color-primary);
+}
+.card1 .cardTitle {
+  color: white;
+}
+.card1 .cardPrice {
+  margin: 0;
+}
+.card1 .cardTitle::after {
+  content: "- Our most popular -";
+  font-size: 1.1rem;
+  display: block;
+
+}
+.cardWrapper {
+  padding: 0 2rem 2rem 2rem;
 }
 
 .cardTitle {
   font-size: 1.75rem;
   margin-bottom: 10px;
+  text-align: center;
+}
+
+.cardPrice {
+  font-size: 1.75rem;
+  margin-bottom: 15px;
+  font-weight: bold;
 }
 
 .cardDescription {
@@ -43,12 +80,6 @@
   font-size: 1em;
   line-height: 1.7;
   margin-bottom: 25px;
-}
-
-.cardPrice {
-  font-size: 1.5rem;
-  margin-bottom: 15px;
-  font-weight: bold;
 }
 
 .cardFeatures {

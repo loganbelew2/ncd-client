@@ -5,11 +5,14 @@
   padding: 3rem 7% 3rem 7%;
   background-color: lightgray;
   border-radius: 0 55vw 0 38vw;
-  padding-top: 300px;
+  padding-top: 10rem;
 }
 
 .services_section > div {
   margin: 1rem 0;
+}
+.services_section .first_service {
+  margin-top: 2.5rem;
 }
 .buttons {
   display: flex;

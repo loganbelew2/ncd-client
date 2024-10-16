@@ -2,7 +2,7 @@ import {Packages} from "../components/Packages/Packages"
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Detailing Packages | Nashville Car Detail",
+  title: "Detailing Pricing | Nashville Car Detail",
   description: "Explore Nashville Car Detail’s range of detailing packages. From interior to exterior to full-service packages, find the perfect option for your vehicle.",
   keywords: "Nashville car detailing packages, auto detailing services, interior detailing, exterior detailing, full detail package",
   openGraph: {

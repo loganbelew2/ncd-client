@@ -14,7 +14,7 @@
   --font-size-lg: 1.25rem; /* 20px */
   --font-size-xl: 1.5rem; /* 24px */
   --font-size-xxl: 2rem; /* 32px */
-  
+
   /* Define font family */
   --font-family: "Roboto", sans-serif;
 }
@@ -100,35 +100,28 @@ footer {
   transition: transform 0.3s ease;
 }
 
-.btn--primary:hover {
-  /* background: linear-gradient(
-    to right,
-    var(--color-secondary),
-    var(--color-primary)
-  );  */
+.btn:hover {
   transform: translateY(-2px);
 }
 
 /* Secondary Button */
 .btn--secondary {
-  background-color: transparent;
-  color: black; /* Text color */
+  background-color: darkgray;
+  color: var(--color-background); /* Text color */
   border: none;
-  border-radius: 100px;
-  padding: 0.7rem 1.5rem;
+  padding: 0.7rem 2.5rem;
+  border-radius: 5px;
   font-size: var(--font-size-md);
   font-family: var(--font-family);
   cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.btn--secondary:hover {
-  color: var(--color-primary);
+  transition: transform 0.3s ease;
 }
 
 .btn--tertiary {
-  color: rgb(255, 255, 255);
-  background-color: rgba(0, 170, 255, 1) ;
+  color: white;
+  background-color: transparent;
+  /* outline: 1px dotted gray; */
+  background-color: rgba(0, 170, 255, 0.4);
   border: none;
   padding: 0.7rem 1.5rem;
   border-radius: 5px;
@@ -169,7 +162,6 @@ footer {
   html {
     font-size: 18px; /* Slightly smaller base font size */
   }
-
 }
 
 /* Small screens (phones) */

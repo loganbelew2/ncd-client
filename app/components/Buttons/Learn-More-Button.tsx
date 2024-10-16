@@ -11,7 +11,7 @@ export default function LearnMoreButton({ service }: PropsObject) {
   };
   
   return (
-    <button className="btn--tertiary" onClick={handleButtonClick}>
+    <button className=" btn btn--tertiary" onClick={handleButtonClick}>
       Learn More
     </button>
   );

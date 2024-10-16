@@ -26,13 +26,10 @@
 
 .dropdownIcon {
   display: inline-block;
-  transition: transform 0.3s ease; /* Smoothly rotate the icon */
+  transition: transform 0.3s ease; 
   margin-left: 0.5rem; /* Add space between the text and icon */
 }
 
-.turnIcon .dropdownIcon {
-  transform: rotate(180deg); /* Rotate 180 degrees to face up */
-}
 
 .navContainer {
   display: flex;
@@ -122,6 +119,7 @@
 .dropdown a {
   text-decoration: none;
   color: black;
+
 }
 .dropdown .sublink {
   width: max-content;
@@ -136,7 +134,7 @@
   top: 100%;
   left: 0;
 }
-.link:nth-child(3)::after {
+.link::after {
   content: "";
   position: absolute;
   left: 0;
@@ -189,8 +187,15 @@
   .link:hover::after {
     background-color: var(--color-primary); /* Orange color for the underline */
   }
+  .nav_open_top_bar {
+    display: none;
+  }
+ 
 }
 @media (max-width: 1025px) {
+  .turnIcon .dropdownIcon {
+    transform: rotate(180deg); 
+  }
   .nav .serviceDropdownButton {
     background: none;
     border: none;
