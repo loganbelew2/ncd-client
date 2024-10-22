@@ -1,17 +1,17 @@
-.exteriorDetailContainer {
+.interiorDetailContainer {
     /* background-color: lightgray; */
     display: flex;
     flex-direction: column;
     align-items: center;;
 }
 
-.exteriorHero {
+.interiorHero {
     background-color: rgba(0, 0, 0, .5);
     color: white;
     text-align: center;
     width: 100%;
     height: 60vh;
-    background-image: url('/images/wheel-wash.jpg');
+    background-image: url('/images/steam-clean.webp');
     background-size: cover;
     background-repeat: no-repeat;
     background-blend-mode: multiply;
@@ -19,7 +19,7 @@
 }
 
 
-.washAndWaxProcessSection {
+.cleaningProcessSection {
     padding: 2rem;
     background-color: #f9f9f9;
   }
@@ -69,12 +69,12 @@
 
 
 
-.exteriorDetailContainer h1 {
+.interiorDetailContainer h1 {
     text-align: center;
     margin-bottom: 0;
     padding-top: 10vh;
 }
-.exteriorDetailContainer h2 {
+.interiorDetailContainer h2 {
     text-align: center;
     margin-bottom: 0;
 }

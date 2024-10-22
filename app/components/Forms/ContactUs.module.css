@@ -1,16 +1,19 @@
 .section_two {
-  padding-top: 20px;
+  padding: 1rem;
+  width: 100%;
   background-color: var(--color-primary);
+  background-color: black;
   display: flex;
   flex-direction: column;
-  margin: 0 auto 3rem auto;
   align-items: center;
+  text-align: center;
 }
 .section_two h2 {
   color: white;
 }
 .section_two h3 {
   color: white;
+  font-size: 1.5rem;
 }
 .section_two form {
   width: 70%;

@@ -1,5 +1,7 @@
 import { Metadata } from "next";
 import Services from "../components/Services/Services";
+import Process from "../components/Process/Process";
+import ContactUs from "../components/Forms/ContactUs";
 
 export const metadata: Metadata = {
   title: "Nashville Car Detail - Car Detailing Services Near Nashville",
@@ -37,5 +39,11 @@ export const metadata: Metadata = {
   },
 };
 export default function ServicesPage() {
-  return <Services></Services>;
+  return (
+    <>
+      <Services />
+      <Process />
+      <ContactUs />
+    </>
+  );
 }

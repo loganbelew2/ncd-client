@@ -10,11 +10,13 @@ export default function LocationsCarousel() {
     "Nashville",
     "Franklin",
     "Brentwood",
-    "Nolensville",
+    "Gallatin",
     "Spring Hill",
     "Murfreesboro",
     "Smyrna",
     "Mt. Juliet",
+    "Hendersonville",
+    "Lebanon",
   ];
 
   function handleSlideClick(locationIndex: number) {

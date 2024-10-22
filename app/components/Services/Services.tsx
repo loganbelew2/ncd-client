@@ -59,7 +59,7 @@ export default function Services() {
             </p>
             <div className={styles.buttons}>
               <PrimaryButton params={2} />
-              <LearnMoreButton service="interior-detail" />
+              <LearnMoreButton service="interior-detailing" />
             </div>
           </div>
         </div>
@@ -74,7 +74,7 @@ export default function Services() {
             </p>
             <div className={styles.buttons}>
               <PrimaryButton params={3} />
-              <LearnMoreButton service="full-detail" />
+              <LearnMoreButton service="full-detailing" />
             </div>
           </div>
           <div className={styles.services_exterior_right}>

@@ -1,5 +1,4 @@
-import PrimaryButton from "../Buttons/Primary-Button";
-import Process from "../Process/Process";
+
 import styles from "./Exterior-Service.module.css";
 
 export default function ExteriorService() {
@@ -121,7 +120,6 @@ export default function ExteriorService() {
           </li>
         </ul>
       </div>
-      <Process/>
       
     </section>
   );

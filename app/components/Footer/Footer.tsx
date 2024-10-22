@@ -3,7 +3,10 @@ import styles from "./Footer.module.css";
 export function Footer() {
   return (
     <div className={styles.footer__container}>
-      <p>© 2024 Nashville Car Detail</p>
+      <div>
+        <p>Hours: 7am to 7pm Monday to Sunday</p>
+        <p>© 2024 Nashville Car Detail. All Rights Reserved</p>
+      </div>
       <address>
         <p>
           Email:{" "}

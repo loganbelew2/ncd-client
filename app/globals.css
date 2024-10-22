@@ -109,7 +109,7 @@ footer {
 
 /* Secondary Button */
 .btn--secondary {
-  background-color: darkgray;
+  background-color: black;
   color: var(--color-background); /* Text color */
   border: none;
   padding: 0.7rem 2.5rem;

@@ -7,7 +7,7 @@ const packages = [
     title: "Interior Detail",
     description:
       "A comprehensive cleaning of your vehicle’s interior leaving it looking and smelling brand new.",
-    price: "$99",
+    price: "$129",
     features: [
       "steam clean",
       "clean headliner",
@@ -26,7 +26,7 @@ const packages = [
     title: "Full Detail",
     description:
       "Complete detailing service covering both interior and exterior, providing a complete rejuvenation of your vehicle.",
-    price: "$129",
+    price: "$159",
     features: [
       "steam clean",
       "clean headliner",

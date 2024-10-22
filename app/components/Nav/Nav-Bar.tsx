@@ -258,9 +258,27 @@ export const NavBar = ({ isFooter }: NavProps) => {
               <Link
                 className={styles.sublink}
                 onClick={() => {closeMenu(); toggleLocationDropdown();}}
-                href={`/locations/nolensville`}
+                href={`/locations/gallatin`}
               >
-                Nolensville, TN
+                Gallatin, TN
+              </Link>
+            </li>
+            <li>
+              <Link
+                className={styles.sublink}
+                onClick={() => {closeMenu(); toggleLocationDropdown();}}
+                href={`/locations/hendersonville`}
+              >
+                Hendersonville, TN
+              </Link>
+            </li>
+            <li>
+              <Link
+                className={styles.sublink}
+                onClick={() => {closeMenu(); toggleLocationDropdown();}}
+                href={`/locations/lebanon`}
+              >
+                Lebanon, TN
               </Link>
             </li>
             <li>
