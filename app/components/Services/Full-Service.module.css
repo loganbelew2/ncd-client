@@ -10,7 +10,7 @@
     color: white;
     text-align: center;
     width: 100%;
-    height: 60vh;
+    min-height: 60vh;
     background-image: url('/images/snow-foam.webp');
     background-size: cover;
     background-repeat: no-repeat;

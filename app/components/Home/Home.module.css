@@ -1,6 +1,6 @@
 .hero__container {
   display: flex;
-  height: 70vh;
+  min-height: 70vh;
   flex-direction: column;
   gap: 0.5rem;
   color: white;
