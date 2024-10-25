@@ -3,6 +3,8 @@ import { NavBar } from "./components/Nav/Nav-Bar";
 import { Footer } from "./components/Footer/Footer";
 import Analytics from "./components/Analytics/Analytics";
 import { GoogleTag } from "./components/Analytics/GoogleTag";
+import CtaBanner from "./components/CtaBanner/CtaBanner";
+import ContactUs from "./components/Forms/ContactUs";
 
 export default function RootLayout({
   children,
@@ -21,6 +23,8 @@ export default function RootLayout({
             </nav>
           </header>
           <main className="main">{children}</main>
+          <CtaBanner/>
+          <ContactUs/>
           <footer className="footer">
             <Footer />
           </footer>

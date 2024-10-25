@@ -1,10 +1,11 @@
 .background {
-  background-color: black;
+  background-color: var(--color-primary);
 }
 .services_section {
   padding: 3rem 7% 3rem 7%;
-  background-color: lightgray;
-  border-radius: 0 55vw 0 38vw;
+  background-color: var(--color-compliment);
+  background-color: white;
+  border-radius: 0 55vw 0 35vw;
   padding-top: 10rem;
 }
 

@@ -1,0 +1,15 @@
+.WhyUsWrapper {
+    text-align: center;
+    padding: 0 0 40px 0;
+}
+.BenefitsContainer {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 2rem;
+    flex-flow: row wrap;  
+}
+.BenefitsContainer > * {
+    box-shadow: 0 4px 20px var(--opacity-color-primary);
+    padding: 20px;
+    width: 300px;
+}

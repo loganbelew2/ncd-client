@@ -8,11 +8,8 @@ export default function Services() {
   return (
     <div className={styles.background}>
       <section className={styles.services_section}>
-        <h2 className="h2 txt-center">Our Detailing Services</h2>
+        <h2 className="h2 txt-center">Our 3 Detailing Services</h2>
         <p className={`${styles.subheading} txt-center `}>
-          {/* We keep it simple with our 3 services and aim to provide the most
-          value at the most affordable cost to you all while never sacrificing
-          for quality! */}
           3 Services - Affordable cost - Professional quality - Great value
         </p>
         <div className={`${styles.services_exterior} ${styles.first_service}`}>

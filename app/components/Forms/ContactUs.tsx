@@ -10,6 +10,7 @@ export default function ContactUs() {
     subject: "",
     message: "",
   });
+  const [notification, setNotification] = useState({ message: "", type: "" });
 
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -20,12 +21,20 @@ export default function ContactUs() {
       [name]: value,
     });
   };
+
+  const showNotification = (message: string, type: "success" | "error") => {
+    setNotification({ message, type });
+    setTimeout(() => {
+      setNotification({ message: "", type: "" });
+    }, 1000);
+  };
+
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     // Phone number validation (format: 123-456-7890)
-    const phonePattern = /^\d{3}-\d{3}-\d{4}$/; // Adjusting for the hyphen format
+    const phonePattern = /^\d{3}-\d{3}-\d{4}$/;
     if (!phonePattern.test(formData.phone)) {
-      window.alert("Please enter a valid phone number (format: xxx-xxx-xxxx).");
+      showNotification("Please enter a valid phone number (format: xxx-xxx-xxxx).", "error");
       return;
     }
 
@@ -40,7 +49,7 @@ export default function ContactUs() {
       });
 
       if (response.ok) {
-        window.alert("Message sent");
+        showNotification("Message sent successfully!", "success");
         setFormData({
           name: "",
           email: "",
@@ -49,30 +58,38 @@ export default function ContactUs() {
           message: "",
         });
       } else {
-        window.alert("Failed to send the message.");
+        showNotification("Failed to send the message.", "error");
       }
     } catch (error) {
       console.error("Error", error);
+      showNotification("An error occurred. Please try again later.", "error");
     }
   }
 
   function phoneFormat(e: ChangeEvent<HTMLInputElement>) {
     let phoneInput = e.target;
-    let value = phoneInput.value.replace(/\D/g, ""); // Remove non-digits
+    let value = phoneInput.value.replace(/\D/g, "");
     if (value.startsWith("1") && value.length > 10) {
       value = value.slice(1);
     }
     if (value.length > 3 && value.length <= 6) {
       value = value.slice(0, 3) + "-" + value.slice(3);
     } else if (value.length > 6) {
-      value =
-        value.slice(0, 3) + "-" + value.slice(3, 6) + "-" + value.slice(6, 10);
+      value = value.slice(0, 3) + "-" + value.slice(3, 6) + "-" + value.slice(6, 10);
     }
     phoneInput.value = value;
   }
 
   return (
     <section className={styles.section_two}>
+      {notification.message && (
+        <div
+          className={`${styles.notification} ${notification.type === "error" ? styles.error : ""}`}
+        >
+          {notification.message}
+        </div>
+      )}
+
       <h2 style={{ marginBottom: 0 }}>Questions?</h2>
       <h3>Send us a message and we will get back asap!</h3>
 
@@ -83,6 +100,7 @@ export default function ContactUs() {
         className={styles.form}
       >
         <fieldset className={styles.fieldSet}>
+          {/* Input Fields */}
           <div className={styles.formGroup}>
             <input
               className={styles.inputField}
@@ -98,7 +116,6 @@ export default function ContactUs() {
               autoComplete="name"
               onChange={handleInputChange}
             />
-            <small className={styles.formError} aria-live="polite"></small>
           </div>
 
           <div className={styles.formGroup}>
@@ -114,8 +131,8 @@ export default function ContactUs() {
               autoComplete="email"
               onChange={handleInputChange}
             />
-            <small className={styles.formError} aria-live="polite"></small>
           </div>
+
           <div className={styles.formGroup}>
             <input
               onInput={phoneFormat}
@@ -130,7 +147,6 @@ export default function ContactUs() {
               autoComplete="tel"
               onChange={handleInputChange}
             />
-            <small className={styles.formError} aria-live="polite"></small>
           </div>
 
           <div className={styles.formGroup}>
@@ -146,7 +162,6 @@ export default function ContactUs() {
               aria-required="true"
               onChange={handleInputChange}
             />
-            <small className={styles.formError} aria-live="polite"></small>
           </div>
 
           <div className={styles.formGroup}>
@@ -162,7 +177,6 @@ export default function ContactUs() {
               aria-required="true"
               onChange={handleInputChange}
             />
-            <small className={styles.formError} aria-live="polite"></small>
           </div>
 
           <div className={styles.formGroup}>

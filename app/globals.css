@@ -3,6 +3,7 @@
 /* Define color variables */
 :root {
   --color-primary: #00aaff; /* Electric Blue */
+  --opacity-color-primary: rgba(0, 170, 255, .5);
   --color-secondary: #ffa500; /* orange*/
   --color-background: #ffffff; /* White */
   --color-foreground: #000000; /* Black */

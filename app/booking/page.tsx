@@ -1,10 +1,11 @@
 import { Suspense } from "react";
 import Booking from "../components/Booking/Booking";
+import BookingV2 from "../components/Booking/Bookingv2";
 
 export default function BookingPage() {
   return (
     <Suspense fallback={<div>Loading...</div>}>
-      <Booking></Booking>
+      <BookingV2></BookingV2>
     </Suspense>
   );
 }

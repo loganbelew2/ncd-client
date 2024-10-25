@@ -213,6 +213,15 @@ export const NavBar = ({ isFooter }: NavProps) => {
               <Link
                 className={styles.sublink}
                 onClick={() => {closeMenu(); toggleLocationDropdown();}}
+                href={`/locations`}
+              >
+                All Locations
+              </Link>
+            </li>
+            <li>
+              <Link
+                className={styles.sublink}
+                onClick={() => {closeMenu(); toggleLocationDropdown();}}
                 href={`/locations/brentwood`}
               >
                 Brentwood, TN

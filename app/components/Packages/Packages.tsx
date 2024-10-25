@@ -60,7 +60,7 @@ const packages = [
       "dress tires",
       "brake dust/iron removal",
       "tar, sap, bug removal",
-      "wax protection applied (1 month)",
+      "wax protection applied (3 months)",
     ],
   },
 ];

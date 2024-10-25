@@ -8,12 +8,14 @@ import Link from "next/link";
 import Services from "../Services/Services";
 import SecondaryButton from "../Buttons/Secondary-Button";
 import Process from "../Process/Process";
+import AboutUs from "../AboutUs/AboutUs";
+import WhyUs from "../WhyUs/WhyUs";
 export default function Home() {
   return (
     <div className={styles.home__container}>
       <section className={styles.hero__container}>
         <h1 className={styles.title}>
-          Mobile auto detailing <br />
+          Mobile car detailing <br />
           in Nashville
         </h1>
         <p className={styles.subheading}>
@@ -37,8 +39,9 @@ export default function Home() {
         <LocationsCarousel />
       </section>
       <Services />
+      <WhyUs/>
+      <AboutUs/>
       <Process/>
-      <ContactUs />
     </div>
   );
 }

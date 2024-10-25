@@ -1,4 +1,5 @@
 import ContactUs from "@/app/components/Forms/ContactUs";
+import LocationsLearn from "@/app/components/Locations/LocationsLearn/LocationsLearn";
 import Process from "@/app/components/Process/Process";
 import InteriorService from "@/app/components/Services/Interior-Service";
 import { Metadata } from "next";
@@ -33,7 +34,7 @@ function InteriorDetail() {
     <>
       <InteriorService />
       <Process />
-      <ContactUs />
+      <LocationsLearn/>
     </>
   );
 }

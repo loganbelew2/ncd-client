@@ -3,7 +3,7 @@ import Image from 'next/image'
 export default function Process() {
     return (
         <section className={styles.processContainer}>
-            <h2>Our Process</h2>
+            <h2>How It Works</h2>
             <div className={styles.steps}>
                 <div className={styles.step}>
                     <Image

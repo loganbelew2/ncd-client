@@ -43,7 +43,6 @@ export default function ServicesPage() {
     <>
       <Services />
       <Process />
-      <ContactUs />
     </>
   );
 }
