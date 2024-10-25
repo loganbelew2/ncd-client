@@ -60,7 +60,7 @@ export default function FullService() {
         <h2>Why Choose Our Full Detailing Service?</h2>
         <p>
           Our full detailing service ensures that every aspect of your vehicle receives 
-          expert attention. From deep cleaning to protective coatings, we restore your car's 
+          expert attention. From deep cleaning to protective coatings, we restore your car&apos;s 
           beauty and prolong its life. Enjoy a pristine interior and exterior with our mobile 
           service at your convenience.
         </p>
@@ -79,7 +79,7 @@ export default function FullService() {
           </li>
           <li>
             <strong>Improved Resale Value:</strong> Regular detailing helps maintain and enhance 
-            your vehicle's resale value.
+            your vehicle&apos;s resale value.
           </li>
           <li>
             <strong>Convenience:</strong> Our mobile service brings expert detailing right to your door.
