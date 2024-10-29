@@ -5,16 +5,13 @@ export default function InteriorService() {
   return (
     <section className={styles.interiorDetailContainer}>
       <div className={styles.interiorHero}>
-        <h1>Mobile Interior Car Detailing In Nashville</h1>
-        <p className="subheading">
+        <h1 className={styles.heading}>Mobile Interior Car Detailing In Nashville</h1>
+        <p className={styles.subheading}>
           Refresh and protect the interior of your vehicle from the crazy Tennessee weather without the hassle of leaving your home.
         </p>
       </div>
       <section className={styles.cleaningProcessSection}>
-        <h2 className={styles.heading}>Our Interior Cleaning Process</h2>
-        <p className={styles.subheading}>
-          Our thorough process addresses every part of your car’s interior, delivering a deep clean and restoring a fresh feel.
-        </p>
+        <h2>Our Interior Cleaning Process</h2>
         <div className={styles.grid}>
           <div className={styles.card}>
             <h3 className={styles.cardTitle}>1</h3>

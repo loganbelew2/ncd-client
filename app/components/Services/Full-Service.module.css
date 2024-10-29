@@ -1,99 +1,89 @@
 .fullDetailContainer {
-    /* background-color: lightgray; */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  /* background-color: lightgray; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .fullDetailHero {
-    background-color: rgba(0, 0, 0, .6);
-    color: white;
-    text-align: center;
-    width: 100%;
-    min-height: 60vh;
-    background-image: url('/images/snow-foam.webp');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-blend-mode: multiply;
-    background-position: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  text-align: center;
+  width: 100%;
+  min-height: 60vh;
+  background-image: url("/images/snow-foam.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: multiply;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 3vh 3vw;
 }
-
 
 .fullDetailProcessSection {
-    padding: 2rem;
-    background-color: #f9f9f9;
-  }
-  
-  .heading {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    text-align: center;
-    color: #333;
-  }
-  
-  .subheading {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-    text-align: center;
-    color: #555;
-  }
-  
-  .grid {
-    display: grid;
-    gap: 1.5rem;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 2fr));
-    grid-template-columns: repeat(3, 1fr);
-  }
-  
-  .card {
-    background-color: white;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 1.5rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  
-  .cardTitle {
-    font-size: 1.8rem;
-    color: var(--color-primary);
-    margin-bottom: 0.5rem;
-  }
-  
-  .cardDescription {
-    font-size: 1rem;
-    color: #555;
-    line-height: 1.5;
-  }
-  
-
-
-
-.fullDetailContainer h1 {
-    text-align: center;
-    margin-bottom: 0;
-    padding-top: 10vh;
+  padding: 2rem;
+  background-color: #f9f9f9;
 }
 .fullDetailContainer h2 {
-    text-align: center;
-    margin-bottom: 0;
+  text-align: center;
 }
+
+.heading {
+  margin: 0.5rem;
+  text-align: center;
+}
+
+.subheading {
+  font-size: 1.2rem;
+  margin: 0.5rem;
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 2fr));
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cardTitle {
+  font-size: 1.8rem;
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+}
+
+.cardDescription {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+}
+
 .serviceDetails {
-    width: 85%;
+  width: 85%;
 }
 .whyList {
-    padding: 0;
+  padding: 0;
 }
-.whyList *{
-    padding: .5rem;
-    list-style: none;
+.whyList * {
+  padding: 0.5rem;
+  list-style: none;
 }
 .whyList strong {
-    color:var(--color-primary);
+  color: var(--color-primary);
 }
 
 @media (max-width: 1025px) {
-    .grid {
-        grid-template-columns: 1fr;
-    }
+  .grid {
+    grid-template-columns: 1fr;
+  }
 }

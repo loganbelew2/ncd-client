@@ -5,18 +5,14 @@ export default function FullService() {
   return (
     <section className={styles.fullDetailContainer}>
       <div className={styles.fullDetailHero}>
-        <h1>Complete Mobile Car Detailing in Nashville</h1>
-        <p className="subheading">
+        <h1 className={styles.heading}>Complete Mobile Car Detailing in Nashville</h1>
+        <p className={styles.subheading}>
           Transform your vehicle with our comprehensive full detail service, 
           ensuring every inch of your car is meticulously cleaned and protected.
         </p>
       </div>
       <section className={styles.fullDetailProcessSection}>
-        <h2 className={styles.heading}>Our Full Detail Process</h2>
-        <p className={styles.subheading}>
-          Our thorough full detailing process provides a complete clean and restoration 
-          for both the interior and exterior of your vehicle.
-        </p>
+        <h2 >Our Full Detail Process</h2>
         <div className={styles.grid}>
           <div className={styles.card}>
             <h3 className={styles.cardTitle}>1</h3>

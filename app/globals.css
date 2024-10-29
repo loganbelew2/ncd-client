@@ -61,7 +61,7 @@ h3 {
   color: var(--color-primary);
 }
 .font--bold {
-  font-weight: bold;
+  font-weight: 700;
 }
 .header {
   position: sticky;

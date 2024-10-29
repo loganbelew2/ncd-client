@@ -16,6 +16,10 @@
     background-repeat: no-repeat;
     background-blend-mode: multiply;
     background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 3vh 3vw;
 }
 
 
@@ -23,19 +27,20 @@
     padding: 2rem;
     background-color: #f9f9f9;
   }
+  .interiorDetailContainer h2 {
+    text-align: center;
+  }
   
   .heading {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+    margin: .5rem;
     text-align: center;
-    color: #333;
   }
   
   .subheading {
     font-size: 1.2rem;
-    margin-bottom: 2rem;
+    margin: .5rem;
     text-align: center;
-    color: #555;
+
   }
   
   .grid {
@@ -66,18 +71,6 @@
     line-height: 1.5;
   }
   
-
-
-
-.interiorDetailContainer h1 {
-    text-align: center;
-    margin-bottom: 0;
-    padding-top: 10vh;
-}
-.interiorDetailContainer h2 {
-    text-align: center;
-    margin-bottom: 0;
-}
 .serviceDetails {
     width: 85%;
 }

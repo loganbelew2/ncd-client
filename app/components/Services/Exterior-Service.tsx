@@ -5,18 +5,14 @@ export default function ExteriorService() {
   return (
     <section className={styles.exteriorDetailContainer}>
       <div className={styles.exteriorHero}>
-        <h1>Mobile Car Wash and Wax In Nashville</h1>
-        <p className="subheading">
+        <h1 className={styles.heading}>Mobile Car Wash and Wax In Nashville</h1>
+        <p className={styles.subheading}>
           Protect your car&apos;s paint from the crazy Tennessee weather and
           turn heads all without leaving your house.
         </p>
       </div>
       <section className={styles.washAndWaxProcessSection}>
-        <h2 className={styles.heading}>Our Wash and Wax Process</h2>
-        <p className={styles.subheading}>
-          Our detailed process ensures that every part of your vehicle gets the
-          attention it deserves, leaving your car clean, shiny, and protected.
-        </p>
+        <h2 >Our Wash and Wax Process</h2>
         <div className={styles.grid}>
           <div className={styles.card}>
             <h3 className={styles.cardTitle}>1</h3>
