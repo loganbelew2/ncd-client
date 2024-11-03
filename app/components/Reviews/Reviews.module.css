@@ -1,3 +1,23 @@
+.reviewsContainer {
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+}
 .title {
     text-align: center;
+    font-size: 3rem;
+}
+.reviewCard {
+    width: 300px;
+    box-shadow: 0 4px 20px var(--opacity-color-primary);
+    padding: 1rem;
+}
+.google {
+    display: flex;
+    justify-content: space-between;
+}
+.reviewer {
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }

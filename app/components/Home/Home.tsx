@@ -10,6 +10,7 @@ import SecondaryButton from "../Buttons/Secondary-Button";
 import Process from "../Process/Process";
 import AboutUs from "../AboutUs/AboutUs";
 import WhyUs from "../WhyUs/WhyUs";
+import { Packages } from "../Packages/Packages";
 export default function Home() {
   return (
     <div className={styles.home__container}>
@@ -25,6 +26,25 @@ export default function Home() {
             All Without Leaving Home
           </span>
         </p>
+        {/* <div className={styles.heroButtons}>
+          <PrimaryButton />
+          <SecondaryButton />
+        </div> */}
+        <div className={styles.reviewsContainer}>
+          <Image
+            src={"/images/google.png"}
+            height={30}
+            width={30}
+            alt="google"
+          />
+          <Image
+            src={"/images/5stars.png"}
+            height={30}
+            width={100}
+            alt="5 stars"
+          />
+          <p>Average Google Rating: <span>5.0 out of 5.0</span></p>
+        </div>
         <div className={styles.heroButtons}>
           <PrimaryButton />
           <SecondaryButton />
@@ -39,9 +59,10 @@ export default function Home() {
         <LocationsCarousel />
       </section>
       <Services />
-      <WhyUs/>
-      <AboutUs/>
-      <Process/>
+      <WhyUs />
+      <AboutUs />
+      <Process />
+      <Packages/>
     </div>
   );
 }

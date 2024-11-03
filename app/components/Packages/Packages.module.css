@@ -12,7 +12,7 @@
 }
 .header > p {
   font-size: 1.2rem;
-  color: gray;
+  /* color: gray; */
 }
 .cardsContainer {
   display: flex;
@@ -27,7 +27,7 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   flex: 1;
   min-width: 300px;
-  max-width: 25vw;
+  
 }
 .cardInfoContainer {
   display: flex;
@@ -37,6 +37,7 @@
 .blueBackground {
   text-align: center;
   padding: 30px 10px 10px 10px;
+  margin: 0 0 20px 0;
   border-radius: 8px 8px 0 0;
 }
 .blueBackground * {
@@ -50,7 +51,7 @@
 .card1 .cardTitle {
   color: white;
 }
-.card1 .cardPrice {
+ .cardPrice {
   margin: 0;
 }
 .card1 .cardTitle::after {
@@ -71,7 +72,6 @@
 
 .cardPrice {
   font-size: 1.75rem;
-  margin-bottom: 15px;
   font-weight: bold;
 }
 
@@ -94,10 +94,10 @@
   font-size: 1em; /* Adjust text size if needed */
 }
 
-.cardFeatures li::before {
+.feature::before {
   content: "";
   display: inline-block;
-  width: 16px;
+  min-width: 16px;
   height: 16px;
   background-image: url("/images/checkmark.svg"); /* Path to your SVG file */
   background-size: contain;
@@ -105,4 +105,53 @@
   background-position: center;
   margin-right: 8px; /* Space between checkmark and text */
   transform: translateY(-2px); /* Align vertically with text */
+}
+.missingFeature::before {
+  content: "";
+  display: inline-block;
+  min-width: 20px;
+  height: 20px;
+  background-image: url("/images/redx.png"); /* Path to your SVG file */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 8px; /* Space between checkmark and text */
+  transform: translateY(-2px); /* Align vertically with text */
+}
+
+.toggleContainer {
+  display: flex;
+  border-radius: 20px;
+  overflow: hidden;
+  width: 160px;
+  background-color: #e0e0e0;
+  margin: 10px auto;
+}
+
+.toggleContainer button {
+  flex: 1;
+  padding: 8px;
+  font-size: 16px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  color: #333;
+  background-color: #e0e0e0;
+}
+
+.toggleContainer button.activeToggle {
+  background-color: var(--color-secondary); /* Electric blue */
+  color: white;
+}
+
+.variantPricing {
+  margin: .5rem 0;
+  font-size: var(--font-size-lg);
+}
+
+@media (max-width: 1025px) {
+  .packagesContainer {
+    width: 90%;
+  }
 }
