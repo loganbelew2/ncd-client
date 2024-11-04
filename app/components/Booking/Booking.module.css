@@ -1,13 +1,5 @@
-.bookingSection {
+.booking h2 {
   padding-top: 20px;
-  margin: auto;
+  font-size: 2rem;
   text-align: center;
-}
-.bookingSection h1 {
-  font-size: 3rem;
-  margin-bottom: 0;
-  
-}
-.bookingSection p {
-  font-size: 1.2rem;
 }
