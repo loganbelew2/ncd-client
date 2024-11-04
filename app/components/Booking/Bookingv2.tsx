@@ -23,7 +23,7 @@ export default function BookingV2() {
     <section className={styles.bookingSection}>
       <h1>Schedule Now and Pay Later</h1>
       <p>
-        We will come to you and restore your car while you eat, sleep or bath
+        We will come to you and restore your car while you eat, work or bath
         the dog
       </p>
       <div id="square-appointments-container"></div>

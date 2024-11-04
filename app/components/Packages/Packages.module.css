@@ -123,15 +123,15 @@
   display: flex;
   border-radius: 20px;
   overflow: hidden;
-  width: 160px;
+  width: 200px;
   background-color: #e0e0e0;
   margin: 10px auto;
 }
 
 .toggleContainer button {
   flex: 1;
-  padding: 8px;
-  font-size: 16px;
+  padding: .5rem;
+  font-size: 17px;
   border: none;
   border-radius: 20px;
   cursor: pointer;
