@@ -1,6 +1,5 @@
 "use client";
 import { useEffect } from "react";
-import styles from "./Booking.module.css"
 export default function BookingV2() {
   useEffect(() => {
     const script = document.createElement("script");
@@ -24,10 +23,5 @@ export default function BookingV2() {
     };
   }, []);
 
-  return (
-    <div className={styles.booking} id="square-appointments-container">
-      {" "}
-      <h2>We currently only do appointments at residential homes and not apartments or workplaces</h2>
-    </div>
-  );
+  return <div id="square-appointments-container"></div>;
 }
