@@ -185,10 +185,10 @@ export const Packages = () => {
                 <p className={styles.cardPrice}>${displayPrice}</p>
                 <p className={styles.noMargin}>price for regular car/sedan</p>
                 <p className={styles.variantPricing}>
-                  small suv / truck: ${displayPrice + 20}
+                   suv/truck: ${displayPrice + 20}
                 </p>
                 <p className={styles.variantPricing}>
-                  large suv / truck ${displayPrice + 40}
+                  3 row suv/van ${displayPrice + 40}
                 </p>
                 <p>{displayHours}</p>
               </div>
