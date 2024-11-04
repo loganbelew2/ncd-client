@@ -9,8 +9,12 @@ const executivePackages = [
     title: "Interior Detail",
     description:
       "A comprehensive cleaning of your vehicle’s interior leaving it looking and smelling brand new.",
-    price: 149,
+    price: 159,
     features: [
+      "clean headliner",
+      "stain removal",
+      "steam clean",
+      "shampoo / extract mats & seats",
       "double vacuum",
       "clean plastic, vinyl & leather",
       "clean all cracks & crevices",
@@ -18,13 +22,9 @@ const executivePackages = [
       "clean doorjambs",
       "wipe down seats",
       "air freshener",
-      "clean headliner",
-      "stain removal",
-      "steam clean",
-      "shampoo / extract mats & seats",
     ],
     hours: "(3 to 4 hours)",
-    expressPrice: 99,
+    expressPrice: 119,
     expressFeatures: [
       "vacuum",
       "clean plastic, vinyl & leather",
@@ -47,8 +47,14 @@ const executivePackages = [
     title: "Full Detail",
     description:
       "Complete detailing service covering both interior and exterior, providing a complete rejuvenation of your vehicle.",
-    price: 189,
+    price: 199,
     features: [
+      "clean headliner",
+      "stain removal",
+      "steam clean",
+      "shampoo / extract mats & seats",
+      "exterior trim restored and protected",
+      "wax paint protection applied (3 months)",
       "double vacuum",
       "clean plastic, vinyl & leather",
       "clean all cracks & crevices",
@@ -56,20 +62,14 @@ const executivePackages = [
       "clean doorjambs",
       "wipe down seats",
       "air freshener",
-      "clean headliner",
-      "stain removal",
-      "steam clean",
-      "shampoo / extract mats & seats",
       "exterior foam bath",
       "hand wash",
       "clean wheels wheel wells & tires",
       "dress / shine tires",
       "brake dust, tar & sap removal",
-      "exterior trim restored and protected",
-      "wax protection applied (3 months)",
     ],
     hours: "(5 to 6 hours)",
-    expressPrice: 129,
+    expressPrice: 139,
     expressFeatures: [
       "vacuum",
       "clean plastic, vinyl & leather",
@@ -92,14 +92,14 @@ const executivePackages = [
       "exterior trim restored and protected",
       "wax paint protection applied (3 months)",
     ],
-    expressHours: "(4 to 5 hours)",
+    expressHours: "(3 to 4 hours)",
   },
   {
     id: 1,
     title: "Exterior Detail",
     description:
       "Thorough washing and protection for your vehicle’s exterior surfaces, including paint decon and sealant.",
-    price: 90,
+    price: 119,
     features: [
       "exterior foam bath",
       "hand wash",
@@ -198,14 +198,14 @@ export const Packages = () => {
                 </div>
 
                 <ul className={styles.cardFeatures}>
-                  {displayFeatures.map((feature, i) => (
-                    <li className={styles.feature} key={i}>
-                      {feature}
-                    </li>
-                  ))}
                   {missingFeatures.map((missingFeature, i) => (
                     <li key={`missing-${i}`} className={styles.missingFeature}>
                       {missingFeature}
+                    </li>
+                  ))}
+                  {displayFeatures.map((feature, i) => (
+                    <li className={styles.feature} key={i}>
+                      {feature}
                     </li>
                   ))}
                 </ul>
