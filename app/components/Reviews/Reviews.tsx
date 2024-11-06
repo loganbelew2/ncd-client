@@ -52,7 +52,7 @@ export default function Reviews() {
       reviewText:
         "Phenomenal attention to detail. My car looks brand new and Logan worked so hard to make it so. Thank you so much Logan!",
       reviewerName: "Heidi Glick",
-      reviewerImage: "/images/heidiReview.png",
+      reviewerImage: "/images/HeidiReview.png",
     },
   ];
 
