@@ -7,6 +7,12 @@
     text-align: center;
     font-size: 3rem;
 }
+.reviewCards {
+    display: flex;
+    gap: 4rem;
+    flex-flow: row wrap;
+
+}
 .reviewCard {
     width: 300px;
     box-shadow: 0 4px 20px var(--opacity-color-primary);
@@ -20,4 +26,10 @@
     display: flex;
     align-items: center;
     gap: 5px;
+}
+
+@media (max-width: 1024px) {
+    .reviewCards {
+        justify-content: center;
+    }
 }
