@@ -10,10 +10,13 @@
 }
 
 .services_section > div {
-  margin: 1rem 0;
+  margin: 1rem 0 3rem;
 }
 .services_section .first_service {
   margin-top: 2.5rem;
+}
+.services_section .second_service {
+  gap: 2rem;
 }
 .buttons {
   display: flex;
@@ -36,7 +39,7 @@
   display: flex;
   flex-flow: row wrap;
   padding: 60px;
-  gap: 1.5rem;
+  gap: .5rem;
 }
 .services_exterior_left {
   flex: 1;
@@ -61,5 +64,8 @@
   }
   .services_exterior {
     padding: 0;
+  }
+  .services_section .second_service {
+    gap: 0;
   }
 }

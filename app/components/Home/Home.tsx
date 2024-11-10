@@ -2,7 +2,6 @@
 import Image from "next/image";
 import styles from "./Home.module.css";
 import PrimaryButton from "../Buttons/Primary-Button";
-import ContactUs from "../Forms/ContactUs";
 import LocationsCarousel from "../Carousel/LocationsCarousel";
 import Link from "next/link";
 import Services from "../Services/Services";
@@ -50,6 +49,10 @@ export default function Home() {
           <SecondaryButton />
         </div>
       </section>
+      <WhyUs />
+      <Services />
+      <Process />
+      <Packages/>
       <section className={styles.locations__section}>
         <h2 className="h2 txt-center">Service Areas</h2>
         <p className={styles.subheading}>
@@ -58,11 +61,7 @@ export default function Home() {
         </p>
         <LocationsCarousel />
       </section>
-      <Services />
-      <WhyUs />
       <AboutUs />
-      <Process />
-      <Packages/>
     </div>
   );
 }

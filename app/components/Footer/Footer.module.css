@@ -6,3 +6,7 @@
     background-color: var(--color-primary);
     
 }
+
+.footer__container a {
+    color: black;
+}

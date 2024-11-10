@@ -6,12 +6,12 @@ export default function WhyUs() {
       <h2>Why Choose Us</h2>
       <div className={styles.BenefitsContainer}>
         <div>
-          <h3>Save money</h3>
+          <h3>Highly Rated</h3>
           <Image
-            src={"/images/money.png"}
+            src={"/images/finalrating.png"}
             alt="car icon"
-            height={150}
-            width={150}
+            height={180}
+            width={180}
           />
         </div>
         <div>

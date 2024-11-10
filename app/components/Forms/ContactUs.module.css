@@ -35,7 +35,8 @@
   color: black;
 }
 .section_two h3 {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
+  color: gray;
 }
 .section_two form {
   width: 70%;

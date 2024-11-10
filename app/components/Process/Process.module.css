@@ -17,3 +17,12 @@
     font-weight: 600;
     font-size: 1.4rem;
 }
+
+@media (max-width: 1025px) {
+    .steps {
+        gap: 1rem;
+    }
+    .step {
+        width: 100%;
+    }
+}

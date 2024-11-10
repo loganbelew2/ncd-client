@@ -53,9 +53,7 @@ export default function Services() {
               Interior detail | <span className="font--blue">Deep Clean</span>
             </h3>
             <p>
-              When you book an interior detailing service at Nashville Car
-              Detail, you’re choosing to refresh and revitalize your car’s
-              interior. We meticulously clean every surface, from deep vacuuming
+              We meticulously clean every surface, from deep vacuuming
               the carpets to conditioning the seats, leaving the interior
               spotless and refreshed. Our service will help protect your car’s
               interior materials, enhance comfort, and create a fresh
@@ -73,9 +71,7 @@ export default function Services() {
               Full detail | <span className="font--blue">Inside & Out</span>
             </h3>
             <p>
-              When you book a full detailing service at Nashville Car Detail,
-              you’re investing in a comprehensive makeover for your vehicle,
-              inside and out. We provide a thorough exterior hand wash, wax, and
+              We provide a thorough exterior hand wash, wax, and
               paint protection, paired with a deep interior clean, including
               carpet & upholstery shampoo. This service is designed
               to give your car a renewed look and feel, maximizing its

@@ -2,101 +2,110 @@
 import { useState } from "react";
 import PrimaryButton from "../Buttons/Primary-Button";
 import styles from "./Packages.module.css"; // Adjust the path as needed
+import Image from "next/image";
 
 const executivePackages = [
   {
     id: 3,
-    title: "Interior Detail",
+    title: "Interior Detail - ",
     description:
       "A comprehensive cleaning of your vehicle’s interior leaving it looking and smelling brand new.",
     price: 159,
     features: [
-      "clean headliner",
       "stain removal",
       "steam clean",
       "shampoo / extract mats & seats",
       "double vacuum",
-      "clean plastic, vinyl & leather",
-      "clean all cracks & crevices",
+      "clean all surfaces, plastic, vinyl & leather",
       "spotless windows",
       "clean doorjambs",
-      "wipe down seats",
       "air freshener",
     ],
     hours: "(3 to 4 hours)",
-    expressPrice: 119,
-    expressFeatures: [
+    type: "Interior",
+    tier: "Executive",
+    image: "/images/steam-clean.webp",
+  },
+  {
+    id: 4,
+    title: "Interior Detail - ",
+    description:
+      "A quicker interior detail service for general maintenance and cleanliness.",
+    price: 119,
+    features: [
       "vacuum",
-      "clean plastic, vinyl & leather",
-      "clean all cracks & crevices",
+      "clean all surfaces, plastic, vinyl & leather",
       "spotless windows",
       "clean doorjambs",
-      "wipe down seats",
       "air freshener",
     ],
-    missingFeatures: [
-      "clean headliner",
-      "stain removal",
-      "steam clean",
-      "shampoo / extract mats & seats",
-    ],
-    expressHours: "(2 to 3 hours)",
+    hours: "(2 to 3 hours)",
+    type: "Interior",
+    tier: "Express",
+    image: "/images/interior-express.jpeg",
   },
   {
     id: 2,
-    title: "Full Detail",
+    title: "Full Detail - ",
     description:
       "Complete detailing service covering both interior and exterior, providing a complete rejuvenation of your vehicle.",
     price: 199,
-    features: [
-      "clean headliner",
-      "stain removal",
-      "steam clean",
-      "shampoo / extract mats & seats",
-      "exterior trim restored and protected",
-      "wax paint protection applied (3 months)",
-      "double vacuum",
-      "clean plastic, vinyl & leather",
-      "clean all cracks & crevices",
-      "spotless windows",
-      "clean doorjambs",
-      "wipe down seats",
-      "air freshener",
-      "exterior foam bath",
-      "hand wash",
-      "clean wheels wheel wells & tires",
-      "dress / shine tires",
-      "brake dust, tar & sap removal",
-    ],
+    features: {
+      interior: [
+        "stain removal",
+        "steam clean",
+        "shampoo / extract mats & seats",
+        "double vacuum",
+        "clean all surfaces, plastic, vinyl & leather",
+        "spotless windows",
+        "clean doorjambs",
+        "air freshener",
+      ],
+      exterior: [
+        "exterior foam bath",
+        "hand wash",
+        "clean wheels, wheel wells & tires",
+        "dress / shine tires",
+        "brake dust, tar & sap removal",
+        "wax paint protection applied (3 months)",
+      ],
+    },
     hours: "(5 to 6 hours)",
-    expressPrice: 139,
-    expressFeatures: [
-      "vacuum",
-      "clean plastic, vinyl & leather",
-      "clean all cracks & crevices",
-      "spotless windows",
-      "clean doorjambs",
-      "wipe down seats",
-      "air freshener",
-      "exterior foam bath",
-      "hand wash",
-      "clean wheels, wheel wells & tires",
-      "dress / shine tires",
-      "brake dust, tar & sap removal",
-    ],
-    missingFeatures: [
-      "clean headliner",
-      "stain removal",
-      "steam clean",
-      "shampoo / extract mats & seats",
-      "exterior trim restored and protected",
-      "wax paint protection applied (3 months)",
-    ],
-    expressHours: "(3 to 4 hours)",
+    type: "Full",
+    tier: "Executive",
+    image: "/images/express-exterior.jpg",
+  },
+  {
+    id: 5,
+    title: "Full Detail - ",
+    description:
+      "A quicker full detail service for general maintenance, covering both interior and exterior.",
+    price: 139,
+    features: {
+      interior: [
+        "vacuum",
+        "clean all surfaces, plastic, vinyl & leather",
+        "spotless windows",
+        "clean doorjambs",
+        "air freshener",
+      ],
+      exterior: [
+        "exterior foam bath",
+        "hand wash",
+        "clean wheels, wheel wells & tires",
+        "dress / shine tires",
+        "brake dust, tar & sap removal",
+        "wax paint protection applied (3 months)",
+      ],
+    },
+    hours: "(3 to 4 hours)",
+    type: "Full",
+    tier: "Express",
+    image: "/images/full-detail.webp",
   },
   {
     id: 1,
-    title: "Exterior Detail",
+    title: "Exterior Detail - ",
     description:
       "Thorough washing and protection for your vehicle’s exterior surfaces, including paint decon and sealant.",
     price: 119,
@@ -106,113 +115,114 @@ const executivePackages = [
       "clean wheels, wheel wells & tires",
       "dress / shine tires",
       "brake dust, tar & sap removal",
-      "exterior trim restored and protected",
       "wax paint protection applied (3 months)",
     ],
     hours: "(2 to 3 hours)",
+    type: "Exterior",
+    tier: "Executive",
+    image: "/images/Car-Exterior-Detailing.jpg",
   },
 ];
 
 export const Packages = () => {
-  const [detailToggle, setDetailToggle] = useState({
-    interior: false,
-    full: false,
-  });
+  const [selectedType, setSelectedType] = useState("Interior");
 
-  const handleToggle = (id: number) => {
-    setDetailToggle((prevToggle) => ({
-      ...prevToggle,
-      [id === 3 ? "interior" : "full"]:
-        !prevToggle[id === 3 ? "interior" : "full"],
-    }));
-  };
+  const filteredPackages = executivePackages.filter(
+    (pkg) => pkg.type === selectedType
+  );
 
   return (
     <div className={styles.packagesContainer}>
       <div className={styles.header}>
         <h1>Our Detailing Packages</h1>
         <p>
-          Choose one of our <span className="font--blue">*Executive*</span>{" "}
-          packages for more comprehensive detailing or choose
-          <span className="font--blue"> *Express*</span> for more general
-          maintenance cleaning
+          Choose between our <span className="font--blue">Executive</span> and{" "}
+          <span className="font--blue">Express</span> packages to fit your needs
         </p>
       </div>
+      <div className={styles.toggleContainer}>
+        <button
+          className={`${styles.toggleButton} ${
+            selectedType === "Interior" ? styles.active : ""
+          }`}
+          onClick={() => setSelectedType("Interior")}
+        >
+          Interior Only
+        </button>
+        <button
+          className={`${styles.toggleButton} ${
+            selectedType === "Full" ? styles.active : ""
+          }`}
+          onClick={() => setSelectedType("Full")}
+        >
+          Full Detail
+        </button>
+        <button
+          className={`${styles.toggleButton} ${
+            selectedType === "Exterior" ? styles.active : ""
+          }`}
+          onClick={() => setSelectedType("Exterior")}
+        >
+          Exterior Only
+        </button>
+      </div>
       <div className={`${styles.cardsContainer} gcardsContainer`}>
-        {executivePackages.map((pkg, index) => {
-          const isExpress =
-            (pkg.id === 3 && detailToggle.interior) ||
-            (pkg.id === 2 && detailToggle.full);
-          const displayPrice = isExpress
-            ? pkg.expressPrice ?? pkg.price
-            : pkg.price;
-          const displayFeatures = isExpress
-            ? pkg.expressFeatures ?? pkg.features
-            : pkg.features;
-          const displayHours = isExpress
-            ? pkg.expressHours ?? pkg.hours
-            : pkg.hours;
-          const missingFeatures =
-            isExpress && pkg.missingFeatures ? pkg.missingFeatures : [];
+        {filteredPackages.map((pkg, index) => (
+          <div
+            key={index}
+            className={`${styles.card} ${styles[`card${index}`]}`}
+          >
+            <div className={styles.blueBackground}>
+              <h2 className={styles.cardTitle}>
+                {pkg.title} <span className="font--blue">{pkg.tier}</span>
+              </h2>
+              <p className={styles.cardPrice}>${pkg.price}*</p>
 
-          return (
-            <div
-              key={index}
-              className={`${styles.card} ${styles[`card${index}`]}`}
-            >
-              <div className={styles.blueBackground}>
-                <h2 className={styles.cardTitle}>{pkg.title}</h2>
-
-                {/* Toggle Switch */}
-                {(pkg.id === 3 || pkg.id === 2) && (
-                  <div className={styles.toggleContainer}>
-                    <button
-                      onClick={() => handleToggle(pkg.id)}
-                      className={!isExpress ? styles.activeToggle : ""}
-                    >
-                      Executive
-                    </button>
-                    <button
-                      onClick={() => handleToggle(pkg.id)}
-                      className={isExpress ? styles.activeToggle : ""}
-                    >
-                      Express
-                    </button>
-                  </div>
+              <p>{pkg.hours}</p>
+            </div>
+            <div className={styles.image}>
+              <Image
+                src={pkg.image}
+                layout="responsive"
+                width={1}
+                height={1}
+                alt="exterior"
+              />
+            </div>
+            <div className={styles.cardWrapper}>
+              <ul className={styles.cardFeatures}>
+                {pkg.type === "Full" ? (
+                  <>
+                    <h3>Interior Features</h3>
+                    {pkg.features.interior.map((feature, i) => (
+                      <li className={styles.feature} key={`interior-${i}`}>
+                        {feature}
+                      </li>
+                    ))}
+                    <h3>Exterior Features</h3>
+                    {pkg.features.exterior.map((feature, i) => (
+                      <li className={styles.feature} key={`exterior-${i}`}>
+                        {feature}
+                      </li>
+                    ))}
+                  </>
+                ) : (
+                  <>
+                    <h3>Features</h3>
+                    {pkg.features.map((feature, i) => (
+                      <li className={styles.feature} key={i}>
+                        {feature}
+                      </li>
+                    ))}
+                  </>
                 )}
-                {pkg.id === 1 && <p>Executive - No Express Option</p>}
-
-                <p className={styles.cardPrice}>${displayPrice}</p>
-                <p className={styles.noMargin}>price for regular car/sedan</p>
-                <p className={styles.variantPricing}>
-                   suv/truck: ${displayPrice + 20}
-                </p>
-                <p className={styles.variantPricing}>
-                  3 row suv/van ${displayPrice + 40}
-                </p>
-                <p>{displayHours}</p>
-              </div>
-              <div className={styles.cardWrapper}>
-                <div className={styles.cardInfoContainer}>
-                  <PrimaryButton params={index + 1} />
-                </div>
-
-                <ul className={styles.cardFeatures}>
-                  {missingFeatures.map((missingFeature, i) => (
-                    <li key={`missing-${i}`} className={styles.missingFeature}>
-                      {missingFeature}
-                    </li>
-                  ))}
-                  {displayFeatures.map((feature, i) => (
-                    <li className={styles.feature} key={i}>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
+              </ul>
+              <div className={styles.cardInfoContainer}>
+                <PrimaryButton params={index + 1} />
               </div>
             </div>
-          );
-        })}
+          </div>
+        ))}
       </div>
     </div>
   );

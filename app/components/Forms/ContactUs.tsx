@@ -91,7 +91,7 @@ export default function ContactUs() {
       )}
 
       <h2 style={{ marginBottom: 0 }}>Questions?</h2>
-      <h3>Send us a message and we will get back asap!</h3>
+      <h3>Send us a message and we will get back asap</h3>
 
       <form
         method="POST"
