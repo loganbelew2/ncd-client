@@ -123,6 +123,17 @@ const executivePackages = [
     image: "/images/Car-Exterior-Detailing.jpg",
   },
 ];
+// Type guard function to check if features has interior and exterior properties
+const isFullDetailFeatures = (
+  features: any
+): features is { interior: string[]; exterior: string[] } => {
+  return (
+    features &&
+    typeof features === "object" &&
+    "interior" in features &&
+    "exterior" in features
+  );
+};
 
 export const Packages = () => {
   const [selectedType, setSelectedType] = useState("Interior");
@@ -177,7 +188,6 @@ export const Packages = () => {
                 {pkg.title} <span className="font--blue">{pkg.tier}</span>
               </h2>
               <p className={styles.cardPrice}>${pkg.price}*</p>
-
               <p>{pkg.hours}</p>
             </div>
             <div className={styles.image}>
@@ -191,7 +201,7 @@ export const Packages = () => {
             </div>
             <div className={styles.cardWrapper}>
               <ul className={styles.cardFeatures}>
-                {pkg.type === "Full" ? (
+                {isFullDetailFeatures(pkg.features) ? (
                   <>
                     <h3>Interior Features</h3>
                     {pkg.features.interior.map((feature, i) => (
