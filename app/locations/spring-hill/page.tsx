@@ -1,9 +1,12 @@
 import SpringHill from "@/app/components/Locations/springHill/Spring-Hill";
+import { Packages } from "@/app/components/Packages/Packages";
+import Process from "@/app/components/Process/Process";
+import Services from "@/app/components/Services/Services";
 
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Mobile Car Detailing in Spring Hill - auto detailing near me",
+  title: "Mobile Car Detailing in Spring Hill, TN - auto detailing near me",
   description:
     "Nashville Car Detail offers premium mobile car detailing services in Spring Hill, TN. Experience top-tier car care with our expert team, available at your location. Book your appointment today!",
   keywords:
@@ -29,7 +32,12 @@ export const metadata: Metadata = {
 };
 
 export default function SpringHillPage() {
-    return (
-        <SpringHill/>
-    )
+  return (
+    <>
+      <SpringHill />
+      <Services />
+      <Process />
+      <Packages />
+    </>
+  );
 }

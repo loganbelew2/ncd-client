@@ -1,5 +1,6 @@
 import ContactUs from "@/app/components/Forms/ContactUs";
 import LocationsLearn from "@/app/components/Locations/LocationsLearn/LocationsLearn";
+import { Packages } from "@/app/components/Packages/Packages";
 import Process from "@/app/components/Process/Process";
 import ExteriorService from "@/app/components/Services/Exterior-Service";
 import { Metadata } from "next";
@@ -32,6 +33,7 @@ function ExteriorDetail() {
     <>
       <ExteriorService />
       <Process />
+      <Packages />
       <LocationsLearn/>
     </>
   );

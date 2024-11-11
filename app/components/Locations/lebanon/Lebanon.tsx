@@ -13,7 +13,7 @@ export default function Lebanon() {
           driveway to give your car the clean it deserves!
         </p>
       </div>
-      <Services />
+      
     </section>
   );
 }

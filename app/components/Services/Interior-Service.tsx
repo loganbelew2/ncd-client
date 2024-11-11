@@ -1,89 +1,87 @@
-
 import styles from "./Interior-Service.module.css";
 
 export default function InteriorService() {
   return (
     <section className={styles.interiorDetailContainer}>
       <div className={styles.interiorHero}>
-        <h1 className={styles.heading}>Mobile Interior Car Detailing In Nashville</h1>
+        <h1 className={styles.heading}>Mobile Vehicle Interior Detailing Near You in Nashville</h1>
         <p className={styles.subheading}>
-          Refresh and protect the interior of your vehicle from the crazy Tennessee weather without the hassle of leaving your home.
+          Refresh and protect your vehicle&apos;s interior from Nashville&apos;s unpredictable weather with our convenient mobile interior detailing service—right at your doorstep.
         </p>
       </div>
       <section className={styles.cleaningProcessSection}>
-        <h2>Our Interior Cleaning Process</h2>
+        <h2>Our Professional Vehicle Interior Detailing Process</h2>
         <div className={styles.grid}>
           <div className={styles.card}>
             <h3 className={styles.cardTitle}>1</h3>
             <p className={styles.cardDescription}>
-              Vacuum seats, carpets, and floor mats to remove loose dirt, crumbs, and debris.
+              Comprehensive vacuuming of seats, carpets, and floor mats to remove loose dirt, crumbs, and debris.
             </p>
           </div>
           <div className={styles.card}>
             <h3 className={styles.cardTitle}>2</h3>
             <p className={styles.cardDescription}>
-              Clean and condition all leather surfaces to remove dirt, oils, and restore a soft, supple feel.
+              Deep clean and condition leather surfaces, removing dirt and oils to restore softness and protection.
             </p>
           </div>
           <div className={styles.card}>
             <h3 className={styles.cardTitle}>3</h3>
             <p className={styles.cardDescription}>
-              Deep clean upholstery and carpets using steam or extraction methods to lift stubborn stains and odors.
+              Upholstery and carpet deep cleaning with steam or extraction to lift stubborn stains and odors, enhancing your vehicle&apos;s interior appeal.
             </p>
           </div>
           <div className={styles.card}>
             <h3 className={styles.cardTitle}>4</h3>
             <p className={styles.cardDescription}>
-              Detail dashboard, center console, and all touchpoints with specialty cleaners to restore shine and remove grime.
+              Detail and sanitize dashboard, center console, and all touchpoints for a renewed, grime-free finish.
             </p>
           </div>
           <div className={styles.card}>
             <h3 className={styles.cardTitle}>5</h3>
             <p className={styles.cardDescription}>
-              Clean and protect interior glass and mirrors for clear visibility and a streak-free finish.
+              Streak-free cleaning and protection of interior glass and mirrors for optimal visibility.
             </p>
           </div>
           <div className={styles.card}>
             <h3 className={styles.cardTitle}>6</h3>
             <p className={styles.cardDescription}>
-              Final Inspection of the vehicle and then touch up any areas overlooked that didn&apos;t get the proper attention.
+              Thorough inspection and touch-ups to ensure your vehicle&apos;s interior detailing meets the highest standard.
             </p>
           </div>
         </div>
       </section>
       <div className={styles.serviceDetails}>
-        <h2>Why Should I Get My Car&apos;s Interior Detailed?</h2>
+        <h2>Why Choose Our Interior Auto Detailing Services Near Nashville?</h2>
         <p>
-          Choosing a professional for your car&apos;s interior detailing means a meticulous clean and restoration, extending the life of your car&apos;s interior materials. We focus on the details that matter, from stain removal to conditioning leather, ensuring your car feels like new. Our mobile service brings this premium experience directly to you.
+          Our professional mobile interior detailing service brings deep cleaning, stain removal, and leather conditioning directly to you in Nashville, TN. We focus on every detail to restore your car&apos;s interior, extending its lifespan and enhancing its value. Our interior detailing process makes your vehicle feel like new.
         </p>
         <ul className={styles.whyList}>
           <li>
-            <strong>Removes Stubborn Stains</strong> Deep cleaning can remove difficult stains from seats and carpets, enhancing your car&apos;s appearance.
+            <strong>Eliminates Stubborn Stains</strong> Deep interior cleaning lifts tough stains from seats and carpets, giving your car a fresh look.
           </li>
           <li>
-            <strong>Eliminates Odors</strong> Our process helps neutralize unpleasant smells, leaving your car&apos;s interior fresh and clean.
+            <strong>Neutralizes Odors</strong> Our methods help remove odors, leaving your vehicle&apos;s interior smelling fresh.
           </li>
           <li>
-            <strong>Protects Interior Materials</strong> Conditioning leather and using fabric protectants keeps your seats, dashboard, and other surfaces in great shape.
+            <strong>Protects Interior Surfaces</strong> Conditioning leather and applying fabric protectants extend the life of seats, dashboards, and touchpoints.
           </li>
           <li>
-            <strong>Boosts Resale Value</strong> A well-maintained interior can increase the value of your car when it’s time to sell or trade it in.
+            <strong>Increases Resale Value</strong> A professionally detailed interior can increase your car&apos;s resale or trade-in value.
           </li>
           <li>
-            <strong>Prevents Wear and Tear</strong> Regular detailing helps prevent cracks, fading, and other damage to the upholstery and dashboard.
+            <strong>Prevents Wear and Tear</strong> Regular detailing helps prevent cracks, fading, and other common issues.
           </li>
           <li>
-            <strong>Improves Air Quality</strong> Removing dust, dirt, and allergens from the interior creates a healthier environment inside your car.
+            <strong>Improves Air Quality</strong> Removing dust, dirt, and allergens creates a healthier in-car environment.
           </li>
           <li>
-            <strong>Saves Time</strong> Letting a professional handle the deep cleaning allows you to focus on other things while we make your car look and smell amazing.
+            <strong>Saves Time</strong> With mobile detailing, you save time and hassle while we handle the job with care.
           </li>
           <li>
-            <strong>Makes Driving More Enjoyable</strong> A clean, fresh-smelling interior can improve your overall driving experience.
+            <strong>Enhances Driving Experience</strong> Enjoy a clean, refreshed interior every time you drive.
           </li>
         </ul>
       </div>
-     
     </section>
   );
 }

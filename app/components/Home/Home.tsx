@@ -10,6 +10,7 @@ import Process from "../Process/Process";
 import AboutUs from "../AboutUs/AboutUs";
 import WhyUs from "../WhyUs/WhyUs";
 import { Packages } from "../Packages/Packages";
+import LocationsLearn from "../Locations/LocationsLearn/LocationsLearn";
 export default function Home() {
   return (
     <div className={styles.home__container}>
@@ -25,10 +26,7 @@ export default function Home() {
             All Without Leaving Home
           </span>
         </p>
-        {/* <div className={styles.heroButtons}>
-          <PrimaryButton />
-          <SecondaryButton />
-        </div> */}
+
         <div className={styles.reviewsContainer}>
           <Image
             src={"/images/google.png"}
@@ -42,7 +40,9 @@ export default function Home() {
             width={100}
             alt="5 stars"
           />
-          <p>Average Google Rating: <span>5.0 out of 5.0</span></p>
+          <p>
+            Average Google Rating: <span>5.0 out of 5.0</span>
+          </p>
         </div>
         <div className={styles.heroButtons}>
           <PrimaryButton />
@@ -52,15 +52,8 @@ export default function Home() {
       <WhyUs />
       <Services />
       <Process />
-      <Packages/>
-      <section className={styles.locations__section}>
-        <h2 className="h2 txt-center">Service Areas</h2>
-        <p className={styles.subheading}>
-          Check out all of the <Link href={"/locations"}>Locations </Link> we
-          proudly serve and let us give your car the shine it deserves!
-        </p>
-        <LocationsCarousel />
-      </section>
+      <Packages />
+      <LocationsLearn />
       <AboutUs />
     </div>
   );

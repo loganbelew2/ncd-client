@@ -7,7 +7,7 @@ export const viewport: Viewport = {
   userScalable: false,
 };
 export const metadata: Metadata = {
-  title: "Mobile Auto Detailing in Nashville | Car Detailing Near Me",
+  title: "Mobile Detailing Nashville, TN | Car Detailing Near Me",
   description:
     "Nashville Car Detail offers top-notch mobile auto detailing services in the Nashville area. Book your appointment today!",
   keywords:

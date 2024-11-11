@@ -1,9 +1,12 @@
 import Franklin from "@/app/components/Locations/franklin/Franklin";
+import { Packages } from "@/app/components/Packages/Packages";
+import Process from "@/app/components/Process/Process";
+import Services from "@/app/components/Services/Services";
 
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Mobile Car Detailing in Franklin - auto detailing near me",
+  title: "Mobile Car Detailing in Franklin, TN - auto detailing near me",
   description:
     "Nashville Car Detail offers premium mobile car detailing services in Franklin, TN. Experience top-tier car care with our expert team, available at your location. Book your appointment today!",
   keywords:
@@ -30,6 +33,11 @@ export const metadata: Metadata = {
 
 export default function FranklinPage() {
     return (
-        <Franklin/>
+      <>
+      <Franklin />
+      <Services />
+      <Process />
+      <Packages />
+    </>
     )
 }

@@ -4,9 +4,9 @@ import Process from "../components/Process/Process";
 import ContactUs from "../components/Forms/ContactUs";
 
 export const metadata: Metadata = {
-  title: "Nashville Car Detail - Car Detailing Services Near Nashville",
+  title: "Nashville Car Detail - Car Detailing Services Nashville",
   description:
-    "Explore Nashville Car Detail's premium car detailing services, including Full Detail, Interior Detail, and Exterior Detail. Book now for a fresh and shiny ride!",
+    "Explore Nashville Car Detail's premium car detailing services, including Full Detailing, Interior Detailing, and Exterior Detailing. Book now for a fresh and shiny ride!" ,
   keywords:
     "Nashville car detailing, car detail services, full car detail, interior car detail, exterior car detail, auto detailing, mobile car detail Nashville",
   openGraph: {

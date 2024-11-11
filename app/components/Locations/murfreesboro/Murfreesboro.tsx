@@ -13,7 +13,7 @@ export default function Murfreesboro() {
           driveway to give your car the clean it deserves!
         </p>
       </div>
-      <Services />
+      
     </section>
   );
 }

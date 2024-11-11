@@ -26,6 +26,7 @@ export default function LocationsLearn() {
         <Image
           src={"/images/heroimage.webp"}
           alt="car"
+          layout="responsive"
           width={500}
           height={500}
         />
