@@ -1,12 +1,52 @@
 .footer__container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 100vw;
-    background-color: var(--color-primary);
-    
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  gap: 2rem;
+  align-items: flex-start;
+  width: 100%;
+  background-color: var(--color-primary);
+  padding: 20px;
+  color: white;
 }
 
-.footer__container a {
+.footer__info {
+  margin-bottom: 10px;
+}
+.footer__contact {
+  margin-bottom: 10px;
+}
+.footer__contact a {
     color: black;
+}
+
+.footer__links {
+  display: flex;
+  justify-content: space-between;
+
+  max-width: 1200px;
+}
+
+.footer__container h4 {
+  margin-bottom: 10px;
+}
+
+.footer__container ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.ul li {
+  margin: 5px 0;
+  width: max-content;
+}
+
+.ul a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.ul li a:hover {
+  color: var(--color-secondary); /* Or any other hover color */
 }

@@ -10,7 +10,7 @@ export default function Franklin() {
           We proudly serve all areas of Franklin, TN, bringing premium car detailing services right to your location!
         </p>
       </div>
-
+      <div className={styles.overlay}>
       <div className={styles.whyChooseUs}>
         <h2>Why Choose Our Franklin Mobile Car Detailing Services?</h2>
         <p>
@@ -36,6 +36,7 @@ export default function Franklin() {
             {" "}Locations
           </Link>. Experience high-quality car detailing with the convenience of mobile service. Schedule your appointment today and let us help keep your car looking its best.
         </p>
+      </div>
       </div>
     </section>
   );
