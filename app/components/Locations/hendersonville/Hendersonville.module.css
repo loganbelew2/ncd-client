@@ -1,62 +1,30 @@
+.hendersonvilleSection h2 {
+  text-align: center;
+}
+
+.hendersonvilleSection {
+  width: 85%;
+  margin: 0 auto;
+}
 .header {
-  background-image: url("/images/Hendersonville.png");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-color: rgba(0, 0, 0, 0.5);
-  background-blend-mode: multiply;
-  color: white;
   text-align: center;
   display: flex;
   flex-direction: column;
   padding: 3vh 3vw;
   justify-content: space-evenly;
-  min-height: 60vh;
 }
 
 .header h1 {
-  font-size: 3rem;
-  color: var(--color-background);
   margin-bottom: 10px;
 }
-
-.header p {
-  font-size: 1.2rem;
-  color: var(--color-background);
-  margin-bottom: 40px;
-}
-.ctaSection {
-  padding: 50px 0 5px 0;
-  background-color: var(--color-primary);
-  color: white;
-  width: 100%;
-  text-align: center;
-  height: 100%;
-  margin-bottom: 1rem;
-  padding: 60px 0;
+.header h1::after {
+  content: "";
+  display: block;
+  height: 4px;
+  background: linear-gradient(to right, var(--color-primary), transparent);
 }
 
-.ctaSection h2 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-}
-
-.ctaSection p {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
-}
-
-.testimonialSection {
-  padding: 40px 20px;
-}
-
-.testimonialSection h2 {
-  font-size: 2.5rem;
-  color: #000;
-  margin-bottom: 20px;
-}
-
-.testimonialSection p {
-  color: #666;
-  font-size: 1.2rem;
+.link {
+  text-decoration: none;
+  color: var(--color-primary);
 }
