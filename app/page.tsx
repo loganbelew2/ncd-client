@@ -42,7 +42,7 @@ export const metadata: Metadata = {
   ],
   "url": "https://www.nashvillecardetail.com",
   "telephone": "+1-615-927-1987",
-  "openingHours": "Mo-Fr 07:00-19:00",
+  "openingHours": "Mo-Sun 07:00-19:00",
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": "5.0",
