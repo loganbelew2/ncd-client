@@ -5,6 +5,7 @@ import Analytics from "./components/Analytics/Analytics";
 import { GoogleTag } from "./components/Analytics/GoogleTag";
 import CtaBanner from "./components/CtaBanner/CtaBanner";
 import ContactUs from "./components/Forms/ContactUs";
+import { metadata } from "./page";
 
 export default function RootLayout({
   children,
@@ -13,8 +14,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en-US">
-      <GoogleTag/>
+      <GoogleTag />
       <Analytics />
+      <head>
+        {metadata.other && (
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: metadata.other.jsonLd }}
+          />
+        )}
+      </head>
       <body className="body">
         <div className="container">
           <header className="header">
@@ -23,8 +32,8 @@ export default function RootLayout({
             </nav>
           </header>
           <main className="main">{children}</main>
-          <CtaBanner/>
-          <ContactUs/>
+          <CtaBanner />
+          <ContactUs />
           <footer className="footer">
             <Footer />
           </footer>
