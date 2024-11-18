@@ -4,7 +4,7 @@
 
 .reviewCard {
   width: 300px;
-  box-shadow: 0 4px 20px var(--opacity-color-primary);
+  box-shadow: 0 1px 5px var(--opacity-color-primary);
   padding: 1rem;
   margin: 0 auto;
 }
@@ -39,5 +39,8 @@
 @media (max-width: 1024px) {
   .reviewCards {
     justify-content: center;
+  }
+  .reviewCard {
+    width: fit-content;
   }
 }
