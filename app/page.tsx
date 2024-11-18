@@ -37,8 +37,8 @@ export const metadata: Metadata = {
   "logo": "https://www.nashvillecardetail.com/images/NCD_Logo_White_BG.jpg",
   "image": [
   "https://www.nashvillecardetail.com/images/schemainterior.jpeg",
-  "https://www.nashvillecardetail.com/images/schemaredcar.jpeg"
-  "https://www.nashvillecardetail.com/images/interiorschema.jpeg",
+  "https://www.nashvillecardetail.com/images/schemaredcar.jpeg",
+  "https://www.nashvillecardetail.com/images/interiorschema.jpeg"
   ],
   "url": "https://www.nashvillecardetail.com",
   "telephone": "+1-615-927-1987",
