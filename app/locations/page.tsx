@@ -16,7 +16,7 @@ export const metadata: Metadata = {
       "Explore our various mobile auto detailing locations, providing top-notch car detailing services throughout Nashville and surrounding areas. Book your appointment today!",
     type: "website",
     url: "https://www.nashvillecardetail.com/locations",
-    images: "/images/NCDLogoTransBig.png", 
+    images: "/images/NCD_Logo_White_BG.jpg", 
   },
   twitter: {
     card: "summary_large_image",
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     title: "Nashville Car Detail Locations - Premium Mobile Auto Detailing",
     description:
       "Find out where Nashville Car Detail offers mobile auto detailing services. Check out our locations today!",
-    images: "/images/NCDLogoTransBig.png", 
+    images: "/images/NCD_Logo_White_BG.jpg", 
   },
 };
 

@@ -20,7 +20,7 @@ export const metadata: Metadata = {
       "Nashville Car Detail provides high-quality mobile car detailing services in Nashville, TN. Contact us to schedule your detailing service and experience unparalleled car care.",
     type: "website",
     url: "https://www.nashvillecardetail.com/locations/nashville",
-    images: "/images/NCDLogoTransBig.png",
+    images: "/images/NCD_Logo_White_BG.jpg",
   },
   twitter: {
     card: "summary_large_image",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     title: "Mobile Car Detailing in Nashville - auto detailing near me",
     description:
       "Get premium mobile car detailing services in Nashville, TN, from Nashville Car Detail. Book now for top-notch car care!",
-    images: "/images/NCDLogoTransBig.png",
+    images: "/images/NCD_Logo_White_BG.jpg",
   },
 };
 
