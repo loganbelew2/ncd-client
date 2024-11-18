@@ -58,7 +58,9 @@ export default function Reviews() {
 
   return (
     <section className={styles.reviewsContainer}>
-      <h1 className={styles.title}>See what our satisfied customers are saying</h1>
+      <h1 className={styles.title}>
+        What Our Customers Are Saying
+      </h1>
       <div className={styles.reviewCards}>
         {reviews.map((review, index) => (
           <ReviewCard

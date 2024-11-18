@@ -8,7 +8,7 @@
     justify-content: center;
 }
 .step {
-    padding: 1rem;
+    padding: 2rem;
 }
 .step:nth-child(2) img {
     padding-top: 1rem;
@@ -16,6 +16,7 @@
 .stepHeader {
     font-weight: 600;
     font-size: 1.4rem;
+    margin: 0;
 }
 
 @media (max-width: 1025px) {
@@ -24,5 +25,6 @@
     }
     .step {
         width: 100%;
+        padding: 0;
     }
 }

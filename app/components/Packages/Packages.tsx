@@ -145,7 +145,7 @@ export const Packages = () => {
   return (
     <div className={styles.packagesContainer}>
       <div className={styles.header}>
-        <h1>Our Detailing Packages</h1>
+        <h2>Our Detailing Packages</h2>
         <p>
           Choose between our <span className="font--blue">Executive</span> and{" "}
           <span className="font--blue">Express</span> packages to fit your needs

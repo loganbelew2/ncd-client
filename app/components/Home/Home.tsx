@@ -43,11 +43,11 @@ export default function Home() {
     <div className={styles.home__container}>
       <section className={styles.hero__container}>
         <h1 className={styles.title}>
-          Mobile car detailing <br />
-          in Nashville
+          Mobile Car Detailing <br />
+          In Nashville
         </h1>
         <p className={styles.subheading}>
-          Quick Online Booking, Professional Detailing, and Exceptional Results
+          Quick Booking and Professional Detailing
           –{" "}
           <span className="font--blue font--bold">
             All Without Leaving Home

@@ -1,6 +1,5 @@
 .hero__container {
   display: flex;
-  min-height: 70vh;
   flex-direction: column;
   color: white;
   background-image: url("/images/interiorDetail.jpg");
@@ -9,10 +8,10 @@
   background-size: cover;
   background-blend-mode: multiply;
   background-color: rgba(0, 0, 0, 0.6);
-  gap: 1.5rem;
+  gap: 1rem;
   align-items: center;
-  justify-content: center;
   text-align: center;
+  padding: 4rem;
 }
 .hero__container * {
   margin: 0;
@@ -42,13 +41,14 @@
 }
 
 .title {
-  font-weight: 400;
+  font-weight: 700;
   line-height: 1.2; /* Adjusts the height between lines */
 
   overflow-wrap: break-word;
 }
 .subheading {
   text-align: center;
+  font-size: 1.1rem;
 }
 .locations__section {
   width: 85%;
@@ -73,9 +73,9 @@
 
 @media (max-width: 1025px) {
   .hero__container {
-    padding: 2rem 1rem;
+    padding: 3rem 1rem;
     justify-content: center;
-    min-height: 70vh;
+    /* min-height: 70vh; */
   }
   section.section_two {
     width: 100%;

@@ -5,19 +5,26 @@
 .BenefitsContainer {
     display: flex;
     justify-content: space-evenly;
+
     gap: 2rem;
     flex-flow: row wrap;  
 }
 .BenefitsContainer > * {
     box-shadow: 0 4px 20px var(--opacity-color-primary);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding: 20px;
     width: 300px;
     height: 300px;
 }
+.BenefitsContainer h3 {
+    margin: 0;
+}
 @media (max-width: 1025px) {
     .BenefitsContainer > * {
-        padding: 0;
-        height: 200px;
+        height: 250px;
     }
     .BenefitsContainer h3 {
         margin: .5rem;

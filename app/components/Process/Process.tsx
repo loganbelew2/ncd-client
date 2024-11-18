@@ -23,7 +23,7 @@ export default function Process() {
                         alt='car icon'
                     ></Image>
                     <p className={styles.stepHeader}>step 2</p>
-                    <p>We come to you <br /> and send a reminder before</p>
+                    <p>We come to you </p>
                 </div>
                 <div className={styles.step}>
                     <Image
@@ -33,7 +33,7 @@ export default function Process() {
                         alt='car key icon'
                     ></Image>
                     <p className={styles.stepHeader}>step 3</p>
-                    <p>You hand us the keys <br /> and point us to the <br /> water and power supply</p>
+                    <p>You hand us the keys <br /> and we get started <br /></p>
                 </div>
                 <div className={styles.step}>
                     <Image
@@ -43,7 +43,7 @@ export default function Process() {
                         alt='checklist icon'
                     ></Image>
                     <p className={styles.stepHeader}>step 4</p>
-                    <p>After we finish the detail <br /> we show the result <br /> and ensure satisfaction</p>
+                    <p>After we finish the detail <br /> we ensure satisfaction <br /></p>
                 </div>
             </div>
         </section>

@@ -10,7 +10,7 @@ export default function Services() {
       <section className={styles.services_section}>
         <h2 className="h2 txt-center">Our 3 Detailing Services</h2>
         <p className={`${styles.subheading} txt-center `}>
-          3 Services - Affordable cost - Professional quality - Great value
+          Affordable cost - Professional quality - Great value
         </p>
         <div className={`${styles.services_exterior} ${styles.first_service}`}>
           <div className={styles.services_exterior_left}>

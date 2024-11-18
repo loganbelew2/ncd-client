@@ -24,7 +24,7 @@ export default function WhyUs() {
           />
         </div>
         <div>
-          <h3>Excellent results</h3>
+          <h3>Excellent Results</h3>
           <Image
             src={"/images/excellent.png"}
             alt="car icon"
