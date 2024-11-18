@@ -1,6 +1,9 @@
 "use client";
 import { useState } from "react";
 import Image from "next/image";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css"; // Import Swiper styles
+import "swiper/css/pagination";
 import styles from "./Reviews.module.css";
 
 // Define the props type for ReviewCard
@@ -10,8 +13,12 @@ interface ReviewCardProps {
   reviewerImage: string;
 }
 
-// Reusable ReviewCard component with typed props
-function ReviewCard({ reviewText, reviewerName, reviewerImage }: ReviewCardProps) {
+// Reusable ReviewCard component
+function ReviewCard({
+  reviewText,
+  reviewerName,
+  reviewerImage,
+}: ReviewCardProps) {
   const [isExpanded, setIsExpanded] = useState(false);
   const truncatedReview = reviewText.split(" ").slice(0, 20).join(" ") + "...";
 
@@ -20,7 +27,11 @@ function ReviewCard({ reviewText, reviewerName, reviewerImage }: ReviewCardProps
   };
 
   return (
-    <div className={styles.reviewCard}>
+    <div className={styles.reviewCard}>   
+      <div className={styles.reviewer}>
+        <Image src={reviewerImage} width={35} height={35} alt="profile" />
+        <span>{reviewerName}</span>
+      </div>
       <div className={styles.google}>
         <Image src="/images/5stars.png" height={30} width={100} alt="stars" />
         <Image src="/images/google.png" height={30} width={30} alt="google" />
@@ -31,16 +42,12 @@ function ReviewCard({ reviewText, reviewerName, reviewerImage }: ReviewCardProps
           {isExpanded ? " Show less" : " Show more"}
         </span>
       </p>
-      <div className={styles.reviewer}>
-        <Image src={reviewerImage} width={35} height={35} alt="profile" />
-        <span>{reviewerName}</span>
-      </div>
     </div>
   );
 }
 
 export default function Reviews() {
-  // Array of reviews with type annotations
+  // Array of reviews
   const reviews: ReviewCardProps[] = [
     {
       reviewText:
@@ -58,19 +65,34 @@ export default function Reviews() {
 
   return (
     <section className={styles.reviewsContainer}>
-      <h1 className={styles.title}>
-        What Our Customers Are Saying
-      </h1>
-      <div className={styles.reviewCards}>
+      <h2 className={styles.title}>What Our Customers Are Saying</h2>
+      <p>{"< swipe >"}</p>
+      <Swiper
+        spaceBetween={20}
+        slidesPerView={1} // Default for mobile
+        pagination={{ clickable: true }}
+        breakpoints={{
+          900: {
+            slidesPerView: 2, // For tablets and small desktops
+            spaceBetween: 15,
+          },
+          1024: {
+            slidesPerView: 4, // For larger screens and desktops
+            spaceBetween: 30,
+          },
+        }}
+        className={styles.reviewCards}
+      >
         {reviews.map((review, index) => (
-          <ReviewCard
-            key={index}
-            reviewText={review.reviewText}
-            reviewerName={review.reviewerName}
-            reviewerImage={review.reviewerImage}
-          />
+          <SwiperSlide key={index}>
+            <ReviewCard
+              reviewText={review.reviewText}
+              reviewerName={review.reviewerName}
+              reviewerImage={review.reviewerImage}
+            />
+          </SwiperSlide>
         ))}
-      </div>
+      </Swiper>
     </section>
   );
 }

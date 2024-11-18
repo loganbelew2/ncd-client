@@ -1,11 +1,7 @@
 import Home from "./components/Home/Home";
-import { Viewport, Metadata } from "next";
-export const viewport: Viewport = {
-  width: "device-width",
-  initialScale: 1,
-  maximumScale: 1,
-  userScalable: false,
-};
+import { Metadata } from "next";
+import Head from "next/head";
+
 export const metadata: Metadata = {
   title: "Mobile Detailing Nashville, TN | Car Detailing Near Me",
   description:
@@ -33,5 +29,31 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <Home></Home>;
+  return (
+    <>
+      <Head>
+        {/* LocalBusiness Schema Markup */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "AutomotiveBusiness",
+              "name": "Nashville Car Detail",
+              "image": "https://www.nashvillecardetail.com/images/NCDLogoTransBig.png",
+              "url": "https://www.nashvillecardetail.com",
+              "telephone": "+1-615-927-1987",
+              "openingHours": "Mo-Fr 07:00-19:00",
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "5.0",
+                "reviewCount": "2"
+              }
+            }),
+          }}
+        />
+      </Head>
+      <Home />
+    </>
+  );
 }

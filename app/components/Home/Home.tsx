@@ -12,6 +12,7 @@ import AboutUs from "../AboutUs/AboutUs";
 import WhyUs from "../WhyUs/WhyUs";
 import { Packages } from "../Packages/Packages";
 import LocationsLearn from "../Locations/LocationsLearn/LocationsLearn";
+import Reviews from "../Reviews/Reviews";
 
 export default function Home() {
   useEffect(() => {
@@ -80,8 +81,9 @@ export default function Home() {
       <WhyUs />
       <Services />
       <Process />
+      <Reviews />
       <Packages />
-      <LocationsLearn />
+      <LocationsLearn /> 
 
       {/* Gift Up widget */}
       <section className={styles.giftWrapper}>

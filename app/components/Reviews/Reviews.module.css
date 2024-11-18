@@ -1,35 +1,43 @@
-.reviewsContainer {
-    width: 90%;
-    margin: 0 auto;
-    padding: 20px;
-}
 .title {
-    text-align: center;
-    font-size: 3rem;
+  text-align: center;
 }
-.reviewCards {
-    display: flex;
-    gap: 4rem;
-    flex-flow: row wrap;
 
-}
 .reviewCard {
-    width: 300px;
-    box-shadow: 0 4px 20px var(--opacity-color-primary);
-    padding: 1rem;
+  width: 300px;
+  box-shadow: 0 4px 20px var(--opacity-color-primary);
+  padding: 1rem;
+  margin: 0 auto;
 }
 .google {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 .reviewer {
-    display: flex;
-    align-items: center;
-    gap: 5px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
+.reviewsContainer {
+  width: 100%;
+  padding: 3rem
+}
+.reviewsContainer > p {
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.reviewCards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  
+}
+
+
 @media (max-width: 1024px) {
-    .reviewCards {
-        justify-content: center;
-    }
+  .reviewCards {
+    justify-content: center;
+  }
 }
