@@ -5,8 +5,8 @@ export default function WhyUs() {
     <section className={styles.WhyUsWrapper}>
       <h2>Why Choose Us</h2>
       <div className={styles.BenefitsContainer}>
-        <div>
-          <h3>Highly Rated</h3>
+        <div className={styles.highly}>
+          <h3>Highly <br /> Rated</h3>
           <Image
             src={"/images/finalrating.png"}
             alt="car icon"
@@ -24,7 +24,7 @@ export default function WhyUs() {
           />
         </div>
         <div>
-          <h3>Excellent Results</h3>
+          <h3>Excellent <br /> Results</h3>
           <Image
             src={"/images/excellent.png"}
             alt="car icon"

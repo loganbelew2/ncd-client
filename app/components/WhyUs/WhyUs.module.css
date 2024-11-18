@@ -19,6 +19,9 @@
     width: 300px;
     height: 300px;
 }
+.highly {
+    padding-top: 3rem;
+}
 .BenefitsContainer h3 {
     margin: 0;
 }
