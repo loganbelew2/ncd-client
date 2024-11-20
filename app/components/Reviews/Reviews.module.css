@@ -35,6 +35,10 @@
   
 }
 
+.swipe {
+    color: var(--color-primary);
+}
+
 
 @media (max-width: 1024px) {
   .reviewCards {

@@ -66,7 +66,7 @@ export default function Reviews() {
   return (
     <section className={styles.reviewsContainer}>
       <h2 className={styles.title}>What Our Customers Are Saying</h2>
-      <p>{"< swipe >"}</p>
+      <p className={styles.swipe}>{"< swipe >"}</p>
       <Swiper
         spaceBetween={20}
         slidesPerView={1} // Default for mobile

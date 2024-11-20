@@ -80,9 +80,9 @@ export default function Home() {
 
       <WhyUs />
       <Services />
+      <Packages />
       <Process />
       <Reviews />
-      <Packages />
       <LocationsLearn /> 
 
       {/* Gift Up widget */}

@@ -10,7 +10,7 @@ const executivePackages = [
     title: "Interior Detail - ",
     description:
       "A comprehensive cleaning of your vehicle’s interior leaving it looking and smelling brand new.",
-    price: 159,
+    price: 169,
     features: [
       "stain removal",
       "steam clean",
@@ -31,7 +31,7 @@ const executivePackages = [
     title: "Interior Detail - ",
     description:
       "A quicker interior detail service for general maintenance and cleanliness.",
-    price: 119,
+    price: 139,
     features: [
       "vacuum",
       "clean all surfaces, plastic, vinyl & leather",
@@ -80,7 +80,7 @@ const executivePackages = [
     title: "Full Detail - ",
     description:
       "A quicker full detail service for general maintenance, covering both interior and exterior.",
-    price: 139,
+    price: 169,
     features: {
       interior: [
         "vacuum",
@@ -108,7 +108,7 @@ const executivePackages = [
     title: "Exterior Detail - ",
     description:
       "Thorough washing and protection for your vehicle’s exterior surfaces, including paint decon and sealant.",
-    price: 119,
+    price: 139,
     features: [
       "exterior foam bath",
       "hand wash",
