@@ -8,9 +8,9 @@ const emailUser = process.env.EMAIL_USER;
 const emailPassword = process.env.EMAIL_PASSWORD;
 const receivingEmail = process.env.RECEIVING_EMAIL;
 export async function POST(request: Request) {
-  const { name, email, phone, subject, message } = await request.json();
+  const { name, email, phone, message } = await request.json();
   // Basic validation
-  if (!name || !email || !phone || !subject || !message) {
+  if (!name || !email || !phone || !message) {
     return NextResponse.json({ error: 'All fields are required' }, { status: 400 });
   }
   // Set up Nodemailer transporter
@@ -27,7 +27,6 @@ export async function POST(request: Request) {
   const mailOptions = {
     from: receivingEmail, // Your sending email
     to: receivingEmail, // Where the email is sent
-    subject: `Contact Form Submission: ${subject}`,
     text: `You received a message from ${name} (${email} / ${phone}):\n\n${message}`,
   };
   try {

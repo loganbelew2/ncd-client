@@ -34,7 +34,10 @@ export default function ContactUs() {
     // Phone number validation (format: 123-456-7890)
     const phonePattern = /^\d{3}-\d{3}-\d{4}$/;
     if (!phonePattern.test(formData.phone)) {
-      showNotification("Please enter a valid phone number (format: xxx-xxx-xxxx).", "error");
+      showNotification(
+        "Please enter a valid phone number (format: xxx-xxx-xxxx).",
+        "error"
+      );
       return;
     }
 
@@ -75,7 +78,8 @@ export default function ContactUs() {
     if (value.length > 3 && value.length <= 6) {
       value = value.slice(0, 3) + "-" + value.slice(3);
     } else if (value.length > 6) {
-      value = value.slice(0, 3) + "-" + value.slice(3, 6) + "-" + value.slice(6, 10);
+      value =
+        value.slice(0, 3) + "-" + value.slice(3, 6) + "-" + value.slice(6, 10);
     }
     phoneInput.value = value;
   }
@@ -84,13 +88,15 @@ export default function ContactUs() {
     <section className={styles.section_two}>
       {notification.message && (
         <div
-          className={`${styles.notification} ${notification.type === "error" ? styles.error : ""}`}
+          className={`${styles.notification} ${
+            notification.type === "error" ? styles.error : ""
+          }`}
         >
           {notification.message}
         </div>
       )}
 
-      <h2 style={{ marginBottom: 0 }}>Questions?</h2>
+      <h2 style={{ marginBottom: 0 }}>Get In Touch</h2>
       <h3>Send us a message and we will get back asap</h3>
 
       <form
@@ -145,21 +151,6 @@ export default function ContactUs() {
               required
               aria-required="true"
               autoComplete="tel"
-              onChange={handleInputChange}
-            />
-          </div>
-
-          <div className={styles.formGroup}>
-            <input
-              className={styles.inputField}
-              type="text"
-              id="subject"
-              name="subject"
-              value={formData.subject}
-              placeholder="Subject"
-              required
-              maxLength={100}
-              aria-required="true"
               onChange={handleInputChange}
             />
           </div>

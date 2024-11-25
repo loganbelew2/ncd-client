@@ -61,6 +61,12 @@ export default function Reviews() {
       reviewerName: "Heidi Glick",
       reviewerImage: "/images/HeidiReview.png",
     },
+    {
+      reviewText:
+        "Excellent car detail! Service was handled by Logan who was both friendly and professional. Took the time to explain the detailing process and answer questions I had. Couldn't be happier with the results!",
+      reviewerName: "zang ell1",
+      reviewerImage: "/images/zacharyReview.png",
+    },
   ];
 
   return (
