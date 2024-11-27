@@ -9,14 +9,15 @@ const executivePackages = [
     id: 3,
     title: "Interior Detail - ",
     description:
-      "A comprehensive cleaning of your vehicle’s interior leaving it looking and smelling brand new.",
-    price: 169,
+      "Ideal for vehicles that need a real deep clean and have some staining : A comprehensive cleaning of your vehicle’s interior leaving it looking and smelling brand new.",
+    price: 179, 
     features: [
       "stain removal",
       "steam clean",
-      "shampoo / extract mats & seats",
+      "shampoo/extract fabric mats & seats",
       "double vacuum",
       "clean all surfaces, plastic, vinyl & leather",
+      "clean nooks & crannies",
       "spotless windows",
       "clean doorjambs",
       "air freshener",
@@ -30,16 +31,18 @@ const executivePackages = [
     id: 4,
     title: "Interior Detail - ",
     description:
-      "A quicker interior detail service for general maintenance and cleanliness.",
-    price: 139,
+      "Ideal for well-maintained vehicles that do not need heavy stain removal or deep seat and carpet shampooing : A quicker interior detail service for general maintenance and cleanliness.",
+    price: 119,
     features: [
-      "vacuum",
+      "wipe down seats",
+      "double vacuum",
       "clean all surfaces, plastic, vinyl & leather",
+      "clean nooks & crannies",
       "spotless windows",
       "clean doorjambs",
       "air freshener",
     ],
-    hours: "(2 to 3 hours)",
+    hours: "(2 to 2.5 hours)",
     type: "Interior",
     tier: "Express",
     image: "/images/interior-express.jpeg",
@@ -48,8 +51,8 @@ const executivePackages = [
     id: 2,
     title: "Full Detail - ",
     description:
-      "Complete detailing service covering both interior and exterior, providing a complete rejuvenation of your vehicle.",
-    price: 199,
+      "Our most popular package, bringing both our Executive packages into one at a slight discount, providing a complete rejuvenation of your vehicle.",
+    price: 279,
     features: {
       interior: [
         "stain removal",
@@ -79,8 +82,8 @@ const executivePackages = [
     id: 5,
     title: "Full Detail - ",
     description:
-      "A quicker full detail service for general maintenance, covering both interior and exterior.",
-    price: 169,
+      "A quicker full detail service for general maintenance, covering both our interior Express and exterior Executive.",
+    price: 219,
     features: {
       interior: [
         "vacuum",
@@ -98,7 +101,7 @@ const executivePackages = [
         "wax paint protection applied (3 months)",
       ],
     },
-    hours: "(3 to 4 hours)",
+    hours: "(4 to 5 hours)",
     type: "Full",
     tier: "Express",
     image: "/images/full-detail.webp",
@@ -107,8 +110,8 @@ const executivePackages = [
     id: 1,
     title: "Exterior Detail - ",
     description:
-      "Thorough washing and protection for your vehicle’s exterior surfaces, including paint decon and sealant.",
-    price: 139,
+      "Thorough washing and protection for your vehicle’s exterior surfaces, including tire shine and paint waxing.",
+    price: 119,
     features: [
       "exterior foam bath",
       "hand wash",
@@ -117,7 +120,7 @@ const executivePackages = [
       "brake dust, tar & sap removal",
       "wax paint protection applied (3 months)",
     ],
-    hours: "(2 to 3 hours)",
+    hours: "(2 to 2.5 hours)",
     type: "Exterior",
     tier: "Executive",
     image: "/images/Car-Exterior-Detailing.jpg",
@@ -200,6 +203,7 @@ export const Packages = () => {
               />
             </div>
             <div className={styles.cardWrapper}>
+              <p>{pkg.description}</p>
               <ul className={styles.cardFeatures}>
                 {isFullDetailFeatures(pkg.features) ? (
                   <>
