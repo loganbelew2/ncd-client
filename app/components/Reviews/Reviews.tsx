@@ -67,6 +67,12 @@ export default function Reviews() {
       reviewerName: "zang ell1",
       reviewerImage: "/images/zacharyReview.png",
     },
+    {
+      reviewText:
+        "Logan detailed two of my cars and made them look better than they've ever looked on the inside and out. He made our work vehicle look better than it did when we bought it! Would highly recommend him!",
+      reviewerName: "Michaela Calotta",
+      reviewerImage: "/images/miaReview.png",
+    },
   ];
 
   return (
