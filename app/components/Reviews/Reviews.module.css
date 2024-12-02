@@ -39,12 +39,21 @@
     color: var(--color-primary);
 }
 
+.swiper-button-next,
+.swiper-button-prev {
+  color: var(--color-primary); /* Blue arrows */
+  border: 2px solid var(--color-primary);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
 
 @media (max-width: 1024px) {
-  .reviewCards {
-    justify-content: center;
+  .reviewsContainer {
+    padding: 1rem;
   }
   .reviewCard {
-    width: fit-content;
+    width: 80%;
   }
 }

@@ -318,6 +318,9 @@ export const NavBar = ({ isFooter }: NavProps) => {
         <Link className={styles.link} href="/pricing" onClick={closeMenu}>
           Pricing
         </Link>
+        <Link className={styles.link} href="/contact" onClick={closeMenu}>
+          Contact Us
+        </Link>
         <div className={styles.phone__div}>
           <a href="tel:+16159271987">
             <div>

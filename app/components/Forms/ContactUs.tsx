@@ -7,7 +7,6 @@ export default function ContactUs() {
     name: "",
     email: "",
     phone: "",
-    subject: "",
     message: "",
   });
   const [notification, setNotification] = useState({ message: "", type: "" });
@@ -57,7 +56,6 @@ export default function ContactUs() {
           name: "",
           email: "",
           phone: "",
-          subject: "",
           message: "",
         });
       } else {

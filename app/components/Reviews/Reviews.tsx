@@ -1,19 +1,19 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css"; // Import Swiper styles
+import { Navigation, Pagination } from "swiper/modules"; // Import necessary modules
+import "swiper/css";
+import "swiper/css/navigation";
 import "swiper/css/pagination";
 import styles from "./Reviews.module.css";
 
-// Define the props type for ReviewCard
 interface ReviewCardProps {
   reviewText: string;
   reviewerName: string;
   reviewerImage: string;
 }
 
-// Reusable ReviewCard component
 function ReviewCard({
   reviewText,
   reviewerName,
@@ -27,7 +27,7 @@ function ReviewCard({
   };
 
   return (
-    <div className={styles.reviewCard}>   
+    <div className={styles.reviewCard}>
       <div className={styles.reviewer}>
         <Image src={reviewerImage} width={35} height={35} alt="profile" />
         <span>{reviewerName}</span>
@@ -47,7 +47,6 @@ function ReviewCard({
 }
 
 export default function Reviews() {
-  // Array of reviews
   const reviews: ReviewCardProps[] = [
     {
       reviewText:
@@ -75,21 +74,38 @@ export default function Reviews() {
     },
   ];
 
+  const [isMobile, setIsMobile] = useState(true);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 1024);
+    };
+
+    handleResize(); // Initialize
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <section className={styles.reviewsContainer}>
       <h2 className={styles.title}>What Our Customers Are Saying</h2>
-      <p className={styles.swipe}>{"< swipe >"}</p>
       <Swiper
+        modules={[Navigation, Pagination]}
         spaceBetween={20}
-        slidesPerView={1} // Default for mobile
-        pagination={{ clickable: true }}
+        slidesPerView={1}
+        navigation={isMobile} // Only enable navigation on mobile
         breakpoints={{
-          900: {
-            slidesPerView: 2, // For tablets and small desktops
+          800: {
+            slidesPerView: 2,
             spaceBetween: 15,
           },
-          1024: {
-            slidesPerView: 4, // For larger screens and desktops
+          900: {
+            slidesPerView: 3,
+            spaceBetween: 25,
+          },
+          1300: {
+            slidesPerView: 4,
             spaceBetween: 30,
           },
         }}
