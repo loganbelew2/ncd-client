@@ -50,15 +50,27 @@ export default function Reviews() {
   const reviews: ReviewCardProps[] = [
     {
       reviewText:
-        "Logan provided impeccable service and treated our older vehicle with the same care and attention as if it were a newer model. The detailing was thorough and professional. He worked so hard to earn our trust. We would highly recommend his detailing service to anyone wanting their car to look brand new again! Thanks, Logan!",
-      reviewerName: "Scott Johnson",
-      reviewerImage: "/images/review1.png",
-    },
-    {
-      reviewText:
         "Phenomenal attention to detail. My car looks brand new and Logan worked so hard to make it so. Thank you so much Logan!",
       reviewerName: "Heidi Glick",
       reviewerImage: "/images/HeidiReview.png",
+    },
+    {
+      reviewText:
+        `I had a great experience with Nashville Car Detail. They were very easy to book with and had great availability. Most places were booked up for the month but they were able to get me in in just a couple days. Them coming to you makes it very convenient as well! Logan was so kind, personable and knowledgeable. I was able to walk through concerns like the car smelling like smoke and he knew exactly what to do. I was able to hand the keys over and continue my day. It was all incredibly easy! We will definitely book with them again in the future!`,
+      reviewerName: "Erin Heuiser",
+      reviewerImage: "/images/ErinReview.png",
+    },
+    {
+      reviewText:
+        "I would give Logan and Nashville a thumbs up! Totally Professional. My car looks brand new. By far the best detail service I’ve used. Thanks Logan, you rock!",
+      reviewerName: "Darlene Fowler",
+      reviewerImage: "/images/DarleneReview.png",
+    },
+    {
+      reviewText:
+        "Logan provided impeccable service and treated our older vehicle with the same care and attention as if it were a newer model. The detailing was thorough and professional. He worked so hard to earn our trust. We would highly recommend his detailing service to anyone wanting their car to look brand new again! Thanks, Logan!",
+      reviewerName: "Scott Johnson",
+      reviewerImage: "/images/review1.png",
     },
     {
       reviewText:
@@ -72,6 +84,14 @@ export default function Reviews() {
       reviewerName: "Michaela Calotta",
       reviewerImage: "/images/miaReview.png",
     },
+    
+    {
+      reviewText:
+        "Nashville Car Detail did an amazing job! They communicated well from start to end and went above and beyond. I highly recommend getting your vehicle detailed here.",
+      reviewerName: "Trina Clancy",
+      reviewerImage: "/images/TrinaReview.png",
+    },
+    
   ];
 
   const [isMobile, setIsMobile] = useState(true);
