@@ -55,8 +55,7 @@ export default function Reviews() {
       reviewerImage: "/images/HeidiReview.png",
     },
     {
-      reviewText:
-        `I had a great experience with Nashville Car Detail. They were very easy to book with and had great availability. Most places were booked up for the month but they were able to get me in in just a couple days. Them coming to you makes it very convenient as well! Logan was so kind, personable and knowledgeable. I was able to walk through concerns like the car smelling like smoke and he knew exactly what to do. I was able to hand the keys over and continue my day. It was all incredibly easy! We will definitely book with them again in the future!`,
+      reviewText: `I had a great experience with Nashville Car Detail. They were very easy to book with and had great availability. Most places were booked up for the month but they were able to get me in in just a couple days. Them coming to you makes it very convenient as well! Logan was so kind, personable and knowledgeable. I was able to walk through concerns like the car smelling like smoke and he knew exactly what to do. I was able to hand the keys over and continue my day. It was all incredibly easy! We will definitely book with them again in the future!`,
       reviewerName: "Erin Heuiser",
       reviewerImage: "/images/ErinReview.png",
     },
@@ -84,14 +83,19 @@ export default function Reviews() {
       reviewerName: "Michaela Calotta",
       reviewerImage: "/images/miaReview.png",
     },
-    
+
     {
       reviewText:
         "Nashville Car Detail did an amazing job! They communicated well from start to end and went above and beyond. I highly recommend getting your vehicle detailed here.",
       reviewerName: "Trina Clancy",
       reviewerImage: "/images/TrinaReview.png",
     },
-    
+    {
+      reviewText:
+        "If I could give more stars I would. From the beginning Logan was in communication with me with what was going on. He was very professional throughout the entire process. We went with the interior car cleaning and when it came to the cleaning the car was in rough shape. He told us that it would take about 3 hours to do but he really took his time and got every nook and cranny in our car and it ended up taking about 5 hours but we couldn’t be more with how it turned out. I’ve never seen our car these clean before. I highly recommend using Logan to clean your car he went above and beyond and we will definitely be using him again!",
+      reviewerName: "David Theiner",
+      reviewerImage: "/images/DavidReview.png",
+    },
   ];
 
   const [isMobile, setIsMobile] = useState(true);

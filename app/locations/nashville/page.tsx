@@ -5,6 +5,7 @@ import Services from "@/app/components/Services/Services";
 
 
 import type { Metadata } from "next";
+import Head from "next/head";
 
 export const metadata: Metadata = {
   title: "Mobile Car Detailing in Nashville, TN - auto detailing near me",
@@ -35,6 +36,12 @@ export const metadata: Metadata = {
 export default function NashvillePage() {
   return (
     <>
+    <Head>
+        <link
+          rel="canonical"
+          href="https://nashvillecardetail.com/locations/nashville"
+        />
+      </Head>
       <Nashville />
       <Services />
       <Process />

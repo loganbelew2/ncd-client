@@ -4,6 +4,7 @@ import Process from "@/app/components/Process/Process";
 import Services from "@/app/components/Services/Services";
 
 import type { Metadata } from "next";
+import Head from "next/head";
 
 export const metadata: Metadata = {
   title: "Mobile Car Detailing in Hendersonville, TN - auto detailing near me",
@@ -34,6 +35,12 @@ export const metadata: Metadata = {
 export default function HendersonvillePage() {
   return (
     <>
+    <Head>
+        <link
+          rel="canonical"
+          href="https://nashvillecardetail.com/locations/hendersonville"
+        />
+      </Head>
       <Hendersonville />
       <Services />
       <Process />

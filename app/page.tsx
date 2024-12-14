@@ -99,6 +99,12 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <>
+      <Head>
+        <link
+          rel="canonical"
+          href="https://nashvillecardetail.com"
+        />
+      </Head>
       <Home />
     </>
   );

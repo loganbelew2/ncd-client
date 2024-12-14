@@ -4,6 +4,7 @@ import Brentwood from "../../components/Locations/brentwood/Brentwood"
 import type { Metadata } from "next";
 import Process from "@/app/components/Process/Process";
 import { Packages } from "@/app/components/Packages/Packages";
+import Head from "next/head";
 
 export const metadata: Metadata = {
   title: "Mobile Car Detailing in Brentwood, TN - auto detailing near me",
@@ -35,6 +36,12 @@ export const metadata: Metadata = {
 export default function BrentwoodPage() {
     return (
       <>
+      <Head>
+        <link
+          rel="canonical"
+          href="https://nashvillecardetail.com/locations/brentwood"
+        />
+      </Head>
       <Brentwood />
       <Services />
       <Process />
