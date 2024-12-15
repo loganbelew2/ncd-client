@@ -5,7 +5,16 @@ import Analytics from "./components/Analytics/Analytics";
 import { GoogleTag } from "./components/Analytics/GoogleTag";
 import CtaBanner from "./components/CtaBanner/CtaBanner";
 import ContactUs from "./components/Forms/ContactUs";
-import { metadata } from "./page";
+import { Metadata } from "next";
+
+
+export const metadata: Metadata = {
+  metadataBase: new URL(`https://www.nashvillecardetail.com`),
+  alternates: {
+      canonical: './',
+  }
+};
+
 
 export default function RootLayout({
   children,

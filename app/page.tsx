@@ -46,7 +46,7 @@ export const metadata: Metadata = {
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": "5.0",
-    "reviewCount": "2"
+    "reviewCount": "8"
   },
   "serviceArea": [
     {
