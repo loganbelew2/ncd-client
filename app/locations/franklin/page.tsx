@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     description:
       "Nashville Car Detail provides high-quality mobile car detailing services in Franklin, TN. Contact us to schedule your detailing service and experience unparalleled car care.",
     type: "website",
-    url: "https://www.nashvillecardetail.com/locations/franklin",
+    url: "https://nashvillecardetail.com/locations/franklin",
     images: "/images/NCD_Logo_White_BG.jpg",
   },
   twitter: {

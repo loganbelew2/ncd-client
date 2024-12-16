@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     description:
       "Explore our various mobile auto detailing locations, providing top-notch car detailing services throughout Nashville and surrounding areas. Book your appointment today!",
     type: "website",
-    url: "https://www.nashvillecardetail.com/locations",
+    url: "https://nashvillecardetail.com/locations",
     images: "/images/NCD_Logo_White_BG.jpg", 
   },
   twitter: {

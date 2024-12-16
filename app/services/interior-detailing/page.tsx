@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     description:
       "Professional interior detailing in Nashville, TN. Refresh your vehicle's interior with our expert mobile services.",
     type: "article",
-    url: "https://www.nashvillecardetail.com/interior-detailing",
+    url: "https://nashvillecardetail.com/interior-detailing",
     images: "/images/interior-detailing.jpg",
   },
   twitter: {

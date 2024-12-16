@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     description:
       "Nashville Car Detail offers top-notch mobile auto detailing services in the Nashville area. Book your appointment today!",
     type: "website",
-    url: "https://www.nashvillecardetail.com",
+    url: "https://nashvillecardetail.com",
     images: "/images/NCD_Logo_White_BG.jpg",
   },
   twitter: {
@@ -34,13 +34,13 @@ export const metadata: Metadata = {
   "@context": "https://schema.org",
   "@type": "AutomotiveBusiness",
   "name": "Nashville Car Detail",
-  "logo": "https://www.nashvillecardetail.com/images/NCD_Logo_White_BG.jpg",
+  "logo": "https://nashvillecardetail.com/images/NCD_Logo_White_BG.jpg",
   "image": [
-  "https://www.nashvillecardetail.com/images/schemainterior.jpeg",
-  "https://www.nashvillecardetail.com/images/schemaredcar.jpeg",
-  "https://www.nashvillecardetail.com/images/interiorschema.jpeg"
+  "https://nashvillecardetail.com/images/schemainterior.jpeg",
+  "https://nashvillecardetail.com/images/schemaredcar.jpeg",
+  "https://nashvillecardetail.com/images/interiorschema.jpeg"
   ],
-  "url": "https://www.nashvillecardetail.com",
+  "url": "https://nashvillecardetail.com",
   "telephone": "+1-615-927-1987",
   "openingHours": "Mo-Sun 07:00-19:00",
   "aggregateRating": {

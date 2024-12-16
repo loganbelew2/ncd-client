@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     description:
       "Nashville Car Detail provides high-quality mobile car detailing services in Spring Hill, TN. Contact us to schedule your detailing service and experience unparalleled car care.",
     type: "website",
-    url: "https://www.nashvillecardetail.com/locations/spring-hill",
+    url: "https://nashvillecardetail.com/locations/spring-hill",
     images: "/images/NCD_Logo_White_BG.jpg",
   },
   twitter: {

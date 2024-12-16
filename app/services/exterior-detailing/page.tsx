@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     description:
       "Top-notch exterior detailing services to bring the shine back to your vehicle.",
     type: "article",
-    url: "https://www.nashvillecardetail.com/exterior-detailing",
+    url: "https://nashvillecardetail.com/exterior-detailing",
     images: "/images/exterior-detailing.jpg",
   },
   twitter: {

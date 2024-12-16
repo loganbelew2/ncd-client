@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     description:
       "Book your next mobile car detailing appointment in Nashville. Choose from interior, exterior, or full detailing services.",
     type: "website",
-    url: "https://www.nashvillecardetail.com/booking",
+    url: "https://nashvillecardetail.com/booking",
     images: "/images/booking.jpg",
   },
   twitter: {
