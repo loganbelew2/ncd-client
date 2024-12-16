@@ -39,7 +39,7 @@ export default function BrentwoodPage() {
       <Head>
         <link
           rel="canonical"
-          href="https://nashvillecardetail.com/locations/brentwood"
+          href="https://nashvillecardetail.com"
         />
       </Head>
       <Brentwood />

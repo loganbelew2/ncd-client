@@ -38,7 +38,7 @@ export default function GallatinPage() {
     <Head>
         <link
           rel="canonical"
-          href="https://nashvillecardetail.com/locations/gallatin"
+          href="https://nashvillecardetail.com"
         />
       </Head>
       <Gallatin />

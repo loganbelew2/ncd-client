@@ -32,7 +32,7 @@ export default function PackagesPage() {
       <Head>
         <link
           rel="canonical"
-          href="https://nashvillecardetail.com/pricing"
+          href="https://nashvillecardetail.com"
         />
       </Head>
       <Packages />

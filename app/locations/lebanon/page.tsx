@@ -38,7 +38,7 @@ export default function LebanonPage() {
     <Head>
         <link
           rel="canonical"
-          href="https://nashvillecardetail.com/locations/lebanon"
+          href="https://nashvillecardetail.com"
         />
       </Head>
       <Lebanon />

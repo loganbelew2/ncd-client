@@ -39,7 +39,7 @@ export default function NashvillePage() {
     <Head>
         <link
           rel="canonical"
-          href="https://nashvillecardetail.com/locations/nashville"
+          href="https://nashvillecardetail.com"
         />
       </Head>
       <Nashville />

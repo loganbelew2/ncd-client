@@ -11,7 +11,7 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   metadataBase: new URL(`https://www.nashvillecardetail.com`),
   alternates: {
-      canonical: 'https://www.nashvillecardetail.com',
+      canonical: './',
   }
 };
 

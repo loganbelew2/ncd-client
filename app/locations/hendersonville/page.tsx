@@ -38,7 +38,7 @@ export default function HendersonvillePage() {
     <Head>
         <link
           rel="canonical"
-          href="https://nashvillecardetail.com/locations/hendersonville"
+          href="https://nashvillecardetail.com"
         />
       </Head>
       <Hendersonville />

@@ -38,7 +38,7 @@ export default function SpringHillPage() {
     <Head>
         <link
           rel="canonical"
-          href="https://nashvillecardetail.com/locations/spring-hill"
+          href="https://nashvillecardetail.com"
         />
       </Head>
       <SpringHill />

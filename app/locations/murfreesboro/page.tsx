@@ -38,7 +38,7 @@ export default function MurfreesboroPage() {
     <Head>
         <link
           rel="canonical"
-          href="https://nashvillecardetail.com/locations/murfreesboro"
+          href="https://nashvillecardetail.com"
         />
       </Head>
       <Murfreesboro />

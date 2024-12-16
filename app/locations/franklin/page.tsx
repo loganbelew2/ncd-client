@@ -38,7 +38,7 @@ export default function FranklinPage() {
       <Head>
         <link
           rel="canonical"
-          href="https://nashvillecardetail.com/locations/franklin"
+          href="https://nashvillecardetail.com"
         />
       </Head>
       <Franklin />

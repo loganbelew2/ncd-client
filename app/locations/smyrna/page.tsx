@@ -38,7 +38,7 @@ export default function SmyrnaPage() {
     <Head>
         <link
           rel="canonical"
-          href="https://nashvillecardetail.com/locations/smyrna"
+          href="https://nashvillecardetail.com"
         />
       </Head>
       <Smyrna />
