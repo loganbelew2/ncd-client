@@ -10,7 +10,7 @@ const executivePackages = [
     title: "Interior Detail - ",
     description:
       "Ideal for vehicles that need a real deep clean and have some staining : A comprehensive cleaning of your vehicle’s interior leaving it looking and smelling brand new.",
-    price: 179, 
+    price: 179,
     features: [
       "stain removal",
       "steam clean",
@@ -24,28 +24,8 @@ const executivePackages = [
     ],
     hours: "(3 to 4 hours)",
     type: "Interior",
-    tier: "Executive",
+    tier: "Deep Clean",
     image: "/images/steam-clean.webp",
-  },
-  {
-    id: 4,
-    title: "Interior Detail - ",
-    description:
-      "Ideal for well-maintained vehicles that do not need heavy stain removal or deep seat and carpet shampooing : A quicker interior detail service for general maintenance and cleanliness.",
-    price: 119,
-    features: [
-      "wipe down seats",
-      "double vacuum",
-      "clean all surfaces, plastic, vinyl & leather",
-      "clean nooks & crannies",
-      "spotless windows",
-      "clean doorjambs",
-      "air freshener",
-    ],
-    hours: "(2 to 2.5 hours)",
-    type: "Interior",
-    tier: "Express",
-    image: "/images/interior-express.jpeg",
   },
   {
     id: 2,
@@ -69,42 +49,14 @@ const executivePackages = [
         "hand wash",
         "clean wheels, wheel wells & tires",
         "dress / shine tires",
-        "brake dust, tar & sap removal",
+        "brake dust, tar, bug & sap removal",
         "wax paint protection applied (3 months)",
       ],
     },
     hours: "(5 to 6 hours)",
     type: "Full",
-    tier: "Executive",
+    tier: "Inside & Out",
     image: "/images/express-exterior.jpg",
-  },
-  {
-    id: 5,
-    title: "Full Detail - ",
-    description:
-      "A quicker full detail service for general maintenance, covering both our interior Express and exterior Executive.",
-    price: 219,
-    features: {
-      interior: [
-        "vacuum",
-        "clean all surfaces, plastic, vinyl & leather",
-        "spotless windows",
-        "clean doorjambs",
-        "air freshener",
-      ],
-      exterior: [
-        "exterior foam bath",
-        "hand wash",
-        "clean wheels, wheel wells & tires",
-        "dress / shine tires",
-        "brake dust, tar & sap removal",
-        "wax paint protection applied (3 months)",
-      ],
-    },
-    hours: "(4 to 5 hours)",
-    type: "Full",
-    tier: "Express",
-    image: "/images/full-detail.webp",
   },
   {
     id: 1,
@@ -117,12 +69,12 @@ const executivePackages = [
       "hand wash",
       "clean wheels, wheel wells & tires",
       "dress / shine tires",
-      "brake dust, tar & sap removal",
+      "brake dust, tar, bug & sap removal",
       "wax paint protection applied (3 months)",
     ],
     hours: "(2 to 2.5 hours)",
     type: "Exterior",
-    tier: "Executive",
+    tier: "Wash & Wax",
     image: "/images/Car-Exterior-Detailing.jpg",
   },
 ];
@@ -137,7 +89,6 @@ const isFullDetailFeatures = (
     "exterior" in features
   );
 };
-
 export const Packages = () => {
   const [selectedType, setSelectedType] = useState("Interior");
 
@@ -150,8 +101,8 @@ export const Packages = () => {
       <div className={styles.header}>
         <h2>Our Detailing Packages</h2>
         <p>
-          Choose between our <span className="font--blue">Executive</span> and{" "}
-          <span className="font--blue">Express</span> packages to fit your needs
+          Get <span className="font--blue">10% </span>off full price when
+          booking multiple vehicles
         </p>
       </div>
       <div className={styles.toggleContainer}>
@@ -237,6 +188,33 @@ export const Packages = () => {
             </div>
           </div>
         ))}
+      </div>
+
+      {/* Add-Ons Section */}
+      <div className={styles.addOnsSection}>
+        <h3>Popular Add-Ons</h3>
+        <div className={styles.addOnsContainer}>
+          <div className={styles.addOn}>
+            <h4>Pet Hair Removal</h4>
+            <p>$30</p>
+          </div>
+          <div className={styles.addOn}>
+            <h4>Headlight Restoration</h4>
+            <p>$70</p>
+          </div>
+          <div className={styles.addOn}>
+            <h4>Engine Bay Cleaning</h4>
+            <p>$40</p>
+          </div>
+          <div className={styles.addOn}>
+            <h4>Exterior Trim Restoration / Faded Plastic</h4>
+            <p>$30</p>
+          </div>
+          <div className={styles.addOn}>
+            <h4>Clean Headliner / stain removal</h4>
+            <p>$30</p>
+          </div>
+        </div>
       </div>
     </div>
   );

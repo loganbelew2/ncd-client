@@ -96,6 +96,12 @@ export default function Reviews() {
       reviewerName: "David Theiner",
       reviewerImage: "/images/DavidReview.png",
     },
+    {
+      reviewText:
+        "Fantastic job, very affordable and really took the time to deliver a wonderful final product. Made my car look like when I first bought it. Couldn’t be more impressed.",
+      reviewerName: "Will Caffey",
+      reviewerImage: "/images/WillReview.png",
+    },
   ];
 
   const [isMobile, setIsMobile] = useState(true);
@@ -118,7 +124,7 @@ export default function Reviews() {
         modules={[Navigation, Pagination]}
         spaceBetween={20}
         slidesPerView={1}
-        navigation={isMobile} // Only enable navigation on mobile
+        navigation={true} // Only enable navigation on mobile
         breakpoints={{
           800: {
             slidesPerView: 2,

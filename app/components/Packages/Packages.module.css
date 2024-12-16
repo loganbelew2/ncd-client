@@ -38,7 +38,7 @@
 .blueBackground {
   text-align: center;
   padding: 30px 10px 10px 10px;
-  margin: 0 0 .5rem 0;
+  margin: 0 0 0.5rem 0;
   border-radius: 8px 8px 0 0;
 }
 
@@ -55,7 +55,7 @@
   margin: 0;
 }
 
- .cardPrice {
+.cardPrice {
   margin: 0;
 }
 
@@ -89,7 +89,7 @@
 .cardFeatures h3 {
   font-size: var(--font-size-lg);
   font-weight: 700;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
 .cardFeatures li {
   display: flex;
@@ -124,7 +124,7 @@
 }
 
 .toggleContainer {
-  padding: .5rem;
+  padding: 0.5rem;
   display: flex;
   justify-content: space-evenly;
   gap: 1rem;
@@ -161,12 +161,42 @@
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Slight shadow for active */
 }
 
-
-
 .variantPricing {
-  margin: .5rem 0;
-  
+  margin: 0.5rem 0;
 }
+
+.addOnsSection {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.addOnsContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.addOn {
+  background-color: #f1f1f1;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.addOn h4 {
+  margin-bottom: 10px;
+  color: var(--color-primary);
+  font-size: 18px;
+}
+
+.addOn p {
+  font-size: 16px;
+  font-weight: 700;
+  color: #333;
+}
+
 
 @media (max-width: 1025px) {
   .packagesContainer {
@@ -176,6 +206,6 @@
     width: 100%;
   }
   .toggleButton {
-    padding: .5rem 1rem;
+    padding: 0.5rem 1rem;
   }
 }
