@@ -84,20 +84,6 @@ export default function Home() {
       <Process />
       <Reviews />
       <LocationsLearn /> 
-
-      {/* Gift Up widget */}
-      <section className={styles.giftWrapper}>
-        <h2>Feeling Generous? Give Someone A Gift Card </h2>
-        <p>
-          Perfect for birthdays, holidays or celebrations! Get it delivered by
-          email or print it out at home.
-        </p>
-        <div
-          className="gift-up-target"
-          data-site-id="1b1388e7-e3dd-413c-a8df-08dd032eab51"
-          data-platform="Other"
-        ></div>
-      </section>
       <AboutUs />
     </div>
   );
