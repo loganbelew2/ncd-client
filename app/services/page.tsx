@@ -33,10 +33,7 @@ export const metadata: Metadata = {
         alt: "Nashville Car Detailing Services",
       },
     ],
-  },
-  alternates: {
-    canonical: "https://nashvillecardetail.com/services",
-  },
+  }
 };
 export default function ServicesPage() {
   return (
