@@ -102,6 +102,12 @@ export default function Reviews() {
       reviewerName: "Will Caffey",
       reviewerImage: "/images/WillReview.png",
     },
+    {
+      reviewText:
+        "Amazing!! Logan was able to get me in the day after inquiring and showed up ready to go. He was so sweet, respectful and knowledgeable. Stains that had been in my truck for 3+ years are finally gone thanks to him and I couldn't be any happier !! I will definitely be recommending him to everyone I know and will definitely be coming back myself (hopefully it won't be this bad next time) .",
+      reviewerName: "Lexie Kittel",
+      reviewerImage: "/images/LexieReview.png",
+    },
   ];
 
   const [isMobile, setIsMobile] = useState(true);
