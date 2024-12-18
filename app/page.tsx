@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     description:
       "Nashville Car Detail offers top-notch mobile auto detailing services in the Nashville area. Book your appointment today!",
     type: "website",
-    url: "https://nashvillecardetail.com",
+    url: "https://www.nashvillecardetail.com",
     images: "/images/NCD_Logo_White_BG.jpg",
   },
   twitter: {
@@ -31,16 +31,16 @@ export const metadata: Metadata = {
   other: {
     jsonLd: `
     {
-  "@context": "https://schema.org",
+  "@context": "https://www.schema.org",
   "@type": "AutomotiveBusiness",
   "name": "Nashville Car Detail",
-  "logo": "https://nashvillecardetail.com/images/NCD_Logo_White_BG.jpg",
+  "logo": "https://www.nashvillecardetail.com/images/NCD_Logo_White_BG.jpg",
   "image": [
-  "https://nashvillecardetail.com/images/schemainterior.jpeg",
-  "https://nashvillecardetail.com/images/schemaredcar.jpeg",
-  "https://nashvillecardetail.com/images/interiorschema.jpeg"
+  "https://www.nashvillecardetail.com/images/schemainterior.jpeg",
+  "https://www.nashvillecardetail.com/images/schemaredcar.jpeg",
+  "https://www.nashvillecardetail.com/images/interiorschema.jpeg"
   ],
-  "url": "https://nashvillecardetail.com",
+  "url": "https://www.nashvillecardetail.com",
   "telephone": "+1-615-927-1987",
   "openingHours": "Mo-Sun 07:00-19:00",
   "aggregateRating": {
@@ -99,12 +99,6 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <>
-      <Head>
-        <link
-          rel="canonical"
-          href="https://nashvillecardetail.com"
-        />
-      </Head>
       <Home />
     </>
   );

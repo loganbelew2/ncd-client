@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     description:
       "Nashville Car Detail provides high-quality mobile car detailing services in Murfreesboro, TN. Contact us to schedule your detailing service and experience unparalleled car care.",
     type: "website",
-    url: "https://nashvillecardetail.com/locations/murfreesboro",
+    url: "https://www.nashvillecardetail.com/locations/murfreesboro",
     images: "/images/NCD_Logo_White_BG.jpg",
   },
   twitter: {
@@ -35,12 +35,6 @@ export const metadata: Metadata = {
 export default function MurfreesboroPage() {
   return (
     <>
-    <Head>
-        <link
-          rel="canonical"
-          href="https://nashvillecardetail.com"
-        />
-      </Head>
       <Murfreesboro />
       <Services />
       <Process />

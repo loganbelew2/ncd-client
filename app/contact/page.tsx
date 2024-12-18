@@ -10,7 +10,7 @@ export const metadata: Metadata = {
       title: "Contact Us | Nashville Car Detail",
       description: "Reach out to Nashville Car Detail for expert car detailing services. We're happy to answer your questions or assist with your booking.",
       type: "website",
-      url: "https://nashvillecardetail.com/contact",
+      url: "https://www.nashvillecardetail.com/contact",
     },
     twitter: {
       card: "summary_large_image",

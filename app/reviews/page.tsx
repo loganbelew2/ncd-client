@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     description:
       "Discover what our customers say about Nashville Car Detail. Check out reviews on our premium mobile detailing services in Nashville, TN.",
     type: "website",
-    url: "https://nashvillecardetail.com/reviews",
+    url: "https://www.nashvillecardetail.com/reviews",
     images: "/images/reviews.jpg",
   },
   twitter: {

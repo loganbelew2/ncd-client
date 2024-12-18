@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     description:
       "Nashville Car Detail provides high-quality mobile car detailing services in Brentwood, TN. Contact us to schedule your detailing service and experience unparalleled car care.",
     type: "website",
-    url: "https://nashvillecardetail.com/locations/brentwood",
+    url: "https://www.nashvillecardetail.com/locations/brentwood",
     images: "/images/NCD_Logo_White_BG.jpg",
   },
   twitter: {
@@ -39,7 +39,7 @@ export default function BrentwoodPage() {
       <Head>
         <link
           rel="canonical"
-          href="https://nashvillecardetail.com"
+          href="https://www.nashvillecardetail.com"
         />
       </Head>
       <Brentwood />

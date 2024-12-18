@@ -13,11 +13,11 @@ export const metadata: Metadata = {
     title: "Nashville Car Detail - Car Detailing Services in Nashville",
     description:
       "Our professional mobile detailing services cover Full Detail, Interior Detail, and Exterior Detail. Book your car detailing service today.",
-    url: "https://nashvillecardetail.com/services",
+    url: "https://www.nashvillecardetail.com/services",
     type: "website",
     images: [
       {
-        url: "https://nashvillecardetail.com/images/car-detailing-services.jpg",
+        url: "https://www.nashvillecardetail.com/images/car-detailing-services.jpg",
         alt: "Nashville Car Detailing Services",
       },
     ],
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
       "Get the best mobile car detailing services in Nashville, including Full, Interior, and Exterior Detail packages. Contact us to book today!",
     images: [
       {
-        url: "https://nashvillecardetail.com/images/car-detailing-services.jpg",
+        url: "https://www.nashvillecardetail.com/images/car-detailing-services.jpg",
         alt: "Nashville Car Detailing Services",
       },
     ],

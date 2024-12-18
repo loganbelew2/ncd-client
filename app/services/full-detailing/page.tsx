@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     description:
       "Transform your car with our full vehicle detailing services in Nashville, TN. Book our premium mobile services today!",
     type: "article",
-    url: "https://nashvillecardetail.com/full-detailing",
+    url: "https://www.nashvillecardetail.com/full-detailing",
     images: "/images/full-detailing.jpg",
   },
   twitter: {

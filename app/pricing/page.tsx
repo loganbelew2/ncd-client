@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     description:
       "Explore our detailing packages to find the perfect service for your vehicle. Interior, exterior, and full detailing options available.",
     type: "article",
-    url: "https://nashvillecardetail.com/pricing",
+    url: "https://www.nashvillecardetail.com/pricing",
     images: "/images/packages-overview.jpg", // Update this path to an appropriate image for the packages page
   },
   twitter: {
@@ -29,12 +29,6 @@ export const metadata: Metadata = {
 export default function PackagesPage() {
   return (
     <>
-      <Head>
-        <link
-          rel="canonical"
-          href="https://nashvillecardetail.com"
-        />
-      </Head>
       <Packages />
     </>
   );

@@ -3,7 +3,6 @@ import { Packages } from "@/app/components/Packages/Packages";
 import Process from "@/app/components/Process/Process";
 import Services from "@/app/components/Services/Services";
 
-
 import type { Metadata } from "next";
 import Head from "next/head";
 
@@ -20,7 +19,7 @@ export const metadata: Metadata = {
     description:
       "Nashville Car Detail provides high-quality mobile car detailing services in Nashville, TN. Contact us to schedule your detailing service and experience unparalleled car care.",
     type: "website",
-    url: "https://nashvillecardetail.com/locations/nashville",
+    url: "https://www.nashvillecardetail.com/locations/nashville",
     images: "/images/NCD_Logo_White_BG.jpg",
   },
   twitter: {
@@ -36,12 +35,6 @@ export const metadata: Metadata = {
 export default function NashvillePage() {
   return (
     <>
-    <Head>
-        <link
-          rel="canonical"
-          href="https://nashvillecardetail.com"
-        />
-      </Head>
       <Nashville />
       <Services />
       <Process />
