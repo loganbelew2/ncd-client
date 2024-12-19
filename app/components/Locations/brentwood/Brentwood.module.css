@@ -1,3 +1,40 @@
+.hero__container {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  color: white;
+  background-image: url("/images/Car-Exterior-Detailing.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: multiply;
+  background-color: rgba(0, 0, 0, 0.6);
+  gap: 1rem;
+  align-items: center;
+  text-align: center;
+  padding: 4rem;
+}
+.title {
+  font-weight: 700;
+  line-height: 1.2; /* Adjusts the height between lines */
+
+  overflow-wrap: break-word;
+}
+.hero__container * {
+  margin: 0;
+}
+.reviewsContainer {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.heroButtons {
+  display: flex;
+  gap: 1rem;
+}
+
 .brentwoodSection h2 {
   text-align: center;
 }
@@ -27,4 +64,12 @@
 .link {
   text-decoration: none;
   color: var(--color-primary);
+}
+
+@media (max-width: 1025px) {
+  .hero__container {
+    padding: 3rem 1rem;
+    justify-content: center;
+    /* min-height: 70vh; */
+  }
 }
