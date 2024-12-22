@@ -14,7 +14,7 @@ export const metadata: Metadata = {
       "Treat your loved ones to a professional car detailing experience with a Nashville Car Detail gift card. Ideal for any occasion.",
     type: "article",
     url: "https://www.nashvillecardetail.com/gift-cards",
-    images: "/images/gift-cards-banner.jpg", // Update this path to an appropriate image for the gift cards page
+    images: "/images/interiorDetail.jpg", 
   },
   twitter: {
     card: "summary_large_image",
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     title: "Gift Cards | Nashville Car Detail",
     description:
       "Treat your loved ones to a professional car detailing experience with a Nashville Car Detail gift card. Ideal for any occasion.",
-    images: "/images/gift-cards-banner.jpg", // Update this path to an appropriate image for the gift cards page
+    images: "/images/interiorDetail.jpg", 
   },
 };
 
