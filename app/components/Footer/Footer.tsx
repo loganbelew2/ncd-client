@@ -20,6 +20,9 @@ export function Footer() {
           <li>
             <Link href="/reviews">Reviews</Link>
           </li>
+          <li>
+            <Link href="/gift-cards">Gift Cards</Link>
+          </li>
         </ul>
       </div>
 
@@ -59,7 +62,7 @@ export function Footer() {
         </ul>
       </div>
       <div className={styles.footer__info}>
-        <p>Hours: 7am to 7pm Monday to Sunday</p>
+        <p>Hours: 7am to 7pm Monday to Saturday</p>
         <p>© 2024 Nashville Car Detail. All Rights Reserved</p>
       </div>
 

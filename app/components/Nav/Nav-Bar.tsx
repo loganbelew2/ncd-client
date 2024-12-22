@@ -104,14 +104,13 @@ export const NavBar = ({ isFooter }: NavProps) => {
       <div className={`${styles.nav} ${isOpen && styles.open}`}>
         {isOpen ? (
           <div className={styles.nav_open_top_bar}>
-            <p>Monday to Sunday: 7am to 7pm</p>
+            <p>Monday to Saturday: 7am to 7pm</p>
             <p>Call or book with us anytime</p>
           </div>
-        ): ''}
-        <div className={styles.services}
-         
-        
-        >
+        ) : (
+          ""
+        )}
+        <div className={styles.services}>
           <button
             onClick={toggleServiceDropdown}
             className={`${styles.serviceDropdownButton} ${
@@ -143,7 +142,10 @@ export const NavBar = ({ isFooter }: NavProps) => {
             <li>
               <Link
                 className={styles.sublink}
-                onClick={() => {closeMenu(); toggleServiceDropdown();}}
+                onClick={() => {
+                  closeMenu();
+                  toggleServiceDropdown();
+                }}
                 href={`/services`}
               >
                 All Services
@@ -152,7 +154,10 @@ export const NavBar = ({ isFooter }: NavProps) => {
             <li>
               <Link
                 className={styles.sublink}
-                onClick={() => {closeMenu(); toggleServiceDropdown();}}
+                onClick={() => {
+                  closeMenu();
+                  toggleServiceDropdown();
+                }}
                 href={`/services/exterior-detailing`}
               >
                 Exterior Detail
@@ -161,7 +166,10 @@ export const NavBar = ({ isFooter }: NavProps) => {
             <li>
               <Link
                 className={styles.sublink}
-                onClick={() => {closeMenu(); toggleServiceDropdown();}}
+                onClick={() => {
+                  closeMenu();
+                  toggleServiceDropdown();
+                }}
                 href={`/services/interior-detailing`}
               >
                 Interior Detail
@@ -170,7 +178,10 @@ export const NavBar = ({ isFooter }: NavProps) => {
             <li>
               <Link
                 className={styles.sublink}
-                onClick={() => {closeMenu(); toggleServiceDropdown();}}
+                onClick={() => {
+                  closeMenu();
+                  toggleServiceDropdown();
+                }}
                 href={`/services/full-detailing`}
               >
                 Full Detail
@@ -178,9 +189,7 @@ export const NavBar = ({ isFooter }: NavProps) => {
             </li>
           </ul>
         </div>
-        <div className={styles.locations}
-         
-        >
+        <div className={styles.locations}>
           <button
             onClick={toggleLocationDropdown}
             className={`${styles.locationDropdownButton} ${
@@ -212,7 +221,10 @@ export const NavBar = ({ isFooter }: NavProps) => {
             <li>
               <Link
                 className={styles.sublink}
-                onClick={() => {closeMenu(); toggleLocationDropdown();}}
+                onClick={() => {
+                  closeMenu();
+                  toggleLocationDropdown();
+                }}
                 href={`/locations`}
               >
                 All Locations
@@ -221,7 +233,10 @@ export const NavBar = ({ isFooter }: NavProps) => {
             <li>
               <Link
                 className={styles.sublink}
-                onClick={() => {closeMenu(); toggleLocationDropdown();}}
+                onClick={() => {
+                  closeMenu();
+                  toggleLocationDropdown();
+                }}
                 href={`/locations/brentwood`}
               >
                 Brentwood, TN
@@ -230,7 +245,10 @@ export const NavBar = ({ isFooter }: NavProps) => {
             <li>
               <Link
                 className={styles.sublink}
-                onClick={() => {closeMenu(); toggleLocationDropdown();}}
+                onClick={() => {
+                  closeMenu();
+                  toggleLocationDropdown();
+                }}
                 href={`/locations/franklin`}
               >
                 Franklin, TN
@@ -239,7 +257,10 @@ export const NavBar = ({ isFooter }: NavProps) => {
             <li>
               <Link
                 className={styles.sublink}
-                onClick={() => {closeMenu(); toggleLocationDropdown();}}
+                onClick={() => {
+                  closeMenu();
+                  toggleLocationDropdown();
+                }}
                 href={`/locations/mt-juliet`}
               >
                 Mt. Juliet, TN
@@ -248,7 +269,10 @@ export const NavBar = ({ isFooter }: NavProps) => {
             <li>
               <Link
                 className={styles.sublink}
-                onClick={() => {closeMenu(); toggleLocationDropdown();}}
+                onClick={() => {
+                  closeMenu();
+                  toggleLocationDropdown();
+                }}
                 href={`/locations/murfreesboro`}
               >
                 Murfreesboro, TN
@@ -257,7 +281,10 @@ export const NavBar = ({ isFooter }: NavProps) => {
             <li>
               <Link
                 className={styles.sublink}
-                onClick={() => {closeMenu(); toggleLocationDropdown();}}
+                onClick={() => {
+                  closeMenu();
+                  toggleLocationDropdown();
+                }}
                 href={`/locations/nashville`}
               >
                 Nashville, TN
@@ -266,7 +293,10 @@ export const NavBar = ({ isFooter }: NavProps) => {
             <li>
               <Link
                 className={styles.sublink}
-                onClick={() => {closeMenu(); toggleLocationDropdown();}}
+                onClick={() => {
+                  closeMenu();
+                  toggleLocationDropdown();
+                }}
                 href={`/locations/gallatin`}
               >
                 Gallatin, TN
@@ -275,7 +305,10 @@ export const NavBar = ({ isFooter }: NavProps) => {
             <li>
               <Link
                 className={styles.sublink}
-                onClick={() => {closeMenu(); toggleLocationDropdown();}}
+                onClick={() => {
+                  closeMenu();
+                  toggleLocationDropdown();
+                }}
                 href={`/locations/hendersonville`}
               >
                 Hendersonville, TN
@@ -284,7 +317,10 @@ export const NavBar = ({ isFooter }: NavProps) => {
             <li>
               <Link
                 className={styles.sublink}
-                onClick={() => {closeMenu(); toggleLocationDropdown();}}
+                onClick={() => {
+                  closeMenu();
+                  toggleLocationDropdown();
+                }}
                 href={`/locations/lebanon`}
               >
                 Lebanon, TN
@@ -293,7 +329,10 @@ export const NavBar = ({ isFooter }: NavProps) => {
             <li>
               <Link
                 className={styles.sublink}
-                onClick={() => {closeMenu(); toggleLocationDropdown();}}
+                onClick={() => {
+                  closeMenu();
+                  toggleLocationDropdown();
+                }}
                 href={`/locations/smyrna`}
               >
                 Smyrna, TN
@@ -302,7 +341,10 @@ export const NavBar = ({ isFooter }: NavProps) => {
             <li>
               <Link
                 className={styles.sublink}
-                onClick={() => {closeMenu(); toggleLocationDropdown();}}
+                onClick={() => {
+                  closeMenu();
+                  toggleLocationDropdown();
+                }}
                 href={`/locations/spring-hill`}
               >
                 Spring Hill, TN
@@ -311,12 +353,14 @@ export const NavBar = ({ isFooter }: NavProps) => {
           </ul>
         </div>
 
-      
         <Link className={styles.link} href="/reviews" onClick={closeMenu}>
           Reviews
         </Link>
         <Link className={styles.link} href="/pricing" onClick={closeMenu}>
           Pricing
+        </Link>
+        <Link className={styles.link} href="/gift-cards" onClick={closeMenu}>
+          Gift Cards
         </Link>
         <Link className={styles.link} href="/contact" onClick={closeMenu}>
           Contact Us
