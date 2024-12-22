@@ -38,7 +38,7 @@ export default function MtJulietPage() {
     <Head>
         <link
           rel="canonical"
-          href="https://nashvillecardetail.com"
+          href="https://www.nashvillecardetail.com"
         />
       </Head>
       <MtJuliet />
