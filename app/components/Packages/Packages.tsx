@@ -199,6 +199,10 @@ export const Packages = () => {
             <p>$30</p>
           </div>
           <div className={styles.addOn}>
+            <h4>Clean Headliner</h4>
+            <p>$30</p>
+          </div>
+          <div className={styles.addOn}>
             <h4>Headlight Restoration</h4>
             <p>$70</p>
           </div>
@@ -208,10 +212,6 @@ export const Packages = () => {
           </div>
           <div className={styles.addOn}>
             <h4>Exterior Trim Restoration / Faded Plastic</h4>
-            <p>$30</p>
-          </div>
-          <div className={styles.addOn}>
-            <h4>Clean Headliner / stain removal</h4>
             <p>$30</p>
           </div>
         </div>
