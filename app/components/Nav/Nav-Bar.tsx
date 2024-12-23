@@ -379,16 +379,7 @@ export const NavBar = ({ isFooter }: NavProps) => {
                   615-927-1987
                 </div>
               ) : (
-                <div>
-                  <Image
-                    src="/images/phone.png"
-                    alt="phone icon"
-                    color="white"
-                    width={20}
-                    height={20}
-                  ></Image>
-                  615-927-1987
-                </div>
+                <></>
               )}
             </div>
           </a>
