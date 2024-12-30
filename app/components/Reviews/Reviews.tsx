@@ -108,6 +108,18 @@ export default function Reviews() {
       reviewerName: "Lexie Kittel",
       reviewerImage: "/images/LexieReview.png",
     },
+    {
+      reviewText:
+        "Logan did an amazing job! It was freezing cold outside and he still spent hours cleaning every spot in our jeep! Looked brand new when he left!!! Definitely 5 star service",
+      reviewerName: "Kimberly",
+      reviewerImage: "/images/KimberlyReview.png",
+    },
+    {
+      reviewText:
+        "I received a car detailing as a Christmas gift. He did a wonderful job. I am so pleased.",
+      reviewerName: "Kayla Whitehead",
+      reviewerImage: "/images/KaylaReview.png",
+    },
   ];
 
   const [isMobile, setIsMobile] = useState(true);
